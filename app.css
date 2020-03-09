@@ -1,53 +1,78 @@
+.html-body-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  height: 100vm;
+}
+
+/* Left column styling starts here. */
+
 .left-column-container {
-  border: 2px solid royalblue;
-  height: ;
-  width: ;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 100vh;
 }
 
 .left-column-header {
-  border: 2px solid pink;
-  height: ;
-  width: ;
+  background-color: #222;
+  height: 60px;
 }
 
 .left-column-section {
-  border: 2px solid olive;
-  height: ;
-  width: ;
+  background-color: #333;
+  flex-grow: 1;
 }
 
 .left-column-footer {
-  border: 2px solid orange;
-  height: ;
-  width: ;
+  background-color: #222;
+  height: 60px;
 }
+
+/* Main section styling starts here. */
 
 .main-section-container {
-  border: 2px solid slategrey;
-  height: ;
-  width: ;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
+/* Main header styling starts here. */
+
 .main-header-container {
-  border: 2px solid sienna;
-  height: ;
-  width: ;
+  height: 60px;
+  display: flex;
 }
 
 .main-header-nav {
-  border: 2px solid slateblue;
-  height: ;
-  width: ;
+  background-color: #555;
+  width: 60px;
+  display: none;
 }
 
 .main-header-section {
-  border: 2px solid coral;
-  height: ;
-  width: ;
+  background-color: #333;
+  flex-grow: 1;
 }
 
+/* Main body styling starts here. */
+
 .main-section-body {
-  border: 2px solid palevioletred;
-  height: ;
-  width: ;
+  background-color: #191919;
+  flex-grow: 1;
+}
+
+/* Responsive styling starts here. */
+
+@media only screen and (max-width: 1000px) {
+  .left-column-container{
+    display: none;
+  }
+
+  .main-header-nav {
+    display: block;
+  }
 }
