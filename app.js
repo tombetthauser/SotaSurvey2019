@@ -3,10 +3,18 @@ const LINKS = [
   "demographics",
   "connections",
   "conclusions"
-]
+];
+
+const linkShow = (link) => {
+  for (let i = 0; i < LINKS.length; i++) {
+    document.querySelector(`.${LINKS[i]}-div`).style.display = "none";
+  }
+  document.querySelector(`.${link}-div`).style.display = "block";
+}
 
 document.addEventListener('DOMContentLoaded', (event) => {
   let style = document.querySelector(".mobile-drop-down").style;
+
   document.querySelector(".main-header-nav").addEventListener("click", () => {
     if (style.height === "125px") {
       style.height = "0px";
@@ -23,13 +31,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       style.borderBottom = "none";
     }
   });
-
-  const linkShow = (link) => {
-    for (let i = 0; i < LINKS.length; i++) {
-      document.querySelector(`.${LINKS[i]}-div`).style.display = "none";
-    }
-    document.querySelector(`.${link}-div`).style.display = "block";
-  }
 
   for (let i = 0; i < LINKS.length; i++) {
     let links = document.querySelectorAll(`.${LINKS[i]}-link`);
