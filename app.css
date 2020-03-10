@@ -1,11 +1,7 @@
 .html-body-container {
   font-family: monospace;
-  align-items: stretch;
-  flex-direction: row;
-  overflow: hidden;
   font-size: 12px;
   display: flex;
-  height: 100vm;
   padding: 0;
   margin: 0;
 }
@@ -18,7 +14,7 @@
   flex-direction: column;
   display: flex;
   height: 100vh;
-  width: 175px;
+  min-width: 175px;
 }
 
 .left-column-header {
@@ -45,7 +41,7 @@
 
 .main-section-container {
   flex-direction: column;
-  display: flex;
+  overflow-y: scroll;
   height: 100vh;
   flex-grow: 1;
 }
@@ -87,7 +83,6 @@
 
 .main-section-body {
   padding: 7.5px 35px;
-  position: relative;
   flex-grow: 1;
   top: 1px;
 }
