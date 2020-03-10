@@ -7,56 +7,56 @@
   height: 100vm;
   font-family: monospace;
   font-size: 12px;
+  overflow: hidden;
 }
 
 /* Left column styling starts here. */
 
 .left-column-container {
-  display: flex;
   flex-direction: column;
-  width: 175px;
+  display: flex;
   height: 100vh;
+  width: 175px;
 }
 
 .left-column-header {
   border-bottom: 1px solid #c4dfff;
   border-right: 1px solid #c4dfff;
-  min-height: 49px;
+  min-height: 39px;
 }
 
 .left-column-section {
   border-bottom: 1px solid #c4dfff;
   border-right: 1px solid #c4dfff;
-  flex-grow: 1;
   overflow-y: scroll;
+  flex-grow: 1;
 }
 
 .left-column-footer {
-  border-bottom: 1px solid #c4dfff;
   border-right: 1px solid #c4dfff;
-  min-height: 30px;
+  min-height: 35px;
 }
 
 /* Main section styling starts here. */
 
 .main-section-container {
-  flex-grow: 1;
-  display: flex;
   flex-direction: column;
+  display: flex;
   height: 100vh;
+  flex-grow: 1;
 }
 
 /* Main header styling starts here. */
 
 .main-header-container {
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
 .main-header-nav {
   border-bottom: 1px solid #c4dfff;
   border-right: 1px solid #c4dfff;
-  width: 50px;
+  width: 40px;
   display: none;
   cursor: pointer;
 }
@@ -70,7 +70,7 @@
 /* Main body styling starts here. */
 
 .mobile-drop-down {
-  border-bottom: 1px solid #c4dfff;
+  border-bottom: none;
   transition: .2s;
   display: none;
   height: 0px;
@@ -78,8 +78,6 @@
 }
 
 .main-section-body {
-  border-bottom: 1px solid #c4dfff;
-  border-right: 1px solid #c4dfff;
   flex-grow: 1;
   position: relative;
   top: 1px;
