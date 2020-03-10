@@ -1,0 +1,140 @@
+
+.html-body-container {
+  font-family: monospace;
+  font-size: 12px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* Left column styling starts here. */
+
+.left-column-container {
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  min-width: 175px;
+}
+
+.left-column-header {
+  border-bottom: 1px solid #c4dfff;
+  border-right: 1px solid #c4dfff;
+  min-height: 39px;
+}
+
+.left-column-section {
+  border-bottom: 1px solid #c4dfff;
+  border-right: 1px solid #c4dfff;
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+
+.left-column-footer {
+  border-right: 1px solid #c4dfff;
+  min-height: 35px;
+}
+
+
+
+/* Main section styling starts here. */
+
+.main-section-container {
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100vh;
+  flex-grow: 1;
+}
+
+
+
+/* Main header styling starts here. */
+
+.main-header-container {
+  display: flex;
+  height: 40px;
+}
+
+.main-header-nav {
+  border-bottom: 1px solid #c4dfff;
+  border-right: 1px solid #c4dfff;
+  cursor: pointer;
+  display: none;
+  width: 40px;
+}
+
+.main-header-section {
+  border-bottom: 1px solid #c4dfff;
+  border-right: 1px solid #c4dfff;
+  flex-grow: 1;
+}
+
+
+
+/* Main body styling starts here. */
+
+.mobile-drop-down {
+  border-bottom: none;
+  overflow: hidden;
+  transition: .2s;
+  display: none;
+  height: 0px;
+}
+
+.main-section-body {
+  padding: 7.5px 35px;
+  flex-grow: 1;
+  top: 1px;
+}
+
+
+
+/* General text formatting starts here. */
+
+.basic-p {
+  width: 500px;
+  max-width: 90%;
+  line-height: 20px;
+}
+
+
+
+/* Responsive styling starts here. */
+
+@media only screen and (max-width: 1000px) {
+  .left-column-container{ display: none; }
+  .main-header-nav { display: block; }
+  .mobile-drop-down { display: block; }
+}
+
+
+
+/* Left column links styling starts here. */
+
+.left-column-ul {
+  padding-left: 25px;
+  list-style: none;
+}
+
+.left-column-li {
+  font-family: monospace;
+  line-height: 25px;
+  font-weight: 100;
+  font-size: 12px;
+  cursor: pointer;
+  color: #000;
+}
+
+.left-column-li:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Main div pages styling starts here. */
+
+.introduction-div { display: block; }
+.demographics-div { display: none; }
+.connections-div { display: none; }
+.conclusions-div { display: none; }
