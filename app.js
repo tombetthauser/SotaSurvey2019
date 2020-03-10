@@ -46,9 +46,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // D3 code starts here for first bar graph.
 
   const data = [
-    { name: "Tom", value: `${Math.random()}` },
-    { name: "Garon", value: `${Math.random()}` },
-    { name: "Mike", value: `${Math.random()}` }
+    { name: "Other", value: "0.005" },
+    { name: "Non-Binary", value: "0.08" },
+    { name: "Male", value: "0.32" },
+    { name: "Female", value: "0.58" },
   ];
 
 
