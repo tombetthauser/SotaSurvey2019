@@ -88,6 +88,15 @@
 }
 
 
+/* Introduction styling starts here. */
+
+.basic-p {
+  width: 500px;
+  max-width: 90%;
+  line-height: 20px;
+}
+
+
 
 /* Responsive styling starts here. */
 
