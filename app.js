@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+
+
   // D3 code starts here for first bar graph.
 
   let data = [
@@ -97,12 +99,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
   
   
+
+
   // D3 race graph code is below.
 
   data = [
     { name: "Decline to Answer", value: "0.04" },
+    { name: "White / Caucasian", value: "0.73" },
     { name: "Biracial / Multi Racial", value: "0.07" },
-    { name: "White / Caucasian", value: "0.073" },
     { name: "Asian / Asian American", value: "0.04" },
     { name: "Black / African American", value: "0.04" },
     { name: "Jewish / White", value: "0.03" },
@@ -111,7 +115,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     { name: "Native American", value: "0.01" },
   ];
 
-  height = 200;
+  height = 400;
   width = 1200;
   margin = ({ top: 20, right: 20, bottom: 20, left: 30 });
 
@@ -140,6 +144,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   svg.append("g").call(yAxis);
   
   
+
+
   
   // D3 orientation graph code is below.
 
@@ -163,6 +169,82 @@ document.addEventListener('DOMContentLoaded', (event) => {
     .range([height - margin.bottom, margin.top]);
 
   svg = d3.select('.graph-orientation');
+
+  g = svg.append("g").attr("fill", COLOR);
+
+  g.selectAll("rect")
+    .data(data)
+    .join("rect")
+    .attr("x", d => x(d.name))
+    .attr("y", d => y(d.value))
+    .attr("height", d => y(0) - y(d.value))
+    .attr("width", x.bandwidth());
+
+  svg.append("g").call(xAxis);
+  svg.append("g").call(yAxis);
+  
+  
+
+
+  
+  // D3 age graph code is below.
+
+  data = [
+    { name: "<18", value: "0.06" },
+    { name: "18-29", value: "0.32" },
+    { name: "30-39", value: "0.26" },
+    { name: "40-49", value: "0.07" },
+    { name: "50-59", value: "0.09" },
+    { name: "60-69", value: "0.14" },
+    { name: "70+", value: "0.06" },
+  ];
+
+  x = d3.scaleBand()
+    .domain(data.map(d => d.name))
+    .range([margin.left, width - margin.right])
+    .padding(0.1);
+
+  y = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.value)])
+    .range([height - margin.bottom, margin.top]);
+
+  svg = d3.select('.graph-age');
+
+  g = svg.append("g").attr("fill", COLOR);
+
+  g.selectAll("rect")
+    .data(data)
+    .join("rect")
+    .attr("x", d => x(d.name))
+    .attr("y", d => y(d.value))
+    .attr("height", d => y(0) - y(d.value))
+    .attr("width", x.bandwidth());
+
+  svg.append("g").call(xAxis);
+  svg.append("g").call(yAxis);
+  
+  
+
+
+  
+  // D3 how did you find this graph code is below.
+
+  data = [
+    { name: "artist / peer", value: "0.198" },
+    { name: "instagram", value: "0.733" },
+    { name: "other", value: "0.069" },
+  ];
+
+  x = d3.scaleBand()
+    .domain(data.map(d => d.name))
+    .range([margin.left, width - margin.right])
+    .padding(0.1);
+
+  y = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.value)])
+    .range([height - margin.bottom, margin.top]);
+
+  svg = d3.select('.graph-found-survey');
 
   g = svg.append("g").attr("fill", COLOR);
 
