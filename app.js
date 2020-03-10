@@ -1,7 +1,6 @@
 const LINKS = [
   "introduction",
   "demographics",
-  // "connections",
   "conclusions"
 ];
 
@@ -56,44 +55,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     { name: "Female", value: "0.58" },
   ];
 
-  // Constants for height width and margin.
   let height = 400;
   let width = 550;
   let margin = ({ top: 20, right: 20, bottom: 20, left: 30 });
-
-  // X and Y scale functions are below.
-  let x = d3.scaleBand()
-    .domain(data.map(d => d.name))
-    .range([margin.left, width - margin.right])
-    .padding(0.1);
-
-  let y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.value)])
-    .range([height - margin.bottom, margin.top]);
-
-  // The X and Y axis functions.
-  let xAxis = g => g
-    .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x));
-
-  let formatPercent = d3.format(".0%");
-
-  let yAxis = g => g
-    .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y).tickFormat(formatPercent));
-
+  let x = d3.scaleBand().domain(data.map(d => d.name)).range([margin.left, width - margin.right]).padding(0.1);
+  let y = d3.scaleLinear().domain([0, d3.max(data, d => d.value)]).range([height - margin.bottom, margin.top]);
+  let xAxis = g => g.attr("transform", `translate(0,${height - margin.bottom})`).call(d3.axisBottom(x));
+  let yAxis = g => g.attr("transform", `translate(${margin.left},0)`).call(d3.axisLeft(y).tickFormat(d3.format(".0%")));
   let svg = d3.select('.graph-gender');
-
   let g = svg.append("g").attr("fill", COLOR);
 
-  g.selectAll("rect")
-    .data(data)
-    .join("rect")
-    .attr("x", d => x(d.name))
-    .attr("y", d => y(d.value))
-    .attr("height", d => y(0) - y(d.value))
-    .attr("width", x.bandwidth());
-
+  g.selectAll("rect").data(data).join("rect").attr("x", d => x(d.name)).attr("y", d => y(d.value)).attr("height", d => y(0) - y(d.value)).attr("width", x.bandwidth());
   svg.append("g").call(xAxis);
   svg.append("g").call(yAxis);
   
@@ -118,33 +90,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   height = 400;
   width = 1200;
   margin = ({ top: 20, right: 20, bottom: 20, left: 30 });
-
-  x = d3.scaleBand()
-    .domain(data.map(d => d.name))
-    .range([margin.left, width - margin.right])
-    .padding(0.1);
-
-  y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.value)])
-    .range([height - margin.bottom, margin.top]);
-
+  x = d3.scaleBand().domain(data.map(d => d.name)).range([margin.left, width - margin.right]).padding(0.1);
+  y = d3.scaleLinear().domain([0, d3.max(data, d => d.value)]).range([height - margin.bottom, margin.top]);
   svg = d3.select('.graph-race');
-
   g = svg.append("g").attr("fill", COLOR);
-
-  g.selectAll("rect")
-    .data(data)
-    .join("rect")
-    .attr("x", d => x(d.name))
-    .attr("y", d => y(d.value))
-    .attr("height", d => y(0) - y(d.value))
-    .attr("width", x.bandwidth());
-
+  g.selectAll("rect").data(data).join("rect").attr("x", d => x(d.name)).attr("y", d => y(d.value)).attr("height", d => y(0) - y(d.value)).attr("width", x.bandwidth());
   svg.append("g").call(xAxis);
   svg.append("g").call(yAxis);
   
-  
-
 
   
   // D3 orientation graph code is below.
@@ -158,35 +111,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
   height = 400;
   width = 550;
   margin = ({ top: 20, right: 20, bottom: 20, left: 30 });
-
-  x = d3.scaleBand()
-    .domain(data.map(d => d.name))
-    .range([margin.left, width - margin.right])
-    .padding(0.1);
-
-  y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.value)])
-    .range([height - margin.bottom, margin.top]);
-
+  x = d3.scaleBand().domain(data.map(d => d.name)).range([margin.left, width - margin.right]).padding(0.1);
+  y = d3.scaleLinear().domain([0, d3.max(data, d => d.value)]).range([height - margin.bottom, margin.top]);
   svg = d3.select('.graph-orientation');
-
   g = svg.append("g").attr("fill", COLOR);
-
-  g.selectAll("rect")
-    .data(data)
-    .join("rect")
-    .attr("x", d => x(d.name))
-    .attr("y", d => y(d.value))
-    .attr("height", d => y(0) - y(d.value))
-    .attr("width", x.bandwidth());
-
+  g.selectAll("rect").data(data).join("rect").attr("x", d => x(d.name)).attr("y", d => y(d.value)).attr("height", d => y(0) - y(d.value)).attr("width", x.bandwidth());
   svg.append("g").call(xAxis);
   svg.append("g").call(yAxis);
-  
-  
-
 
   
+
   // D3 age graph code is below.
 
   data = [
@@ -199,32 +133,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     { name: "70+", value: "0.06" },
   ];
 
-  x = d3.scaleBand()
-    .domain(data.map(d => d.name))
-    .range([margin.left, width - margin.right])
-    .padding(0.1);
-
-  y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.value)])
-    .range([height - margin.bottom, margin.top]);
-
+  x = d3.scaleBand().domain(data.map(d => d.name)).range([margin.left, width - margin.right]).padding(0.1);
+  y = d3.scaleLinear().domain([0, d3.max(data, d => d.value)]).range([height - margin.bottom, margin.top]);
   svg = d3.select('.graph-age');
-
   g = svg.append("g").attr("fill", COLOR);
-
-  g.selectAll("rect")
-    .data(data)
-    .join("rect")
-    .attr("x", d => x(d.name))
-    .attr("y", d => y(d.value))
-    .attr("height", d => y(0) - y(d.value))
-    .attr("width", x.bandwidth());
-
+  g.selectAll("rect").data(data).join("rect").attr("x", d => x(d.name)).attr("y", d => y(d.value)).attr("height", d => y(0) - y(d.value)).attr("width", x.bandwidth());
   svg.append("g").call(xAxis);
   svg.append("g").call(yAxis);
   
-  
-
 
   
   // D3 how did you find this graph code is below.
@@ -235,27 +151,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     { name: "other", value: "0.069" },
   ];
 
-  x = d3.scaleBand()
-    .domain(data.map(d => d.name))
-    .range([margin.left, width - margin.right])
-    .padding(0.1);
-
-  y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.value)])
-    .range([height - margin.bottom, margin.top]);
-
+  x = d3.scaleBand().domain(data.map(d => d.name)).range([margin.left, width - margin.right]).padding(0.1);
+  y = d3.scaleLinear().domain([0, d3.max(data, d => d.value)]).range([height - margin.bottom, margin.top]);
   svg = d3.select('.graph-found-survey');
-
   g = svg.append("g").attr("fill", COLOR);
-
-  g.selectAll("rect")
-    .data(data)
-    .join("rect")
-    .attr("x", d => x(d.name))
-    .attr("y", d => y(d.value))
-    .attr("height", d => y(0) - y(d.value))
-    .attr("width", x.bandwidth());
-
+  g.selectAll("rect").data(data).join("rect").attr("x", d => x(d.name)).attr("y", d => y(d.value)).attr("height", d => y(0) - y(d.value)).attr("width", x.bandwidth());
   svg.append("g").call(xAxis);
   svg.append("g").call(yAxis);
 
