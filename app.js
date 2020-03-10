@@ -80,11 +80,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x));
 
+  const formatPercent = d3.format(".0%");
+
   const yAxis = g => g
     .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y));
-
-  // Use all the above constants and functions.
+    .call(d3.axisLeft(y).tickFormat(formatPercent));
 
   const svg = d3.select('svg');
 
