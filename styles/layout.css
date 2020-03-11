@@ -6,6 +6,15 @@
   margin: 0;
 }
 
+svg {
+  overflow: visible;
+  margin-top: 30px;
+}
+
+text {
+  font-family: monospace;
+  font-size: 12px;
+}
 
 
 /* Left column styling starts here. */
@@ -85,6 +94,9 @@
   padding: 7.5px 35px;
   flex-grow: 1;
   top: 1px;
+}
+.main-section-body svg {
+  margin: 30px auto
 }
 
 

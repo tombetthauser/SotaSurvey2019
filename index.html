@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>State of the Arts 2019</title>
   <link rel="stylesheet" href="app.css">
+  <script src="dist/main.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
 <body class="html-body-container">
   <aside class="left-column-container">
@@ -40,12 +42,11 @@
         <p class="basic-p">Take everything with a big grain of salt and enjoy!</p>
       </div>
       <div class="demographics-div">
-        <p>Welcome to the demographics!</p>
-        <svg class="graph-gender" height="450" width="600"></svg>
-        <svg class="graph-age" height="450" width="600"></svg>
-        <svg class="graph-race" height="450" width="1200"></svg>
-        <svg class="graph-orientation" height="450" width="600"></svg>
-        <svg class="graph-found-survey" height="450" width="600"></svg>
+        <svg class="graph-gender"></svg>
+        <svg class="graph-age"></svg>
+        <svg class="graph-race"></svg>
+        <svg class="graph-orientation"></svg>
+        <svg class="graph-found-survey"></svg>
       </div>
       <div class="connections-div">
         <p>Welcome to the connections!</p>
@@ -57,6 +58,5 @@
       </div>
     </main>
   </section>
-  <script src="dist/main.js"></script>
 </body>
 </html>

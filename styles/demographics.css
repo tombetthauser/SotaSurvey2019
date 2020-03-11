@@ -1,19 +1,11 @@
-.graph-gender {
-  fill: #E0BBE4;
-}
-
-.graph-age {
-  fill: #f2cbbb;
-}
-
 .graph-race {
-  fill: #fcf1d8;
+  margin-bottom: 200px;
+}
+.graph-gender {
+  /* height: 450px;
+  width: 400px; */
 }
 
-.graph-orientation {
-  fill: #dee2d9;
-}
-
-.graph-found-survey {
-  fill: #8da290;
-}
+/* .graph-found-survey {} */
+/* .graph-orientation {} */
+/* .graph-age {} */
