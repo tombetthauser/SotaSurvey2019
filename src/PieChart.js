@@ -15,23 +15,34 @@ export default class PieChart {
   }
 
   render() {
+    // export const ORIENTATION = [
+    //   { name: "Yes", value: "0.564" },
+    //   { name: "No", value: "0.356" },
+    //   { name: "Decline to Say", value: "0.079" },
+    // ];
+
+    let newData = {};
+
+    for (let i = 0; i < this.data.length; i++) {
+      newData[this.data[i].name] = this.data[i].value; 
+    }
+    
+    console.log(newData);
+
     var radius = 135;
-    var svg = d3.select(".graph-gender")
+    var svg = d3.select(this.tag)
       .attr('height', 450)
       .attr('width', 400)
       .append("g")
       .attr("transform", "translate(170,195)")
 
-
-    var data = { yes: 55, no: 35, "decline to say": 8 }
-
     var color = d3.scaleOrdinal()
-      .domain(data)
-      .range(d3.schemeSet2);
+      .domain(newData)
+      .range(d3.schemePastel2.reverse());
 
     var pie = d3.pie()
       .value(function (d) { return d.value; })
-    var data_ready = pie(d3.entries(data))
+    var data_ready = pie(d3.entries(newData))
 
     var arcGenerator = d3.arc()
       .innerRadius(0)
@@ -44,7 +55,7 @@ export default class PieChart {
       .append('path')
       .attr('d', arcGenerator)
       .attr('fill', function (d) { return (color(d.data.key)) })
-      .style("opacity", 0.6)
+      // .style("opacity", 0.35)
 
     svg
       .selectAll('mySlices')
@@ -54,6 +65,7 @@ export default class PieChart {
       .text(function (d) { return d.data.key })
       .attr("transform", function (d) { return "translate(" + arcGenerator.centroid(d) + ")"; })
       .style("font-size", 12)
+      .style("text-anchor", "middle")
 
     svg.append("text")
       .attr("x", 5)

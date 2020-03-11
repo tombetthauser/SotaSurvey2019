@@ -3,12 +3,12 @@ import BarGraph from "./BarGraph";
 import PieChart from "./PieChart";
 
 export const RENDER_GRAPHS = () => {
-  new PieChart({
+  new BarGraph({
     title: "What is your gender?",
     tag: ".graph-gender",
     data: GENDER,
-    // color: "#E0BBE4",
-    // width: 400,
+    color: "#E0BBE4",
+    width: 400,
   }).render();
   
   new BarGraph({
@@ -28,7 +28,7 @@ export const RENDER_GRAPHS = () => {
     angle: true,
   }).render();
   
-  new BarGraph({
+  new PieChart({
     title: "Do you identify as LGBTQ+?",
     tag: ".graph-orientation",
     data: ORIENTATION,
@@ -36,7 +36,7 @@ export const RENDER_GRAPHS = () => {
     width: 400,
   }).render();
   
-  new BarGraph({
+  new PieChart({
     title: "How did you hear about the survey?",
     tag: ".graph-found-survey",
     data: FOUND_SURVEY,

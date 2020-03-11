@@ -4,12 +4,6 @@ export const LINKS = [
   "conclusions"
 ];
 
-export const FOUND_SURVEY = [
-  { name: "artist / peer", value: "0.198" },
-  { name: "instagram", value: "0.733" },
-  { name: "other", value: "0.069" },
-];
-
 export const RACE = [
   { name: "Decline to Answer", value: "0.04" },
   { name: "White / Caucasian", value: "0.73" },
@@ -43,4 +37,10 @@ export const ORIENTATION = [
   { name: "Yes", value: "0.564" },
   { name: "No", value: "0.356" },
   { name: "Decline to Say", value: "0.079" },
+];
+
+export const FOUND_SURVEY = [
+  { name: "artist / peer", value: "0.198" },
+  { name: "instagram", value: "0.733" },
+  { name: "other", value: "0.069" },
 ];
