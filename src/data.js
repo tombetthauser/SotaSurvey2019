@@ -1,8 +1,48 @@
 export const LINKS = [
   "introduction",
   "demographics",
+  "exhibitions",
   "word-cloud",
   "conclusions"
+];
+
+export const APPLICATION_FEES = [
+  { name: "Not Sure / Hard to Say", value: "0.01" },
+  { name: "$0", value: "0.44" },
+  { name: "$0-$25", value: "0.08" },
+  { name: "$25-$50", value: "0.13" },
+  { name: "$50-$100", value: "0.13" },
+  { name: "$100-$250", value: "0.15" },
+  { name: "$250+", value: "0.06" },
+];
+
+export const SHOW_APPLICATIONS = [
+  { name: "0", value: "0.416" },
+  { name: "1-2", value: "0.178" },
+  { name: "3-5", value: "0.218" },
+  { name: "6-10", value: "0.139" },
+  { name: "11-25", value: "0.03" },
+  { name: "25+", value: "0.02" },
+];
+
+export const SOLO_EXHIBITIONS_COUNT = [
+  { name: "0", value: "0.673" },
+  { name: "1-2", value: "0.297" },
+  { name: "3-5", value: "0.3" },
+];
+
+export const GROUP_EXHIBITIONS_COUNT = [
+  { name: "0", value: "0.228" },
+  { name: "1-2", value: "0.475" },
+  { name: "3-5", value: "0.218" },
+  { name: "6-10", value: "0.079" },
+];
+
+export const EXHIBITIONS_PRIORITY = [
+  { name: "Extremely Important", value: "0.218" },
+  { name: "Somewhat Important", value: "0.465" },
+  { name: "Not Important", value: "0.228" },
+  { name: "Not Sure / Hard to Say", value: "0.079" },
 ];
 
 export const RACE = [
@@ -465,64 +505,4 @@ export const KEYWORDS = [
   { name: "World", value: 1 },
   { name: "Writing", value: 1 },
   { name: "Zines", value: 2 },
-]
-
-// export const KEYWORDS = [
-//   { name: "Abstraction", value: 15 },
-//   { name: "Oil Painting", value: 12 },
-//   { name: "Bright Colors / Colorful", value: 10 },
-//   { name: "Acrylic", value: 9 },
-//   { name: "Drawing / Graphite", value: 9 },
-//   { name: "Figurative", value: 9 },
-//   { name: "Interdisciplinary", value: 9 },
-//   { name: "Paint / Paintings", value: 9 },
-//   { name: "Photography", value: 8 },
-//   { name: "Sculpture", value: 8 },
-//   { name: "Social Issues", value: 7 },
-//   { name: "Printmaking", value: 5 },
-//   { name: "Collage", value: 4 },
-//   { name: "Color", value: 4 },
-//   { name: "Conceptual", value: 4 },
-//   { name: "Contemporary", value: 4 },
-//   { name: "Digital", value: 4 },
-//   { name: "Ink", value: 4 },
-//   { name: "Landscape", value: 4 },
-//   { name: "Mixed Media", value: 4 },
-//   { name: "Nature", value: 4 },
-//   { name: "Portrait", value: 4 },
-//   { name: "Sci Fiction", value: 4 },
-//   { name: "Spiritual", value: 4 },
-//   { name: "Watercolor", value: 4 },
-//   { name: "Animation", value: 3 },
-//   { name: "Charcoal", value: 3 },
-//   { name: "Ecology", value: 3 },
-//   { name: "Expressive", value: 3 },
-//   { name: "Botanical", value: 2 },
-//   { name: "Design", value: 2 },
-//   { name: "Experimental", value: 2 },
-//   { name: "Form", value: 2 },
-//   { name: "Formal", value: 2 },
-//   { name: "Geometric", value: 2 },
-//   { name: "Graphic", value: 2 },
-//   { name: "Illustration", value: 2 },
-//   { name: "Interactive", value: 2 },
-//   { name: "Intuitive", value: 2 },
-//   { name: "Love", value: 2 },
-//   { name: "Memory", value: 2 },
-//   { name: "Minimal", value: 2 },
-//   { name: "Mysticism", value: 2 },
-//   { name: "Narrative", value: 2 },
-//   { name: "Paper", value: 2 },
-//   { name: "Personal", value: 2 },
-//   { name: "Plants", value: 2 },
-//   { name: "Political", value: 2 },
-//   { name: "Psychology", value: 2 },
-//   { name: "Queer", value: 2 },
-//   { name: "Realistic", value: 2 },
-//   { name: "Representational", value: 2 },
-//   { name: "Research", value: 2 },
-//   { name: "Still Life", value: 2 },
-//   { name: "Surreal", value: 4 },
-//   { name: "Wood", value: 2 },
-//   { name: "Zines", value: 2 }
-// ]
+];
