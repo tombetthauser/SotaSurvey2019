@@ -1,9 +1,10 @@
 import { FOUND_SURVEY, RACE, GENDER, AGE, ORIENTATION, KEYWORDS } from "./data";
 import BarGraph from "./BarGraph";
 import PieChart from "./PieChart";
+import WordCloud from "./WordCloud";
 
 export const RENDER_GRAPHS = () => {
-  new BarGraph({
+  new WordCloud({
     title: "What words describe your work?",
     tag: ".graph-keywords",
     data: KEYWORDS,
@@ -51,4 +52,6 @@ export const RENDER_GRAPHS = () => {
     color: "#8da290",
     width: 400,
   }).render();
+
+  
 }

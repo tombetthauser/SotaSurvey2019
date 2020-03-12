@@ -2,8 +2,14 @@
   margin-bottom: 200px;
 }
 .graph-gender {
-  /* height: 450px;
-  width: 400px; */
+
+}
+
+.graph-keywords {
+  overflow: visible;
+  width: 900px;
+  height: 675px;
+  z-index: -1;
 }
 
 /* .graph-found-survey {} */

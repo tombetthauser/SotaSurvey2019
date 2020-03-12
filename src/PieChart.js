@@ -12,22 +12,15 @@ export default class PieChart {
     this.margin = input.margin || { top: 20, right: 20, bottom: 20, left: 30 };
     this.color = input.color || "#ddd";
     this.angle = input.angle || false;
+
+    this.rotation = input.rotation || false;
   }
 
   render() {
-    // export const ORIENTATION = [
-    //   { name: "Yes", value: "0.564" },
-    //   { name: "No", value: "0.356" },
-    //   { name: "Decline to Say", value: "0.079" },
-    // ];
-
     let newData = {};
-
     for (let i = 0; i < this.data.length; i++) {
       newData[this.data[i].name] = this.data[i].value; 
     }
-    
-    console.log(newData);
 
     var radius = 135;
     var svg = d3.select(this.tag)
@@ -35,6 +28,7 @@ export default class PieChart {
       .attr('width', 400)
       .append("g")
       .attr("transform", "translate(170,195)")
+      .style("z-index", 1)
 
     var color = d3.scaleOrdinal()
       .domain(newData)

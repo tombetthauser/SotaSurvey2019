@@ -8,6 +8,7 @@
   <script src="dist/main.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
 </head>
 <body class="html-body-container">
   <aside class="left-column-container">
@@ -16,6 +17,7 @@
       <ul class="left-column-ul">
         <li class="left-column-li introduction-link">Introduction</li>
         <li class="left-column-li demographics-link">Demographics</li>
+        <li class="left-column-li word-cloud-link">Studio Keywords</li>
         <li class="left-column-li conclusions-link">Conclusions</li>
       </ul>
     </section>
@@ -30,6 +32,7 @@
       <ul class="left-column-ul">
         <li class="left-column-li introduction-link">Introduction</li>
         <li class="left-column-li demographics-link">Demographics</li>
+        <li class="left-column-li word-cloud-link">Studio Keywords</li>
         <li class="left-column-li conclusions-link">Conclusions</li>
       </ul>
     </nav>
@@ -47,10 +50,11 @@
         <svg class="graph-race"></svg>
         <svg class="graph-orientation"></svg>
         <svg class="graph-found-survey"></svg>
-        <svg class="graph-keywords"></svg>
+        <br>
       </div>
-      <div class="connections-div">
-        <p>Welcome to the connections!</p>
+      <div class="word-cloud-div">
+        <!-- <p>Welcome to the word cloud!</p> -->
+        <svg class="graph-keywords"></svg>
       </div>
       <div class="conclusions-div">
         <p class="basic-p">Welcome to the conclusions section!</p>
