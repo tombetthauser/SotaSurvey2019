@@ -2,8 +2,54 @@ import * as DATA from "./data";
 import BarGraph from "./BarGraph";
 import PieChart from "./PieChart";
 import WordCloud from "./WordCloud";
+import LineGraph from "./LineGraph";
 
 export const RENDER_GRAPHS = () => {
+  // new BarGraph({
+  //   title: "How many social media re-posts / features?",
+  //   tag: ".graph-exhibition-contact",
+  //   data: DATA.EXHIBITION_CONTACT,
+  //   color: "pink",
+  //   width: 800,
+  //   angle: true,
+  // }).render();
+
+  new WordCloud({
+    title: "What words describe your work?",
+    tag: ".graph-exhibition-contact",
+    data: DATA.EXHIBITION_CONTACT,
+    // color: "pink",
+    multiplier: 200,
+    minSize: 12,
+  }).render();
+
+  new BarGraph({
+    title: "How many social media re-posts / features?",
+    tag: ".graph-socialmedia-features",
+    data: DATA.SOCMEDIA_FEATURES,
+    // color: "#E0BBE4",
+    width: 400,
+    angle: true,
+  }).render();
+
+  new BarGraph({
+    title: "How many times was your work written about?",
+    tag: ".graph-publication-count",
+    data: DATA.PUBLICATION_COUNT,
+    // color: "#E0BBE4",
+    width: 400,
+    // angle: true,
+  }).render();
+
+  new WordCloud({
+    title: "What words describe your work?",
+    tag: ".graph-gallery-spaces",
+    data: DATA.EXHIBITION_SPACES,
+    color: "pink",
+    multiplier: 2,
+    minSize: 12,
+  }).render();
+
   new BarGraph({
     title: "How much did you pay in application fees?",
     tag: ".graph-application-fees",
@@ -14,7 +60,7 @@ export const RENDER_GRAPHS = () => {
   }).render();
 
   new BarGraph({
-    title: "How many solo exhibitions were you in?",
+    title: "How shows did you apply for?",
     tag: ".graph-show-applications",
     data: DATA.SHOW_APPLICATIONS,
     // color: "#E0BBE4",
@@ -54,7 +100,7 @@ export const RENDER_GRAPHS = () => {
     width: 8000,
   }).render();
 
-  new BarGraph({
+  new LineGraph({
     title: "What is your gender?",
     tag: ".graph-gender",
     data: DATA.GENDER,

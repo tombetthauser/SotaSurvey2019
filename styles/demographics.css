@@ -12,6 +12,19 @@
   z-index: -1;
 }
 
+.finding-shows-div {
+  fill: rgb(206, 164, 219);
+}
+
+.word-cloud-div {
+  fill: cornflowerblue;
+}
+
+.gallery-spaces-div {
+  fill: rgb(255, 163, 179)
+}
+
+
 /* .graph-found-survey {} */
 /* .graph-orientation {} */
 /* .graph-age {} */

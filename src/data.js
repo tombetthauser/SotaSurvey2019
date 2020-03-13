@@ -3,8 +3,51 @@ export const LINKS = [
   "demographics",
   "exhibitions",
   "word-cloud",
-  "conclusions"
+  "gallery-spaces",
+  "finding-shows",
+  "conclusions",
 ];
+
+export const EXHIBITION_CONTACT = [
+    { name: 'Art Council Research', value: (1 / 201) },
+    { name: 'Non Profit Gallery', value: (1 / 201) },
+    { name: 'Art Societies', value: (2 / 201) },
+    { name: 'BFA / MFA Peers', value: (15 / 201) },
+    { name: 'Cold Contacting Spaces', value: (12 / 201) },
+    { name: 'Contacts from Facebook', value: (11 / 201) },
+    { name: 'Contacts from Instagram', value: (27 / 201) },
+    { name: 'Direct Contact At An Art Center', value: (1 / 201) },
+    { name: 'Direct Emails from Gallerists / Curators', value: (23 / 201) },
+    { name: 'Friends', value: (1 / 201) },
+    { name: 'Gallery Represented', value: (1 / 201) },
+    { name: 'Group Invitationals', value: (1 / 201) },
+    { name: 'N/A', value: (2 / 201) },
+    { name: 'Open Call On Instagram', value: (1 / 201) },
+    { name: 'Other Artists', value: (50 / 201) },
+    { name: 'Relationships With Spaces', value: (1 / 201) },
+    { name: 'Structured Applications', value: (37 / 201) },
+    { name: 'Open Calls', value: (37 / 201) },
+    { name: 'Teachers / Faculty', value: (15 / 201) },
+]
+
+export const SOCMEDIA_FEATURES = [
+  { name: "Not Sure / Hard to Say", value: "0.071" },
+  { name: "0", value: "0.163" },
+  { name: "1-2", value: "0.214" },
+  { name: "3-5", value: "0.265" },
+  { name: "6-10", value: "0.071" },
+  { name: "11-25", value: "0.112" },
+  { name: "25+", value: "0.102" },
+]
+
+export const PUBLICATION_COUNT = [
+  { name: "0", value: "0.584" },
+  { name: "1-2", value: "0.287" },
+  { name: "3-5", value: "0.099" },
+  { name: "6-10", value: "0.02" },
+  { name: "11-25", value: "0" },
+  { name: "25+", value: "0.01" },
+]
 
 export const APPLICATION_FEES = [
   { name: "Not Sure / Hard to Say", value: "0.01" },
@@ -506,3 +549,36 @@ export const KEYWORDS = [
   { name: "Writing", value: 1 },
   { name: "Zines", value: 2 },
 ];
+
+
+export const EXHIBITION_SPACES = [
+  { name: "Art Center", value: 1 },
+  { name: "Art Fair", value: 1 },
+  { name: "Art School Galleries", value: 1 },
+  { name: "Art Walks", value: 1 },
+  { name: "Artist Run Spaces", value: 44 },
+  { name: "Beauty Salons", value: 1 },
+  { name: "Book Fairs", value: 2 },
+  { name: "Church", value: 1 },
+  { name: "Co-op Spaces", value: 12 },
+  { name: "Coffee Shops", value: 16 },
+  { name: "College Gallery", value: 1 },
+  { name: "Furniture Store", value: 1 },
+  { name: "Gallery Spaces", value: 52 },
+  { name: "Library", value: 1 },
+  { name: "Museum Spaces", value: 19 },
+  { name: "None", value: 1 },
+  { name: "Nonprofit Wellness / Creative Center", value: 1 },
+  { name: "Open Studio", value: 2 },
+  { name: "Outdoor Spaces", value: 10 },
+  { name: "Podcast Episode", value: 1 },
+  { name: "Pop-Up Spaces", value: 16 },
+  { name: "Public Spaces", value: 25 },
+  { name: "Restaurants", value: 2 },
+  { name: "School", value: 1 },
+  { name: "Schools", value: 1 },
+  { name: "State Fair", value: 1 },
+  { name: "Tavern", value: 1 },
+  { name: "Theater", value: 1 },
+  { name: "Universities and Colleges", value: 1 },
+]

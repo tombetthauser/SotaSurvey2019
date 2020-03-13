@@ -4,28 +4,40 @@ export default class WordCloud {
     this.data = input.data;
     this.tag = input.tag;
 
-    this.width = input.width || 600;
-    this.height = input.height || 450;
+    this.width = input.width || 1000;
+    this.height = input.height || 750;
     this.innerWidth = (input.width - 50) || 550;
     this.innerHeight = (input.height - 50) || 400;
 
     this.margin = input.margin || { top: 20, right: 20, bottom: 20, left: 30 };
-    this.color = input.color || "#ddd";
+    this.color = input.color || "#666";
     this.sideways = input.sideways || false;
+
+    this.multiplier = input.multiplier || 5;
+    this.minSize = input.minSize || 5;
   }
 
   render() {
     if (!this.sideways) {
       var svg = d3.select(this.tag).append("svg")
       // .style("margin-top", 1000000)
-      .attr("width", 1000)
-      .attr("height", 750)
+      .attr("width", this.width)
+      .attr("height", this.height)
       .append("g")
       .attr("transform", "translate(-75,-32.5)");
 
+      let multiplier = this.multiplier;
+      let minSize = this.minSize;
+      let height = this.height;
+      let width = this.width;
+      let color = this.color;
+
       var layout = d3.layout.cloud()
         .size([1000, 750])
-        .words(this.data.map(function (d) { return { text: d.name, size: (d.value * 5) }; }))
+        .words(this.data.map(function (d) { return {
+          text: d.name, 
+          size: (d.value * multiplier) >= minSize ? (d.value * multiplier) : minSize
+        }; }))
         .padding(5)
         // .rotate(function () { return 0; })
         .fontSize(function (d) { return d.size; })
@@ -40,7 +52,7 @@ export default class WordCloud {
           .data(words)
           .enter().append("text")
           .style("font-size", function (d) { return (d.size + "px"); })
-          .style("fill", "cornflowerblue")
+          // .style("fill", color)
           .style("opacity", "0.75")
           .style("font-weight", "200")
           .attr("text-anchor", "middle")
@@ -75,7 +87,7 @@ export default class WordCloud {
           .data(words)
           .enter().append("text")
           .style("font-size", function (d) { return (d.size + "px"); })
-          .style("fill", "cornflowerblue")
+          .style("fill", this.color)
           .style("opacity", "0.75")
           .style("font-weight", "200")
           .attr("text-anchor", "middle")
