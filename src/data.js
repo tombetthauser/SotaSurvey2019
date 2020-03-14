@@ -1,6 +1,6 @@
 export const LINKS = [
   "introduction",
-  // "map",
+  "map",
   "demographics",
   "exhibitions",
   "word-cloud",
