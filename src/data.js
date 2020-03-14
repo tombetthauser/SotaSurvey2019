@@ -1,5 +1,6 @@
 export const LINKS = [
   "introduction",
+  // "map",
   "demographics",
   "exhibitions",
   "word-cloud",
@@ -7,6 +8,22 @@ export const LINKS = [
   "finding-shows",
   "conclusions",
 ];
+
+export const SIDE_NOTES = {
+  "word-cloud": "* relative size of words based on how many times they appeared in survey responses",
+  "gallery-spaces": "* relative size of words based on how many times they appeared in survey responses",
+  "finding-shows": "* relative size of words based on how many times they appeared in survey responses",
+}
+
+export const COLORS = [
+  "rgb(216, 159, 202)",
+  "rgb(247, 193, 209)",
+  "#FFB7B2",
+  "rgb(252, 210, 183)",
+  "rgb(188, 223, 132)",
+  "rgb(166, 226, 204)",
+  "rgb(158, 171, 226)",
+]
 
 export const EXHIBITION_CONTACT = [
     { name: 'Art Council Research', value: (1 / 201) },

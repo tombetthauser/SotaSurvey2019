@@ -49,7 +49,9 @@ export default class PieChart {
       .append('path')
       .attr('d', arcGenerator)
       .attr('fill', function (d) { return (color(d.data.key)) })
-      // .style("opacity", 0.35)
+      .style("stroke", this.color)
+      .style("stroke-width", 1)
+      .style("fill", "none");
 
     svg
       .selectAll('mySlices')

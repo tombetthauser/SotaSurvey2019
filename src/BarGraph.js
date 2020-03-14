@@ -31,7 +31,7 @@ export default class BarGraph {
     let x = d3.scaleBand()
       .domain(this.data.map(d => d.name))
       .range([this.margin.left, this.innerWidth - this.margin.right])
-      .padding(0.05)
+      .padding(0.2)
 
     g.selectAll("rect")
       .data(this.data)
@@ -39,7 +39,9 @@ export default class BarGraph {
       .attr("height", d => y(0) - y(d.value))
       .attr("width", x.bandwidth())
       .attr("y", d => y(d.value))
-      .attr("fill", this.color);
+      .style("stroke", this.color)
+      .style("stroke-width", 1)
+      .style("fill", "none");
 
 
 

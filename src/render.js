@@ -18,8 +18,8 @@ export const RENDER_GRAPHS = () => {
     title: "What words describe your work?",
     tag: ".graph-exhibition-contact",
     data: DATA.EXHIBITION_CONTACT,
-    // color: "pink",
-    multiplier: 200,
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    multiplier: 300,
     minSize: 12,
   }).render();
 
@@ -27,7 +27,7 @@ export const RENDER_GRAPHS = () => {
     title: "How many social media re-posts / features?",
     tag: ".graph-socialmedia-features",
     data: DATA.SOCMEDIA_FEATURES,
-    // color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
     angle: true,
   }).render();
@@ -36,7 +36,7 @@ export const RENDER_GRAPHS = () => {
     title: "How many times was your work written about?",
     tag: ".graph-publication-count",
     data: DATA.PUBLICATION_COUNT,
-    // color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
     // angle: true,
   }).render();
@@ -45,8 +45,8 @@ export const RENDER_GRAPHS = () => {
     title: "What words describe your work?",
     tag: ".graph-gallery-spaces",
     data: DATA.EXHIBITION_SPACES,
-    color: "pink",
-    multiplier: 2,
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    multiplier: 1.75,
     minSize: 12,
   }).render();
 
@@ -54,7 +54,7 @@ export const RENDER_GRAPHS = () => {
     title: "How much did you pay in application fees?",
     tag: ".graph-application-fees",
     data: DATA.APPLICATION_FEES,
-    // color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
     angle: true,
   }).render();
@@ -63,7 +63,7 @@ export const RENDER_GRAPHS = () => {
     title: "How shows did you apply for?",
     tag: ".graph-show-applications",
     data: DATA.SHOW_APPLICATIONS,
-    // color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
   }).render();
 
@@ -71,7 +71,7 @@ export const RENDER_GRAPHS = () => {
     title: "How many solo exhibitions were you in?",
     tag: ".graph-solo-show-count",
     data: DATA.SOLO_EXHIBITIONS_COUNT,
-    // color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
   }).render();
 
@@ -79,7 +79,7 @@ export const RENDER_GRAPHS = () => {
     title: "How many group exhibitions were you in?",
     tag: ".graph-group-show-count",
     data: DATA.GROUP_EXHIBITIONS_COUNT,
-    // color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
   }).render();
 
@@ -87,7 +87,7 @@ export const RENDER_GRAPHS = () => {
     title: "How much of a priority was exhibiting your work?",
     tag: ".graph-exhibitions-priority",
     data: DATA.EXHIBITIONS_PRIORITY,
-    // color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
     angle: true
   }).render();
@@ -96,15 +96,15 @@ export const RENDER_GRAPHS = () => {
     title: "What words describe your work?",
     tag: ".graph-keywords",
     data: DATA.KEYWORDS,
-    color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 8000,
   }).render();
 
-  new LineGraph({
+  new BarGraph({
     title: "What is your gender?",
     tag: ".graph-gender",
     data: DATA.GENDER,
-    color: "#E0BBE4",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
   }).render();
   
@@ -112,7 +112,7 @@ export const RENDER_GRAPHS = () => {
     title: "What is your age?",
     tag: ".graph-age",
     data: DATA.AGE,
-    color: "#f2cbbb",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
   }).render();
   
@@ -120,7 +120,7 @@ export const RENDER_GRAPHS = () => {
     title: "What is your race / ethnicity?",
     tag: ".graph-race",
     data: DATA.RACE,
-    color: "#8da290",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
     angle: true,
   }).render();
@@ -129,7 +129,7 @@ export const RENDER_GRAPHS = () => {
     title: "Do you identify as LGBTQ+?",
     tag: ".graph-orientation",
     data: DATA.ORIENTATION,
-    color: "#dee2d9",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
   }).render();
   
@@ -137,7 +137,7 @@ export const RENDER_GRAPHS = () => {
     title: "How did you hear about the survey?",
     tag: ".graph-found-survey",
     data: DATA.FOUND_SURVEY,
-    color: "#8da290",
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
   }).render();
 

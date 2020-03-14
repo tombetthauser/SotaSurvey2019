@@ -43,9 +43,30 @@ text {
   flex-grow: 1;
 }
 
+.left-column-section ul {
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: 0 0 5px #fff,
+              0 0 10px #fff,
+              0 0 15px #fff,
+              0 0 20px #fff,
+              0 0 25px #fff,
+              0 0 30px #fff,
+              0 0 35px #fff;
+}
+
 .left-column-footer {
   border-right: 1px solid #c4dfff;
   min-height: 35px;
+}
+
+.side-note-p {
+  width: 130px;
+  font-size: 11px;
+  line-height: 14px;
+  position: absolute;
+  bottom: 45px;
+  z-index: -1;
 }
 
 

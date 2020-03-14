@@ -52,7 +52,7 @@ export default class WordCloud {
           .data(words)
           .enter().append("text")
           .style("font-size", function (d) { return (d.size + "px"); })
-          // .style("fill", color)
+          .style("fill", color)
           .style("opacity", "0.75")
           .style("font-weight", "200")
           .attr("text-anchor", "middle")
