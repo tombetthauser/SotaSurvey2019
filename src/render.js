@@ -16,6 +16,14 @@ export const RENDER_GRAPHS = () => {
   // }).render();
 
   new BoxPlot({
+    title: "How many group exhibitions were you in?",
+    tag: ".graph-group-show-count",
+    data: DATA.GROUP_EXHIBITIONS_COUNT,
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    width: 400,
+  }).render();
+
+  new BarGraph({
     title: "What is your gender?",
     tag: ".graph-gender",
     data: DATA.GENDER,
@@ -84,13 +92,6 @@ export const RENDER_GRAPHS = () => {
     width: 400,
   }).render();
 
-  new PieChart({
-    title: "How many group exhibitions were you in?",
-    tag: ".graph-group-show-count",
-    data: DATA.GROUP_EXHIBITIONS_COUNT,
-    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
-    width: 400,
-  }).render();
 
   new BarGraph({
     title: "How much of a priority was exhibiting your work?",

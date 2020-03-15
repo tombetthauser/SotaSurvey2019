@@ -16,48 +16,62 @@ export default class BoxPlot {
 
   render() {
     // set the dimensions and margins of the graph
-    var margin = {top: 10, right: 30, bottom: 30, left: 40},
+    let margin = {top: 10, right: 30, bottom: 30, left: 40},
       width = 400 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    var svg = d3.select(this.tag)
-    .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-      .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+    let svg = d3.select(this.tag)
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + (margin.top - 290) + ")")
 
+    svg.append("text")
+      .attr("x", (width / 2))
+      .attr("y", 0 - (margin.top / 2))
+      .attr("text-anchor", "middle")
+      .style("font-size", "16px")
+      .style("text-decoration", "underline")
+      .text("Value vs Date Graph");
+      
     console.log(this.data)
     // create dummy data
-    var data = [12,4,11,13,12,22,13,4,15,16,18,19,20,12,11,9]
+    // let data = [];
+    // for (let i = 0; i < this.data.length; i++) {
+    //   console.log(this.data[i])
+    // }
+    // this.data.map(ele => ele.value)
+    let data = [12,4,11,13,12,22,13,4,15,16,18,19,20,12,11,9]
+    console.log(data)
 
     // Compute summary statistics used for the box:
-    var data_sorted = data.sort(d3.ascending)
-    var q1 = d3.quantile(data_sorted, .25)
-    var median = d3.quantile(data_sorted, .5)
-    var q3 = d3.quantile(data_sorted, .75)
-    var interQuantileRange = q3 - q1
-    var min = q1 - 1.5 * interQuantileRange
-    var max = q1 + 1.5 * interQuantileRange
+    let data_sorted = data.sort(d3.ascending)
+    let q1 = d3.quantile(data_sorted, .25)
+    let median = d3.quantile(data_sorted, .5)
+    let q3 = d3.quantile(data_sorted, .75)
+    let interQuantileRange = q3 - q1
+    let min = q1 - 1.5 * interQuantileRange
+    let max = q1 + 1.5 * interQuantileRange
 
     // Show the Y scale
-    var y = d3.scaleLinear()
-      .domain([0,24])
+    let y = d3.scaleLinear()
+      .domain([0, Math.max(...data)])
       .range([height, 0]);
     svg.call(d3.axisLeft(y))
 
+
     // a few features for the box
-    // var center = 200
-    // var width = 100
+    // let center = 200
+    // let width = 100
 
-    var width = Math.floor(Math.random() * 100) + 100;
+    width = Math.floor(Math.random() * 100) + 100;
     let center = 150;
-
     let offset = Math.random() > 0.5 ? Math.floor(Math.random() * 45) : Math.floor(Math.random() * -45);
     // let offset = Math.floor(Math.random() * 45);
     // Show the main vertical line
+
     svg
     .append("line")
       .attr("x1", center - offset)
