@@ -10,6 +10,7 @@ export const LINKS = [
   "studio-visits",
   "sales",
   "sales-cloud",
+  "sales-platforms-cloud",
 ];
 
 export const SIDE_NOTES = {
@@ -20,6 +21,33 @@ export const SIDE_NOTES = {
 
 
 
+
+
+
+
+export const SALE_PLATFORMS = [
+  { name: "Etsy", value: 11 },
+  { name: "Saatchi Art", value: 3 },
+  { name: "Art Finder", value: 2 },
+  { name: "BigCartel", value: 2 },
+  { name: "Red Bubble", value: 2 },
+  { name: "Art in Context", value: 1 },
+  { name: "Artery", value: 1 },
+  { name: "Artsy", value: 1 },
+  { name: "Bandcamp", value: 1 },
+  { name: "Deviantart", value: 1 },
+  { name: "SquareUp", value: 1 },
+  { name: "Facebook", value: 1 },
+  { name: "Fine Art America", value: 1 },
+  { name: "Fiverr", value: 1 },
+  { name: "Instagram", value: 1 },
+  { name: "Padel 8", value: 1 },
+  { name: "Personal Website", value: 1 },
+  { name: "Printful", value: 1 },
+  { name: "Square Space", value: 1 },
+  { name: "Wix", value: 1 },
+  { name: "Wordpress Website", value: 1 },
+]
 
 export const BUYERS_CLOUD = [
   { name: 'Amateur / New Collectors', value: 35 },

@@ -40,7 +40,7 @@ export default class BarGraph {
       .attr("width", x.bandwidth())
       .attr("y", d => y(d.value))
       .style("stroke", this.color)
-      .style("stroke-width", 1)
+      .style("stroke-width", 2)
       .style("fill", "none");
 
 

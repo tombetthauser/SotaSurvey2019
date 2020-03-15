@@ -50,7 +50,7 @@ export default class PieChart {
       .attr('d', arcGenerator)
       .attr('fill', function (d) { return (color(d.data.key)) })
       .style("stroke", this.color)
-      .style("stroke-width", 1)
+      .style("stroke-width", 2)
       .style("fill", "none");
 
     svg
