@@ -21,11 +21,27 @@ export const SIDE_NOTES = {
 
 
 
+
+export const GRANT_SUM = [
+  { name: "no applications", value: "0.51" },
+  { name: "$0", value: "0.39" },
+  { name: "$1-$500", value: "0.02" },
+  { name: "$500-$5,000", value: "0.07" },
+  { name: "$5,000-$15,000", value: "0.01" },
+];
+
 export const GRANT_COUNT = [
+  { name: "no applications", value: "0.55" },
   { name: "0", value: "0.34" },
   { name: "1-2", value: "0.11" },
-  { name: "no applications", value: "0.55" },
-]
+];
+
+export const GRANT_APP_COUNT = [
+  { name: "0", value: "0.713" },
+  { name: "1-2", value: "0.218" },
+  { name: "3-5", value: "0.059" },
+  { name: "", value: "0.01" },
+];
 
 export const RESIDENCY_COUNT = [
   { name: "no applications", value: "0.475" },

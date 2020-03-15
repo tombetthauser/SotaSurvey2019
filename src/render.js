@@ -9,13 +9,31 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 
 export const RENDER_GRAPHS = () => {
 
+  new BarGraph({
+    title: "How much did you receive in grants?",
+    data: DATA.GRANT_SUM,
+    color: randColor(),
+    tag: ".graph-grant-sum",
+    width: 400,
+    angle: true,
+  }).render()
+
   new PieChart({
+    title: "How many grants did you recieve?",
     data: DATA.GRANT_COUNT,
     color: randColor(),
     tag: ".graph-grant-count",
   }).render()
 
   new PieChart({
+    title: "How many grants did you apply for?",
+    data: DATA.GRANT_APP_COUNT,
+    color: randColor(),
+    tag: ".graph-grant-app-count",
+  }).render()
+
+  new PieChart({
+    title: "How many residencies did you attend?",
     data: DATA.RESIDENCY_COUNT,
     color: randColor(),
     tag: ".graph-residency-count",
