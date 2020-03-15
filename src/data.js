@@ -7,6 +7,8 @@ export const LINKS = [
   "gallery-spaces",
   "finding-shows",
   "conclusions",
+  "studio-visits",
+  "sales",
 ];
 
 export const SIDE_NOTES = {
