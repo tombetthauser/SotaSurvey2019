@@ -1,48 +1,16 @@
-let statesHash = {
-	"ca": 27,
-	"nm": 3,
-	"ak": 1,
-	"ga": 1,
-	"md": 3,
-	"la": 3,
-	"ny": 10,
-	"in": 1,
-	"pa": 4,
-	"az": 1,
-	"va": 3,
-	"wi": 3,
-	"oh": 3,
-	"dc": 1,
-	"fl": 3,
-	"mi": 4,
-	"ky": 2,
-	"ct": 1,
-	"ia": 1,
-	"nc": 3,
-	"hi": 1,
-	"tn": 2,
-	"il": 3,
-	"mn": 1,
-	"nh": 1,
-	"or": 2,
-	"wa": 2,
-	"ma": 1,
-	"vt": 1,
-	"ks": 1,
-	"co": 1,
+let statesHash = { "ca": 27, "nm": 3, "ak": 1, "ga": 1, "md": 3, "la": 3, "ny": 10, "in": 1, "pa": 4, "az": 1, "va": 3, "wi": 3, "oh": 3, "dc": 1, "fl": 3, "mi": 4, "ky": 2, "ct": 1, "ia": 1, "nc": 3, "hi": 1, "tn": 2, "il": 3, "mn": 1, "nh": 1, "or": 2, "wa": 2, "ma": 1, "vt": 1, "ks": 1, "co": 1,
 	// Canada:0 1,
 }
 
 jQuery(document).ready(function () {
-	var gdpData = { "ca": 16.63, "ny": 11.58, "wi": 158.97 };
 
 	// Then connect it to the page and add some code to make visualization:
 
 	var max = 0,
 		min = Number.MAX_VALUE,
 		cc,
-		startColor = [255, 220, 220],
-		endColor = [255, 155, 155],
+		startColor = [255, 230, 230],
+		endColor = [255, 200, 200],
 		colors = {},
 		hex;
 
@@ -78,10 +46,11 @@ jQuery(document).ready(function () {
 	jQuery('#vmap').vectorMap(
 		{
 			map: 'usa_en',
-			backgroundColor: '#fff',
-			borderColor: '#fff',
+			backgroundColor: null,
+			borderColor: 'rgb(255,150,150)',
 			borderOpacity: 1,
-			borderWidth: 2.5,
+			borderWidth: 1,
+			color: "#fff",
 			colors: colors,
 			enableZoom: false,
 			hoverOpacity: 0.7,

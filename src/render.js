@@ -3,6 +3,7 @@ import BarGraph from "./BarGraph";
 import PieChart from "./PieChart";
 import WordCloud from "./WordCloud";
 import LineGraph from "./LineGraph";
+import BoxPlot from "./BoxPlot";
 
 export const RENDER_GRAPHS = () => {
   // new BarGraph({
@@ -13,6 +14,14 @@ export const RENDER_GRAPHS = () => {
   //   width: 800,
   //   angle: true,
   // }).render();
+
+  new BoxPlot({
+    title: "What is your gender?",
+    tag: ".graph-gender",
+    data: DATA.GENDER,
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    width: 400,
+  }).render();
 
   new WordCloud({
     title: "What words describe your work?",
@@ -99,14 +108,6 @@ export const RENDER_GRAPHS = () => {
     color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 8000,
   }).render();
-
-  new BarGraph({
-    title: "What is your gender?",
-    tag: ".graph-gender",
-    data: DATA.GENDER,
-    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
-    width: 400,
-  }).render();
   
   new BarGraph({
     title: "What is your age?",
@@ -141,5 +142,4 @@ export const RENDER_GRAPHS = () => {
     width: 400,
   }).render();
 
-  
 }
