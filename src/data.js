@@ -15,6 +15,59 @@ export const SIDE_NOTES = {
   "finding-shows": "* relative size of words based on how many times they appeared in survey responses",
 }
 
+
+
+
+
+
+
+export const GRANT_COUNT = [
+  { name: "0", value: "0.34" },
+  { name: "1-2", value: "0.11" },
+  { name: "no applications", value: "0.55" },
+]
+
+export const RESIDENCY_COUNT = [
+  { name: "no applications", value: "0.475" },
+  { name: "0", value: "0.434" },
+  { name: "1-2", value: "0.091" },
+]
+
+export const RESIDENCY_APP_COUNT = [
+  { name: "0", value: "0.723" },
+  { name: "1-2", value: "0.218" },
+  { name: "3-5", value: "0.05" },
+  { name: "6-10", value: "0.01" },
+]
+
+export const RESIDENCY_PRIORITY = [
+  { name: "Not Sure / Hard to Say", value: "0.112" },
+  { name: "Not Important", value: "0.49" },
+  { name: "Somewhat Important", value: "0.286" },
+  { name: "Extremely Important", value: "0.112" },
+];
+
+export const LEGAL_PAPERWORK = [
+  { name: "no", value: "0.624" },
+  { name: "yes (with explaination)", value: "0.287" },
+  { name: "yes (not fully explained)", value: "0.059" },
+  { name: "not sure / don't recall", value: "0.03" },
+]
+
+export const GALLERY_REPRESENTATION = [
+  { name: "yes", value: "0.83" },
+  { name: "no", value: "0.17" },
+]
+
+export const EVENT_ORGANIZATION = [
+  { name: "0", value: "0.554" },
+  { name: "1", value: "0.178" },
+  { name: "2", value: "0.129" },
+  { name: "3", value: "0.079" },
+  { name: "4", value: "0.02" },
+  { name: "5+", value: "0.04" },
+]
+
 export const COLORS = [
   "rgb(216, 159, 202)",
   "rgb(247, 193, 209)",

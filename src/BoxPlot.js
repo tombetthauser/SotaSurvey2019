@@ -35,7 +35,7 @@ export default class BoxPlot {
       .style("font-size", "16px")
       .style("text-decoration", "underline")
       .text("Value vs Date Graph");
-      
+
     console.log(this.data)
     // create dummy data
     // let data = [];

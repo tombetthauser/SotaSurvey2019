@@ -5,17 +5,63 @@ import WordCloud from "./WordCloud";
 import LineGraph from "./LineGraph";
 import BoxPlot from "./BoxPlot";
 
-export const RENDER_GRAPHS = () => {
-  // new BarGraph({
-  //   title: "How many social media re-posts / features?",
-  //   tag: ".graph-exhibition-contact",
-  //   data: DATA.EXHIBITION_CONTACT,
-  //   color: "pink",
-  //   width: 800,
-  //   angle: true,
-  // }).render();
+const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)];
 
-  new BoxPlot({
+export const RENDER_GRAPHS = () => {
+
+  new PieChart({
+    data: DATA.GRANT_COUNT,
+    color: randColor(),
+    tag: ".graph-grant-count",
+  }).render()
+
+  new PieChart({
+    data: DATA.RESIDENCY_COUNT,
+    color: randColor(),
+    tag: ".graph-residency-count",
+  }).render()
+
+  new BarGraph({
+    data: DATA.RESIDENCY_APP_COUNT,
+    title: "How many residencies did you apply for?",
+    color: randColor(),
+    tag: ".graph-residency-app-count",
+    width: 400,
+  }).render()
+
+  new BarGraph({
+    data: DATA.RESIDENCY_PRIORITY,
+    title: "How much of a priority were residencies / grants?",
+    color: randColor(),
+    tag: ".graph-residency-priority",
+    width: 400,
+    angle: true,
+  }).render()
+
+  new BarGraph({
+    data: DATA.LEGAL_PAPERWORK,
+    title: "Were you given any legal paperwork by gallerists etc?",
+    color: randColor(),
+    tag: ".graph-legal-paperwork",
+    width: 400,
+    angle: true,
+  }).render()
+
+  new PieChart({
+    title: "Did you have official gallery representation?",
+    data: DATA.GALLERY_REPRESENTATION,
+    tag: ".graph-gallery-representation",
+    color: randColor(),
+  }).render();
+
+  new PieChart({
+    title: "How many art events did you help organize?",
+    data: DATA.EVENT_ORGANIZATION,
+    tag: ".graph-event-organization",
+    color: randColor(),
+  }).render();
+
+  new BarGraph({
     title: "How many group exhibitions were you in?",
     tag: ".graph-group-show-count",
     data: DATA.GROUP_EXHIBITIONS_COUNT,
