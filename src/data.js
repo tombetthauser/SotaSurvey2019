@@ -22,7 +22,12 @@ export const SIDE_NOTES = {
 
 
 
-
+export const SELLLING_PRIORITY = [
+  { name: "Not Sure / Hard to Say", value: "0.03" },
+  { name: "Not Important", value: "0.202" },
+  { name: "Somewhat Important", value: "0.434" },
+  { name: "Extremely Important", value: "0.323" },
+];
 
 export const GRANT_SUM = [
   { name: "no applications", value: "0.51" },

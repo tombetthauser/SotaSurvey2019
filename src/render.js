@@ -10,6 +10,15 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 export const RENDER_GRAPHS = () => {
 
   new BarGraph({
+    title: "How much of a priority was selling your work?",
+    data: DATA.SELLLING_PRIORITY,
+    color: randColor(),
+    tag: ".graph-selling-priority",
+    width: 400,
+    angle: true,
+  }).render()
+
+  new BarGraph({
     title: "How much did you receive in grants?",
     data: DATA.GRANT_SUM,
     color: randColor(),
