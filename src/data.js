@@ -9,6 +9,7 @@ export const LINKS = [
   "conclusions",
   "studio-visits",
   "sales",
+  "sales-cloud",
 ];
 
 export const SIDE_NOTES = {
@@ -20,7 +21,29 @@ export const SIDE_NOTES = {
 
 
 
-
+export const BUYERS_CLOUD = [
+  { name: 'Amateur / New Collectors', value: 35 },
+  { name: 'Art Center Store In Consignment', value: 1 },
+  { name: 'Artomat Machines', value: 1 },
+  { name: 'Book Fair', value: 2 },
+  { name: 'BFA / MFA Peers', value: 8 },
+  { name: 'Established / Experienced Collectors', value: 20 },
+  { name: 'Event Attendants', value: 1 },
+  { name: 'Event Attendees', value: 31 },
+  { name: 'Family / Friends', value: 62 },
+  { name: 'Former / Current Faculty', value: 7 },
+  { name: 'Gallerists / Curators', value: 6 },
+  { name: 'Gallery Clients', value: 1 },
+  { name: 'I Don’t Sell My Art', value: 1 },
+  { name: 'Interior Designer For Client', value: 1 },
+  { name: 'My Financial Advisor', value: 1 },
+  { name: 'Nobody', value: 1 },
+  { name: 'None', value: 2 },
+  { name: 'Online Fans', value: 31 },
+  { name: 'Other Artists', value: 34 },
+  { name: 'Strangers', value: 1 },
+  { name: 'Youtubers (Animation Assets)', value: 1 },
+]
 
 export const SELLLING_PRIORITY = [
   { name: "Not Sure / Hard to Say", value: "0.03" },
