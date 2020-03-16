@@ -9,12 +9,55 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 
 export const RENDER_GRAPHS = () => {
 
-  new WordCloud({
-    title: "Did you use online platforms to sell work?",
+  new PieChart({
+    title: "Did you sell any work online?",
+    data: DATA.ANY_ONLINE_SALES,
+    color: randColor(),
+    tag: ".any-online-sales",
+  }).render()
+
+  new BarGraph({
+    title: "Rate treatment from collectors / buyers.",
+    tag: ".graph-collector-treatment",
+    data: DATA.COLLECTOR_TREATMENT,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    title: "How much work did you sell total?",
+    tag: ".graph-sales-sum",
+    data: DATA.SALES_SUM,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    title: "What platforms did you sell work on?",
     tag: ".graph-sale-platforms",
     data: DATA.SALE_PLATFORMS,
-    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
-    multiplier: 10,
+    color: randColor(),
+    angle: true,
+    width: 800,
+  }).render();
+
+  new WordCloud({
+    title: "What city / neighborhood do you live in?",
+    tag: ".cities-neighborhoods-cloud",
+    data: DATA.CITIES_NEIGHBORHOODS,
+    color: randColor(),
+    multiplier: 15,
+    minSize: 8,
+  }).render();
+
+  new WordCloud({
+    title: "What kinds of work did you sell?",
+    tag: ".sales-mediums-cloud",
+    data: DATA.SALES_MEDIUMS,
+    color: randColor(),
+    multiplier: 3,
     minSize: 12,
   }).render();
 
@@ -22,11 +65,29 @@ export const RENDER_GRAPHS = () => {
     title: "Who did you sell work to?",
     tag: ".graph-buyers",
     data: DATA.BUYERS_CLOUD,
-    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    color: randColor(),
     multiplier: 1,
     minSize: 12,
   }).render();
 
+  new BarGraph({
+    title: "How many studio visits did you have?",
+    data: DATA.VISIT_COUNT,
+    color: randColor(),
+    tag: ".graph-visit-count",
+    width: 400,
+    angle: true,
+  }).render()
+
+  new BarGraph({
+    title: "How much of a priority were studio visits?",
+    data: DATA.VISIT_PRIORITY,
+    color: randColor(),
+    tag: ".graph-visit-priority",
+    width: 400,
+    angle: true,
+  }).render()
+  
   new BarGraph({
     title: "How much of a priority was selling your work?",
     data: DATA.SELLLING_PRIORITY,
@@ -168,7 +229,7 @@ export const RENDER_GRAPHS = () => {
   }).render();
 
   new BarGraph({
-    title: "How shows did you apply for?",
+    title: "How many shows did you apply for?",
     tag: ".graph-show-applications",
     data: DATA.SHOW_APPLICATIONS,
     color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
