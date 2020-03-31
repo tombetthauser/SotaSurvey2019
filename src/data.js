@@ -301,8 +301,8 @@ export const LEGAL_PAPERWORK = [
 ]
 
 export const GALLERY_REPRESENTATION = [
-  { name: "yes", value: "0.83" },
-  { name: "no", value: "0.17" },
+  { name: "no", value: "0.83" },
+  { name: "yes", value: "0.17" },
 ]
 
 export const EVENT_ORGANIZATION = [

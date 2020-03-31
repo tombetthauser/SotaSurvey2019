@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   let style = document.querySelector(".mobile-drop-down").style;
   
     document.querySelector(".main-header-nav").addEventListener("click", () => {
-      if (style.height === "125px") { style.height = "0px"; style.borderBottom = "none"; } 
-      else { style.height = "125px"; style.borderBottom = "1px solid #c4dfff"; }
+      if (style.height === "375px") { style.height = "0px"; style.borderBottom = "none"; } 
+      else { style.height = "375px"; style.borderBottom = "1px solid #c4dfff"; }
     });
 
     window.addEventListener('resize', () => {

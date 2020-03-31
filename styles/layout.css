@@ -108,8 +108,6 @@ text {
   z-index: 1;
 }
 
-
-
 /* Main body styling starts here. */
 
 .mobile-drop-down {
@@ -188,3 +186,13 @@ text {
 .sales-cloud-div { display: none; }
 .sales-mediums-cloud-div { display: none; }
 .cities-neighborhoods-cloud-div { display: none; }
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
