@@ -176,8 +176,13 @@ text {
   z-index: 50;
   margin: -7.5px -35px 0 -35px;
   position: relative;
+  padding: 10px 35px 30px;
 }
 
+.cities-top-text-p {
+  line-height: 20px;
+  max-width: 975px;
+}
 
 /* Main div pages styling starts here. */
 
