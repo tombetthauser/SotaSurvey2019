@@ -172,7 +172,6 @@ text {
 .cities-top-text-div {
   border-bottom: 1px solid #c4dfff;
   flex-grow: 1;
-  height: 100px;
   background-color: #fff;
   z-index: 50;
   margin: -7.5px -35px 0 -35px;
