@@ -34,7 +34,10 @@ text {
 .left-column-header {
   border-bottom: 1px solid #c4dfff;
   border-right: 1px solid #c4dfff;
-  min-height: 39px;
+  min-height: 29px;
+  max-height: 29px;
+  padding-left: 25px;
+  padding-top: 10px;
 }
 
 .left-column-section {
@@ -174,7 +177,7 @@ text {
   flex-grow: 1;
   background-color: #fff;
   z-index: 50;
-  margin: -7.5px -35px 0 -35px;
+  margin: -7.5px -35px 25px -35px;
   position: relative;
   padding: 10px 35px 30px;
 }
@@ -187,6 +190,16 @@ text {
 .cities-neighborhoods-cloud-div {
     /* display: none; */
     height: 1200px;
+}
+
+.left-column-header-text {
+  font-size: 20px;
+  letter-spacing: 2.5px;
+}
+
+.left-column-header-year {
+  font-size: 20px;
+  letter-spacing: -1px;
 }
 
 /* Main div pages styling starts here. */
