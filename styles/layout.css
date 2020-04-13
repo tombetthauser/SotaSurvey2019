@@ -184,6 +184,11 @@ text {
   max-width: 975px;
 }
 
+.cities-neighborhoods-cloud-div {
+    /* display: none; */
+    height: 1200px;
+}
+
 /* Main div pages styling starts here. */
 
 .introduction-div { display: block; }
