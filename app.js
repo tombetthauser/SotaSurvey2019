@@ -8,7 +8,8 @@ const linkShow = (link) => {
 }
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (_event) => {
+
   let style = document.querySelector(".mobile-drop-down").style;
   
     document.querySelector(".main-header-nav").addEventListener("click", () => {
@@ -23,9 +24,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     for (let i = 0; i < LINKS.length; i++) {
       let links = document.querySelectorAll(`.${LINKS[i]}-link`);
       for (let j = 0; j < links.length; j++) {
-        document.querySelectorAll(`.${LINKS[i]}-link`)[j].addEventListener("click", () => { linkShow(`${LINKS[i]}`) })
+        document.querySelectorAll(`.${LINKS[i]}-link`)[j].addEventListener("click", () => { 
+          linkShow(`${LINKS[i]}`)
+        })
       }
     }
 
     RENDER_GRAPHS();
 })
+
+//  npx webpack app.js --watch

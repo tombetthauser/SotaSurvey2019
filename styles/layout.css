@@ -169,6 +169,15 @@ text {
   text-decoration: underline;
 }
 
+.cities-top-text-div {
+  /* width: 109%; */
+  flex-grow: 1;
+  height: 100px;
+  background-color: pink;
+  /* z-index: 100; */
+  margin: -7.5px -35px 0 -35px;
+}
+
 
 /* Main div pages styling starts here. */
 
