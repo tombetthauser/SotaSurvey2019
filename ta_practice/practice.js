@@ -14,15 +14,37 @@ const digital_root = num => {
   return digital_root(lastDigit + remainingDigits)
 }
 
-console.log(digital_root(9)) // => 9
-console.log(digital_root(14)) // => 5
-console.log(digital_root(149)) // => 14 => 5
+// console.log(digital_root(9)) // => 9
+// console.log(digital_root(14)) // => 5
+// console.log(digital_root(149)) // => 14 => 5
+
 
 
 // caesar_cipher
 
 // Write a function that takes a message and an increment amount and outputs the same letters
 //  shifted by that amount in the alphabet.Assume lowercase and no punctuation.Preserve spaces.
+
+
+const caesar_cipher = (string, num) => {
+  let alpha = 'abcdefghijklmnopqrstuvwxyz';
+  let newString = '';
+
+  string.split('').forEach(letter => {
+    let oldIdx = alpha.indexOf(letter);
+    let newIdx = oldIdx + num;
+    let validIdx = newIdx % 26;
+    let newLetter = alpha[validIdx];
+
+    newString += newLetter;
+  })
+
+  return newString;
+}
+
+// console.log(caesar_cipher('abc', 1)) // => 'bcd'
+// console.log(caesar_cipher('bcd', 2)) // => 'cde' => 'def'
+// console.log(caesar_cipher('abc', 27)) // => 'bcd'
 
 
 
