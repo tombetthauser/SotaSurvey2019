@@ -107,9 +107,9 @@ const sum_rec = (arr) => {
   return arr[0] + sum_rec(arr.slice(1));
 }
 
-console.log(sum_rec([3])) // => 3
-console.log(sum_rec([1,2,3])) // => 6
-console.log(sum_rec([1,1,3,4,5])) // => 14
+// console.log(sum_rec([3])) // => 3
+// console.log(sum_rec([1,2,3])) // => 6
+// console.log(sum_rec([1,1,3,4,5])) // => 14
 
 
 
