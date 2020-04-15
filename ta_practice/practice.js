@@ -116,8 +116,11 @@ const sum_rec = (arr) => {
 // fibs
 
 // Write a function, fibs(num) which returns the first n elements from the fibonnacci sequence, given n.
-
 // Solve it both iteratively and recursively.
+// 1, 1, 2, 3, 5, 8, 13 and 21.
+
+console.log(fibs(1)) // => 1
+console.log(fibs(1)) // => 1
 
 
 
@@ -162,3 +165,102 @@ const sum_rec = (arr) => {
 // the employees in that department.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Given a binary tree and a sum, determine if the tree has a root - to - leaf path such that adding up all the values along the path equals the given sum.
+//   Note: A leaf is a node with no children.
+//     Example:
+// Given the below binary tree and sum = 22,
+//       5
+//      / \
+//     4   8
+//    /   / \
+//   11  13  4
+//  /     \   \
+// 7       2   1
+
+// If(node.left && node.right) === null;
+// Return  sum
+// return true, as there exist a root - to - leaf path 5 -> 4 -> 11 -> 2 which sum is 22.
+// /**
+//  * Definition for a binary tree node.
+//  * function TreeNode(val) {
+//  *     this.val = val;
+//  *     this.left = node || null;
+//  *     this.right = node || null;
+//  * }
+
+// /**
+//  * @param {TreeNode} root
+//  * @param {number} sum
+//  * @return {boolean}
+//  */
+
+
+
+
+
+
+
+
+// 1
+//   /  \
+// 1    2
+
+
+
+// var hasPathSum = function (root, sum) {
+//   Let pathSum = root.val;
+//   Let temporarySum = root.val
+//   If(pathSum.left && pathSum.right === null && hasPathSum(pathSum, temporarySum) return true;
+
+
+//   // set up a temporary sum ; 
+//   // 
+// }
+
+
+
+// 5
+//   / \
+// 4   8      //// hasPathSum(4, 17) 
+//   / / \    ////has PathSum(11, 13) 
+// 11  13  4    ///hasPathSum(7, 2) 
+//   /  \      \ /// 2, 
+// 7    2      1
+// queue = [5]
+// Pathsum = 9
+// Queue[5, 9]
+// PathSum = 20;
+
+// queue[5, 4, 11, 7]
+
+// var hasPathSum = function (root, sum) {
+//   if (root) {
+//     if (sum - root.val === 0 && !root.left && !root.right) {
+//       return true
+//     } else if (hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val)) {
+//       return true
+//     }
+//   }
+//   return false
+// };
