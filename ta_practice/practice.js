@@ -119,8 +119,14 @@ const sum_rec = (arr) => {
 // Solve it both iteratively and recursively.
 // 1, 1, 2, 3, 5, 8, 13 and 21.
 
-console.log(fibs(1)) // => 1
-console.log(fibs(1)) // => 1
+const fibs = num => {
+  if (num < 3) return [1,1].slice(0,num);
+  let arr = fibs(num - 1);
+  return arr.concat(arr[arr.length - 2] + arr[arr.length - 1])
+}
+
+console.log(fibs(1)) // => [1]
+console.log(fibs(5)) // => [1,1,2,3,5]
 
 
 
@@ -264,3 +270,14 @@ console.log(fibs(1)) // => 1
 //   }
 //   return false
 // };
+
+
+
+
+
+
+
+
+
+// -----------------------------------------
+// Redux manages 
