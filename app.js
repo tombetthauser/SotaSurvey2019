@@ -7,6 +7,24 @@ const linkShow = (link) => {
   document.querySelector(`.${link}-div`).style.display = "block";
 }
 
+const linkBorderRemove = (link) => {
+  if (link) {
+    document.querySelectorAll(`.${link}`).style.borderBottom = 'none';
+  } else {
+    let links = document.querySelectorAll(".left-column-li")
+    links.forEach(link => {
+      link.style.borderBottom = 'none';
+    })
+  }
+}
+
+// const linkBordersRemove = () => {
+//   let links = document.querySelectorAll(".left-column-li")
+//   links.forEach(link => {
+//     link.style.borderBottom = 'none';
+//   })
+// }
+
 
 document.addEventListener('DOMContentLoaded', (_event) => {
 
@@ -29,6 +47,8 @@ document.addEventListener('DOMContentLoaded', (_event) => {
         })
       }
     }
+
+    linkBorderRemove();
 
     RENDER_GRAPHS();
 })
