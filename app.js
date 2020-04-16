@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', (_event) => {
       for (let j = 0; j < links.length; j++) {
         document.querySelectorAll(`.${LINKS[i]}-link`)[j].addEventListener("click", () => { 
           linkShow(`${LINKS[i]}`)
+          linkBorderRemove();
         })
       }
     }
