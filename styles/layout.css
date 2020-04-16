@@ -205,6 +205,13 @@ text {
   border-bottom: 1px solid #c4dfff;
 }
 
+.left-column-header-hand {
+  height: 20px;
+  position: absolute;
+  top: 7px;
+  margin-left: 6px;
+}
+
 /* Main div pages styling starts here. */
 
 .introduction-div { display: block; }
