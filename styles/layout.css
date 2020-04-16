@@ -188,7 +188,6 @@ text {
 }
 
 .cities-neighborhoods-cloud-div {
-    /* display: none; */
     height: 1200px;
 }
 
@@ -203,11 +202,7 @@ text {
 }
 
 .left-nav-highlighted-link {
-  /* color: cornflowerblue; */
-  /* font-weight: 800; */
-  border-bottom: 2px solid pink;
-  /* padding-left: 30px; */
-  /* text-decoration: underline; */
+  border-bottom: 1px solid #c4dfff;
 }
 
 /* Main div pages styling starts here. */
