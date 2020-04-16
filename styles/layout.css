@@ -36,7 +36,7 @@ text {
   border-right: 1px solid #c4dfff;
   min-height: 29px;
   max-height: 29px;
-  padding-left: 25px;
+  padding-left: 20px;
   padding-top: 10px;
 }
 
@@ -209,7 +209,7 @@ text {
   height: 20px;
   position: absolute;
   top: 7px;
-  margin-left: 6px;
+  margin-left: 7px;
 }
 
 /* Main div pages styling starts here. */
