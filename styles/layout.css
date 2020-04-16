@@ -169,7 +169,7 @@ text {
 }
 
 .left-column-li:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .cities-top-text-div {
