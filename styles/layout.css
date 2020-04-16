@@ -4,7 +4,7 @@ svg g text {
 }
 
 .html-body-container {
-  font-family: monospace;
+  font-family: serif;
   font-size: 12px;
   display: flex;
   padding: 0;
@@ -17,7 +17,7 @@ svg {
 }
 
 text {
-  font-family: monospace;
+  font-family: serif;
   font-size: 12px;
 }
 
