@@ -203,9 +203,11 @@ text {
 }
 
 .left-nav-highlighted-link {
-  background-color: pink;
-  border: 3px solid pink;
-  text-decoration: underline;
+  /* color: cornflowerblue; */
+  /* font-weight: 800; */
+  border-bottom: 2px solid pink;
+  /* padding-left: 30px; */
+  /* text-decoration: underline; */
 }
 
 /* Main div pages styling starts here. */
