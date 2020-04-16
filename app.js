@@ -9,7 +9,7 @@ const linkShow = (link) => {
 
 const linkBorderRemove = (link) => {
   if (link) {
-    document.querySelectorAll(`.${link}`).style.borderBottom = 'none';
+    document.querySelectorAll(`.${link}-link`).style.borderBottom = 'none';
   } else {
     let links = document.querySelectorAll(".left-column-li")
     links.forEach(link => {
@@ -18,12 +18,11 @@ const linkBorderRemove = (link) => {
   }
 }
 
-// const linkBordersRemove = () => {
-//   let links = document.querySelectorAll(".left-column-li")
-//   links.forEach(link => {
-//     link.style.borderBottom = 'none';
-//   })
-// }
+const linkBorderAdd = (link) => {
+  if (link) {
+    document.querySelector(`.${link}-link`).style.borderBottom = '1px solid #c4dfff';
+  }
+}
 
 
 document.addEventListener('DOMContentLoaded', (_event) => {
@@ -49,6 +48,7 @@ document.addEventListener('DOMContentLoaded', (_event) => {
     }
 
     linkBorderRemove();
+    linkBorderAdd(`introduction`);
 
     RENDER_GRAPHS();
 })
