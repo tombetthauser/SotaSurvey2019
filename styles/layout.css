@@ -236,7 +236,19 @@ text {
 .introduction-div {
   width: 500px;
   max-width: 80%;
-  line-height: 14px;
+  line-height: 15px;
+}
+
+.introduction-div p, .introduction-div ul, .introduction-div button {
+  margin-bottom: 25px;
+}
+
+.introduction-div strong {
+color: white;
+background-color: pink;
+padding: 2px 4px;
+border-radius: 2px;
+font-weight: 50;
 }
 
 /* Main div pages styling starts here. */
