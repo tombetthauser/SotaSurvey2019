@@ -5,6 +5,7 @@ const linkShow = (link) => {
   for (let i = 0; i < LINKS.length; i++) { document.querySelector(`.${LINKS[i]}-div`).style.display = "none" }
   // document.querySelector(`.side-note-p`).innerHTML = SIDE_NOTES[link] ? SIDE_NOTES[link] : "";
   document.querySelector(`.${link}-div`).style.display = "block";
+  document.querySelector(`.main-section-container`).scrollTop = 0;
 }
 
 const linkBorderRemove = (link) => {
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', (_event) => {
     for (let i = 0; i < LINKS.length; i++) {
       let links = document.querySelectorAll(`.${LINKS[i]}-link`);
       for (let j = 0; j < links.length; j++) {
-        document.querySelectorAll(`.${LINKS[i]}-link`)[j].addEventListener("click", () => { 
+        document.querySelectorAll(`.${LINKS[i]}-link`)[j].addEventListener("click", () => {
           linkShow(`${LINKS[i]}`)
           linkBorderRemove();
           linkBorderAdd(LINKS[i])
