@@ -233,6 +233,12 @@ text {
   height: 13.5px;
 }
 
+.introduction-div {
+  width: 500px;
+  max-width: 80%;
+  line-height: 14px;
+}
+
 /* Main div pages styling starts here. */
 
 .introduction-div { display: block; }
