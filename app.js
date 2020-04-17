@@ -3,7 +3,7 @@ import { RENDER_GRAPHS } from "./src/render";
 
 const linkShow = (link) => {
   for (let i = 0; i < LINKS.length; i++) { document.querySelector(`.${LINKS[i]}-div`).style.display = "none" }
-  document.querySelector(`.side-note-p`).innerHTML = SIDE_NOTES[link] ? SIDE_NOTES[link] : "";
+  // document.querySelector(`.side-note-p`).innerHTML = SIDE_NOTES[link] ? SIDE_NOTES[link] : "";
   document.querySelector(`.${link}-div`).style.display = "block";
 }
 

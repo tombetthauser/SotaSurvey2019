@@ -34,10 +34,10 @@ text {
 .left-column-header {
   border-bottom: 1px solid #c4dfff;
   border-right: 1px solid #c4dfff;
-  min-height: 29px;
-  max-height: 29px;
-  padding-left: 20px;
-  padding-top: 10px;
+  min-height: 26.5px;
+  max-height: 26.5px;
+  padding-left: 25px;
+  padding-top: 12.5px;
 }
 
 .left-column-section {
@@ -49,19 +49,12 @@ text {
 
 .left-column-section ul {
   background-color: #fff;
-  /* z-index: 1; */
-  /* box-shadow: 0 0 5px #fff,
-              0 0 10px #fff,
-              0 0 15px #fff,
-              0 0 20px #fff,
-              0 0 25px #fff,
-              0 0 30px #fff,
-              0 0 35px #fff; */
 }
 
 .left-column-footer {
   border-right: 1px solid #c4dfff;
   min-height: 35px;
+  padding: 12.5px;
 }
 
 .side-note-p {
@@ -70,9 +63,6 @@ text {
   line-height: 14px;
   padding-left: 15px;
   padding-bottom: 5px;
-  /* position: absolute; */
-  /* bottom: 45px; */
-  /* z-index: -1; */
 }
 
 
@@ -109,6 +99,9 @@ text {
   flex-grow: 1;
   background-color: #fff;
   z-index: 1;
+  line-height: 40px;
+  padding-left: 35px;
+  font-size: 13px;
 }
 
 /* Main body styling starts here. */
@@ -180,6 +173,7 @@ text {
   margin: -7.5px -35px 25px -35px;
   position: relative;
   padding: 10px 35px 30px;
+  max-width: 100%;
 }
 
 .cities-top-text-p {
@@ -192,13 +186,13 @@ text {
 }
 
 .left-column-header-text {
-  font-size: 20px;
-  letter-spacing: 2.5px;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
 .left-column-header-year {
-  font-size: 20px;
-  letter-spacing: -1px;
+  font-size: 15px;
+  /* letter-spacing: -1px; */
 }
 
 .left-nav-highlighted-link {
@@ -206,10 +200,37 @@ text {
 }
 
 .left-column-header-hand {
-  height: 20px;
+  height: 17.5px;
   position: absolute;
-  top: 7px;
+  top: 9px;
   margin-left: 7px;
+}
+
+.credits-tom-image {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  background-image: url("https://avatars3.githubusercontent.com/u/28816983?s=460&u=d2779bf0c7aadba25ddb9a9a7369dad1eb0f5471&v=4");
+  background-size: cover;
+  background-position: center;
+}
+
+.left-footer-inner-div {
+  width: 110px;
+  display: inline-block;
+  padding-top: 7.5px;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.left-bottom-links-ul {
+  padding-left: 55px;
+  margin-top: 2.5px;
+}
+
+.left-bottom-links-ul li {
+  height: 13.5px;
 }
 
 /* Main div pages styling starts here. */
