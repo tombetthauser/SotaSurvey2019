@@ -243,12 +243,33 @@ text {
   margin-bottom: 25px;
 }
 
+.introduction-div li {
+  margin-bottom: 4px;
+}
+
 .introduction-div strong {
 color: white;
-background-color: pink;
-padding: 2px 4px;
+background-color: rgb(255, 209, 217);
+padding: 2px 8px;
 border-radius: 2px;
 font-weight: 50;
+text-shadow: -1px 1px 1px rgba(0,0,0,.2);
+font-size: 13px;
+/* color: lightcoral; */
+/* font-family: sans-serif; */
+/* letter-spacing: .5px; */
+}
+
+.rainbow-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 175px;
+  background-image: url("http://www.sotasurvey.org/rainbow.jpg");
+  z-index: 10;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Main div pages styling starts here. */
