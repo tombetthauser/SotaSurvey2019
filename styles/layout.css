@@ -234,14 +234,18 @@ text {
 }
 
 .introduction-div {
-  /* width: 500px; */
-  /* max-width: 960px; */
-  line-height: 20px;
   margin-bottom: 100px;
 }
 
-.introduction-div p {
+.introduction-div, 
+.cities-top-text-div {
+  line-height: 20px;
+}
+
+.introduction-div p,
+.cities-top-text-div p {
   max-width: 960px;
+  margin-top: 25px;
 }
 
 .introduction-div p, .introduction-div ul, .introduction-div button {
@@ -278,7 +282,7 @@ text {
   letter-spacing: 1px;
 } */
 
-.introduction-div strong {
+strong {
   border-radius: 2px;
   font-weight: 50;
   font-size: 18px;
