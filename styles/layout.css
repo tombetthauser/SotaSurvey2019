@@ -262,7 +262,7 @@ text {
   text-shadow: -1px 1px 1px rgba(0,0,0,.2);
 } */
 
-.introduction-div strong {
+/* .introduction-div strong {
   color: white;
   color: black;
   background-color: rgb(211, 211, 211);
@@ -270,27 +270,40 @@ text {
   padding: 4px 8px 2px;
   border-radius: 2px;
   font-weight: 50;
-  /* text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.568); */
   font-family: sans-serif;
   border-radius: 2px;
   font-weight: 50;
   font-size: 18px;
   font-family: sans-serif;
   letter-spacing: 1px;
-}
+} */
 
-/* .introduction-div strong {
+.introduction-div strong {
   border-radius: 2px;
   font-weight: 50;
   font-size: 18px;
   color: rgb(255, 161, 175);
   font-family: sans-serif;
   letter-spacing: 1px;
-  /* animation: color-text-shift; */
-  /* animation-duration: 45s; */
-  /* animation-iteration-count: infinite; */
-  color: #000;
-  padding: 0 5px;
+  animation: color-text-shift;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+}
+/* 
+.introduction-div strong {
+  border-radius: 2px;
+  font-weight: 50;
+  font-size: 18px;
+  color: rgb(255, 161, 175);
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  animation: color-text-shift;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  border: 1px solid pink;
+  color: pink;
+  padding: 4px 12px 3px;
+  background-color: white;
 } */
 
 @keyframes color-text-shift {
@@ -346,7 +359,7 @@ text {
   width: 100%;
 }
 
-.take-survey-button {
+/* .take-survey-button {
   background-color: cornflowerblue;
   color: white;
   padding: 7px 15px;
@@ -355,11 +368,33 @@ text {
   font-family: sans-serif;
   letter-spacing: .5px;
   margin-left: 30px;
+} */
+
+/* .take-survey-button:hover {
+  cursor: pointer;
+  background-color: rgb(133, 170, 238);
+  transition: .2s;
+} */
+
+.take-survey-button {
+  /* background-color: cornflowerblue; */
+  color: black;
+  padding: 10px 35px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: sans-serif;
+  letter-spacing: .5px;
+  margin-left: 30px;
+  border: 1px solid black;
+  letter-spacing: 1.5px;
+  font-weight: 50;
+  transition: .2s;
 }
 
 .take-survey-button:hover {
   cursor: pointer;
-  background-color: rgb(133, 170, 238);
+  border: 1px solid #666;
+  color: #666;
   transition: .2s;
 }
 
