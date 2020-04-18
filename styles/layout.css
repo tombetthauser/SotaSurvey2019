@@ -351,12 +351,11 @@ text {
 
 .intro-title-p {
   margin-top: 25px;
-  margin-bottom: 75px;
+  /* margin-bottom: 75px; */
   padding-bottom: 25px;
   border-bottom: 1px solid #c4dfff;
   font-size: 14px;
-  max-width: 100%;
-  width: 100%;
+  max-width: 960px;
 }
 
 /* .take-survey-button {
