@@ -401,6 +401,22 @@ strong {
   transition: .2s;
 }
 
+.graph-buyers {
+  overflow: visible;
+  width: 900px;
+  height: 650px;
+  margin-top: -20px !important;
+  margin-left: -50px !important;
+}
+
+.sales-mediums-cloud {
+  overflow: visible;
+  width: 900px;
+  height: 650px;
+  margin-top: -50px !important;
+  margin-left: -80px !important;
+}
+
 /* Main div pages styling starts here. */
 
 .introduction-div { display: block; }
