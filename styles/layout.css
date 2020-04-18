@@ -236,7 +236,8 @@ text {
 .introduction-div {
   width: 500px;
   max-width: 80%;
-  line-height: 15px;
+  line-height: 20px;
+  margin-bottom: 100px;
 }
 
 .introduction-div p, .introduction-div ul, .introduction-div button {
@@ -247,18 +248,48 @@ text {
   margin-bottom: 4px;
 }
 
-.introduction-div strong {
+/* .introduction-div strong {
 color: white;
-background-color: rgb(255, 209, 217);
+background-color: rgb(255, 206, 214);
 padding: 2px 8px;
 border-radius: 2px;
 font-weight: 50;
+text-shadow: -1px 1px 1px rgba(0,0,0,.4);
 text-shadow: -1px 1px 1px rgba(0,0,0,.2);
-font-size: 13px;
-/* color: lightcoral; */
-/* font-family: sans-serif; */
-/* letter-spacing: .5px; */
+} */
+
+.introduction-div strong {
+border-radius: 2px;
+font-weight: 500;
+font-size: 18px;
+color: rgb(255, 161, 175);
+font-family: sans-serif;
+letter-spacing: 1px;
+animation: color-text-shift;
+animation-duration: 30s;
+animation-iteration-count: infinite;
 }
+
+@keyframes color-text-shift {
+  0%   {color: rgb(214, 125, 255);}
+  20%  {color: rgb(104, 193, 235);}
+  40%  {color: rgb(116, 201, 67);}
+  60%  {color: rgb(255, 168, 55);}
+  80% {color: rgb(255, 161, 175);}
+  100%   {color: rgb(214, 125, 255);}
+}
+
+/* The element to apply the animation to */
+/* div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+} */
+
+
+
 
 .rainbow-div {
   position: absolute;
@@ -270,6 +301,40 @@ font-size: 13px;
   z-index: 10;
   background-position: center;
   background-size: cover;
+}
+
+.tech-icon {
+  height: 50px;
+}
+
+.tech-stack-intro-p {
+  margin-top: 75px;
+  padding-top: 25px;
+  border-top: 1px solid #c4dfff;
+}
+
+.intro-title-p {
+  margin-top: 25px;
+  margin-bottom: 75px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #c4dfff;
+  font-size: 14px;
+}
+
+.take-survey-button {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: sans-serif;
+  letter-spacing: .5px;
+}
+
+.take-survey-button:hover {
+  cursor: pointer;
+  background-color: rgb(133, 170, 238);
+  transition: .2s;
 }
 
 /* Main div pages styling starts here. */
