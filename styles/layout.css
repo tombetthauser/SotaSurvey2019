@@ -28,7 +28,7 @@ text {
   flex-direction: column;
   display: flex;
   height: 100vh;
-  min-width: 175px;
+  min-width: 200px;
 }
 
 .left-column-header {
@@ -477,6 +477,10 @@ strong {
   margin-left: -50px;
 }
 
+text {
+  text-transform: initial;
+}
+
 /* 
 @keyframes fill-text-shift {
   0% {fill: rgb(214, 125, 255);}
@@ -506,6 +510,7 @@ strong {
 .studio-visitors-cloud-div { display: none; }
 .studio-visit-sources-cloud-div { display: none; }
 .websites-social-media-div { display: none; }
+.studio-habits-div { display: none; }
 
 
 a {

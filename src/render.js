@@ -9,6 +9,17 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 
 export const RENDER_GRAPHS = () => {
 
+  new BarGraph({
+    color: randColor(),
+    title: "What type of work space did you use this past year?",
+    tag: ".studio-space-type",
+    data: DATA.STUDIO_SPACE_TYPE,
+    multiplier: .8,
+    minSize: 14,
+    angle: true,
+    width: 800,
+  }).render();
+
   new WordCloud({
     color: randColor(),
     title: "",

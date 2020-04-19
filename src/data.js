@@ -16,7 +16,27 @@ export const LINKS = [
   "studio-visitors-cloud",
   "studio-visit-sources-cloud",
   "websites-social-media",
+  "studio-habits",
 ];
+
+export const STUDIO_SPACE_TYPE = [
+  {name: "Dedicated room / desk / area in living space", value:	(48 / 163)},
+  {name: "Completely mixed up with living space", value:	(45 / 163)},
+  {name: "Private studio space", value:	(19 / 163)},
+  {name: "Space provided by a school / residency etc.", value:	(16 / 163)},
+  {name: "Shared studio split with another artist / artists", value:	(13 / 163)},
+  {name: "Studio in a larger studio building", value:	(11 / 163)},
+  {name: "Alternative space in non-studio building", value:	(7 / 163)},
+  {name: "Other", value:	(4 / 163)},
+  // {name: "Dedicated room / desk / area in living space", value:	48},
+  // {name: "Completely mixed up with living space", value:	45},
+  // {name: "Private studio space", value:	19},
+  // {name: "Space provided by a school / residency etc.", value:	16},
+  // {name: "Shared studio split with another artist / artists", value:	13},
+  // {name: "Studio in a larger studio building", value:	11},
+  // {name: "Alternative space in non-studio building", value:	7},
+  // {name: "Other", value:	4},
+]
 
 export const ART_RESOURCES = [
   { name: "Instagram", value: 90 },
