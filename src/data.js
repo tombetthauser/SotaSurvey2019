@@ -19,9 +19,19 @@ export const LINKS = [
   "studio-habits",
 ];
 
+export const STUDIO_HOURS = [
+  // {name: "Less than 1 hour", value: ""},
+  {name: "1-2", value: ".069"},
+  {name: "2-5", value: ".455"},
+  {name: "5-7", value: ".198"},
+  {name: "7-10", value: ".109"},
+  {name: "10+", value: ".089"},
+  {name: "N/A", value: ".079"},
+]
+
 export const STUDIO_DAYS = [
-  {name: "no studio space", value: ".08"},
-  {name: "less than 1", value: ".04"},
+  {name: "NA", value: ".08"},
+  {name: "<1", value: ".04"},
   {name: "1", value: ".05"},
   {name: "2", value: ".11"},
   {name: "3", value: ".18"},

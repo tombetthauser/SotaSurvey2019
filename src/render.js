@@ -9,10 +9,19 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 
 export const RENDER_GRAPHS = () => {
 
-  new BarGraph({
+  new PieChart({
+    color: randColor(),
+    title: "How many hours per studio day did you work?",
+    tag: ".studio-hours",
+    data: DATA.STUDIO_HOURS,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
     color: randColor(),
     title: "How many days per week did you work in your studio?",
-    tag: ".studio-hours",
+    tag: ".studio-days",
     data: DATA.STUDIO_DAYS,
     angle: true,
     width: 400,
