@@ -9,6 +9,15 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 
 export const RENDER_GRAPHS = () => {
 
+  new WordCloud({
+    title: "Who visited your studiothis past year?",
+    tag: ".studio-visitors-cloud",
+    data: DATA.STUDIO_VISITORS,
+    // color: randColor(),
+    multiplier: 2,
+    minSize: 10,
+  }).render();
+
   new PieChart({
     title: "Did you sell any work online?",
     data: DATA.ANY_ONLINE_SALES,

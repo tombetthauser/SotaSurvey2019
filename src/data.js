@@ -13,20 +13,30 @@ export const LINKS = [
   // "sales-platforms-cloud",
   "sales-mediums-cloud",
   "cities-neighborhoods-cloud",
+  "studio-visitors-cloud",
 ];
+
+export const STUDIO_VISITORS = [
+  { name: "Other artists", value: 46 },
+  { name: "Family / non-artist friends", value: 30 },
+  { name: "Gallerists / curators", value: 21 },
+  { name: "Amateur / new collectors", value: 19 },
+  { name: "BFA / MFA peers", value: 13 },
+  { name: "Established / experienced collectors", value: 13 },
+  { name: "Former / current faculty", value: 10 },
+  { name: "Open studios", value: 2 },
+  { name: "students", value: 2 },
+  { name: "Community members", value: 1 },
+  { name: "general public", value: 1 },
+  { name: "na", value: 1 },
+  { name: "Press", value: 1 },
+]
 
 export const SIDE_NOTES = {
   "word-cloud": "* relative size of words based on how many times they appeared in survey responses",
   "gallery-spaces": "* relative size of words based on how many times they appeared in survey responses",
   "finding-shows": "* relative size of words based on how many times they appeared in survey responses",
 }
-
-
-
-
-
-
-
 
 export const CITIES_NEIGHBORHOODS = [
   { name: 'Albany (CA)', value: 1 },
