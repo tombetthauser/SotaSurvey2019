@@ -9,6 +9,33 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 
 export const RENDER_GRAPHS = () => {
 
+  new BarGraph({
+    color: randColor(),
+    title: "Did you claim any studio expenses?",
+    tag: ".tax-expenses",
+    data: DATA.TAX_EXPENSES,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
+    color: randColor(),
+    title: "How many jobs did you apply for?",
+    tag: ".job-app-count",
+    data: DATA.JOB_APP_COUNT,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
+    color: randColor(),
+    title: "Did you apply for unemployment or food stamps?",
+    tag: ".unemployment",
+    data: DATA.UNEMPLOYMENT,
+    angle: true,
+    width: 400,
+  }).render();
+
   new PieChart({
     color: randColor(),
     title: "How many hours per studio day did you work?",
@@ -23,6 +50,15 @@ export const RENDER_GRAPHS = () => {
     title: "How many days per week did you work in your studio?",
     tag: ".studio-days",
     data: DATA.STUDIO_DAYS,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
+    title: "How much did you make in job-related income?",
+    tag: ".job-income",
+    data: DATA.JOB_INCOME,
     angle: true,
     width: 400,
   }).render();

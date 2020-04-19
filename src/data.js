@@ -20,6 +20,39 @@ export const LINKS = [
   "employment",
 ];
 
+export const TAX_EXPENSES = [
+  {name: "Yes", value: ".307"},
+  {name: "No", value: ".554"},
+  {name: "Not sure / hard to say", value: ".04"},
+  {name: "didn't file 2019 taxes", value: ".099"},
+]
+
+export const JOB_INCOME = [
+  {name: "$0", value: ".18"},
+  {name: "$1 - $5,000", value: ".18"},
+  {name: "$5,000 - $15,000", value: ".19"},
+  {name: "$15,000 - $25,000", value: ".18"},
+  {name: "$25,000 - $50,000", value: ".13"},
+  {name: "$50,000 - $75,000", value: ".08"},
+  {name: "$75,000 - $100,000", value: ".04"},
+  {name: "$100,000 - $150,000", value: ".02"},
+  // {name: "more than $150,000", value: ""},
+]
+
+export const JOB_APP_COUNT = [
+  {name: "0", value: ".47"},
+  {name: "1-2", value: ".17"},
+  {name: "2-5", value: ".14"},
+  {name: "5-10", value: ".07"},
+  {name: "10-20", value: ".06"},
+  {name: "20+", value: ".09"},
+]
+
+export const UNEMPLOYMENT = [
+  {name: "yes", value: ".089"},
+  {name: "no", value: ".911"},
+]
+
 export const JOB_TYPES = [
   { name: "None / full time student", value: 10 },
   { name: "Retail", value: 8 },
