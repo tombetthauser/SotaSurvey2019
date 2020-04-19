@@ -56,6 +56,17 @@ export const RENDER_GRAPHS = () => {
     width: 800,
   }).render();
 
+  // ------------------- WORD CLOUDS
+
+  new WordCloud({
+    color: randColor(),
+    title: "What types of jobs did you work?",
+    tag: ".job-types",
+    data: DATA.JOB_TYPES,
+    multiplier: 6.5,
+    minSize: 12,
+  }).render();
+
   new WordCloud({
     color: randColor(),
     title: "",

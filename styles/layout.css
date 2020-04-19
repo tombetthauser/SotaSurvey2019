@@ -443,6 +443,7 @@ strong {
 .social-media-positives,
 .art-resources,
 .social-media-negatives,
+.job-types,
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
@@ -455,6 +456,7 @@ strong {
 .studio-visitors-cloud,
 .art-resources,
 .social-media-negatives,
+.job-types,
 .studio-visit-sources-cloud {
   height: 700px;
   width: 1000px;
@@ -511,6 +513,7 @@ text {
 .studio-visit-sources-cloud-div { display: none; }
 .websites-social-media-div { display: none; }
 .studio-habits-div { display: none; }
+.employment-div { display: none; }
 
 
 a {
