@@ -455,6 +455,7 @@ strong {
 .social-media-negatives,
 .studio-visit-sources-cloud {
   height: 700px;
+  width: 1000px;
 }
 
 @keyframes fill-text-shift {

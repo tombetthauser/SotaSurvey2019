@@ -18,6 +18,13 @@ export const LINKS = [
   "websites-social-media",
 ];
 
+export const PERSONAL_WEBSITE = [
+  {name: "Yes and I plan to continue", value: ".7"},
+  {name: "Yes but I plan to stop", value: ".01"},
+  {name: "No but I plan to make one", value: ".2"},
+  {name: "No and I have no plans to doso", value: ".09"},
+]
+
 export const SOCIAL_MEDIA_NEGATIVES = [
   { name: "Likes", value: 2 },
   { name: "order of posts", value: 2 },

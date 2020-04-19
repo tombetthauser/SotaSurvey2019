@@ -13,7 +13,6 @@ export const RENDER_GRAPHS = () => {
     title: "",
     tag: ".social-media-negatives",
     data: DATA.SOCIAL_MEDIA_NEGATIVES,
-    // color: randColor(),
     multiplier: 15,
     minSize: 14,
   }).render();
@@ -22,7 +21,6 @@ export const RENDER_GRAPHS = () => {
     title: "",
     tag: ".social-media-positives",
     data: DATA.SOCIAL_MEDIA_POSITIVES,
-    // color: randColor(),
     multiplier: 6,
     minSize: 14,
   }).render();
@@ -53,12 +51,25 @@ export const RENDER_GRAPHS = () => {
     multiplier: 2,
     minSize: 10,
   }).render();
+
+  // ------------------------ PIE CHARTS
   
   new PieChart({
     title: "Did you sell any work online?",
     data: DATA.ANY_ONLINE_SALES,
     color: randColor(),
     tag: ".any-online-sales",
+  }).render()
+
+  // ------------------------ BAR GRAPHS
+
+  new BarGraph({
+    title: "Did you maintain a studio website in 2019?",
+    tag: ".personal-website",
+    data: DATA.PERSONAL_WEBSITE,
+    color: randColor(),
+    angle: true,
+    width: 400,
   }).render()
 
   new BarGraph({
