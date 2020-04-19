@@ -61,6 +61,15 @@ export const RENDER_GRAPHS = () => {
     tag: ".any-online-sales",
   }).render()
 
+  new PieChart({
+    title: "Did you maintain a studio website in 2016?",
+    tag: ".personal-website-2016",
+    data: DATA.PERSONAL_WEBSITE_2016,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render()
+
   // ------------------------ BAR GRAPHS
 
   new BarGraph({

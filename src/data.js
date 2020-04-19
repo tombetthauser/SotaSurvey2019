@@ -18,6 +18,12 @@ export const LINKS = [
   "websites-social-media",
 ];
 
+export const PERSONAL_WEBSITE_2016 = [
+  {name: "yes", value: ".515"},
+  {name: "no", value: ".434"},
+  {name: "can't recall", value: ".051"},
+]
+
 export const PERSONAL_WEBSITE = [
   {name: "Yes and I plan to continue", value: ".7"},
   {name: "Yes but I plan to stop", value: ".01"},
