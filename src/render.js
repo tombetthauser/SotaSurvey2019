@@ -11,6 +11,24 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     title: "",
+    tag: ".social-media-positives",
+    data: DATA.SOCIAL_MEDIA_POSITIVES,
+    // color: randColor(),
+    multiplier: 5,
+    minSize: 14,
+  }).render();
+
+  new WordCloud({
+    title: "",
+    tag: ".sale-types-cloud",
+    data: DATA.SALE_TYPES,
+    // color: randColor(),
+    multiplier: 3,
+    minSize: 10,
+  }).render();
+
+  new WordCloud({
+    title: "",
     tag: ".studio-visit-sources-cloud",
     data: DATA.STUDIO_VISIT_SOURCES,
     // color: randColor(),
@@ -26,13 +44,75 @@ export const RENDER_GRAPHS = () => {
     multiplier: 2,
     minSize: 10,
   }).render();
-
+  
   new PieChart({
     title: "Did you sell any work online?",
     data: DATA.ANY_ONLINE_SALES,
     color: randColor(),
     tag: ".any-online-sales",
   }).render()
+
+  new BarGraph({
+    title: "How well did your primary platform serve you?",
+    tag: ".social-media-service-rating",
+    data: DATA.SOCIAL_MEDIA_SERVICE_RATING,
+    color: randColor(),
+    width: 400,
+  }).render()
+  
+  new BarGraph({
+    title: "Did you pay for soc.media promotion? Did it work?",
+    tag: ".graph-paid-social-media",
+    data: DATA.PAID_SOCIAL_MEDIA,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render();
+  
+  new BarGraph({
+    title: "Did you use Instagram more or less than last year?",
+    tag: ".instagram-more-less",
+    data: DATA.INSTAGRAM_MORE_LESS,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    title: "How often did you make Instagram studio posts?",
+    tag: ".graph-instagram-frequency",
+    data: DATA.INSTAGRAM_FREQUENCY,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    title: "Did you use Facebook more or less than last year?",
+    tag: ".graph-facebook-more-less",
+    data: DATA.FACEBOOK_MORE_LESS,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    title: "How often did you make Facebook studio posts?",
+    tag: ".graph-facebook-frequency",
+    data: DATA.FACEBOOK_POST_FREQUENCY,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    title: "How much of a priority was soc. media use?",
+    tag: ".graph-social-media-priority",
+    data: DATA.SOC_MEDIA_PRIORITY,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render();
 
   new BarGraph({
     title: "Rate treatment from collectors / buyers.",
@@ -84,7 +164,7 @@ export const RENDER_GRAPHS = () => {
     tag: ".graph-buyers",
     data: DATA.BUYERS_CLOUD,
     color: randColor(),
-    multiplier: 1,
+    multiplier: 1.5,
     minSize: 12,
   }).render();
 

@@ -439,6 +439,8 @@ strong {
 .graph-keywords, 
 .cities-neighborhoods-cloud,
 .studio-visit-sources-cloud,
+.sale-types-cloud,
+.social-media-positives,
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
@@ -461,6 +463,15 @@ strong {
   80%  {fill: rgb(255, 168, 55);}
   100%   {fill: rgb(255, 161, 175);}
 }
+
+.social-media-positives,
+.sale-types-cloud {
+  height: 800px;
+  width: 1000px;
+  text-transform: capitalize;
+  margin-left: -50px;
+}
+
 /* 
 @keyframes fill-text-shift {
   0% {fill: rgb(214, 125, 255);}
@@ -489,6 +500,7 @@ strong {
 .cities-neighborhoods-cloud-div { display: none; }
 .studio-visitors-cloud-div { display: none; }
 .studio-visit-sources-cloud-div { display: none; }
+.websites-social-media-div { display: none; }
 
 
 a {
