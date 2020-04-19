@@ -10,6 +10,15 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 export const RENDER_GRAPHS = () => {
 
   new WordCloud({
+    title: "",
+    tag: ".studio-visit-sources-cloud",
+    data: DATA.STUDIO_VISIT_SOURCES,
+    // color: randColor(),
+    multiplier: 3.5,
+    minSize: 10,
+  }).render();
+
+  new WordCloud({
     title: "Who visited your studiothis past year?",
     tag: ".studio-visitors-cloud",
     data: DATA.STUDIO_VISITORS,

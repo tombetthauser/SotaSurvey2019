@@ -438,6 +438,7 @@ strong {
 .graph-gallery-spaces, 
 .graph-keywords, 
 .cities-neighborhoods-cloud,
+.studio-visit-sources-cloud,
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
@@ -447,7 +448,8 @@ strong {
   text-transform: capitalize;
 }
 
-.studio-visitors-cloud {
+.studio-visitors-cloud,
+.studio-visit-sources-cloud {
   height: 700px;
 }
 
@@ -486,6 +488,7 @@ strong {
 .sales-mediums-cloud-div { display: none; }
 .cities-neighborhoods-cloud-div { display: none; }
 .studio-visitors-cloud-div { display: none; }
+.studio-visit-sources-cloud-div { display: none; }
 
 
 a {

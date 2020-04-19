@@ -14,7 +14,35 @@ export const LINKS = [
   "sales-mediums-cloud",
   "cities-neighborhoods-cloud",
   "studio-visitors-cloud",
+  "studio-visit-sources-cloud",
 ];
+
+export const STUDIO_VISIT_SOURCES = [
+  { name: "Other artist peers", value: 30 },
+  { name: "Conversations at openings / receptions", value: 29 },
+  { name: "Teachers / faculty", value: 15 },
+  { name: "Direct messages on Instagram", value: 12 },
+  { name: "BFA / MFA peers", value: 10 },
+  { name: "Being cold contacted by others", value: 9 },
+  { name: "Direct emails messages", value: 8 },
+  { name: "Direct messages on Facebook", value: 7 },
+  { name: "Cold contacting others", value: 3 },
+  { name: "Annual “art hop” event", value: 1 },
+  { name: "but just because they need to to their work in a studio?", value: 1 },
+  { name: "Drop by unannounced", value: 1 },
+  { name: "Friends of friends", value: 1 },
+  { name: "I have a public-facing studio in a highly trafficked ares", value: 1 },
+  { name: "Invited artist friends over to see my studio space.", value: 1 },
+  { name: "Last time I checked an artist wouldn’t go for anyone else", value: 1 },
+  { name: "Listing in regional brochure", value: 1 },
+  { name: "Local audio tour", value: 1 },
+  { name: "na", value: 1 },
+  { name: "open studio event", value: 1 },
+  { name: "Participating in formal city wise studio tour", value: 1 },
+  { name: "People come to visit the facility  I’m working in", value: 1 },
+  { name: "Phone and actual conversations", value: 1 },
+  { name: "Studio is in an art guild", value: 1 },
+]
 
 export const STUDIO_VISITORS = [
   { name: "Other artists", value: 46 },
