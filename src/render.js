@@ -11,6 +11,14 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     title: "",
+    tag: ".art-resources",
+    data: DATA.ART_RESOURCES,
+    multiplier: 1.5,
+    minSize: 12,
+  }).render();
+
+  new WordCloud({
+    title: "",
     tag: ".social-media-negatives",
     data: DATA.SOCIAL_MEDIA_NEGATIVES,
     multiplier: 15,

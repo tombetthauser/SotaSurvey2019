@@ -441,6 +441,7 @@ strong {
 .studio-visit-sources-cloud,
 .sale-types-cloud,
 .social-media-positives,
+.art-resources,
 .social-media-negatives,
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
@@ -452,6 +453,7 @@ strong {
 }
 
 .studio-visitors-cloud,
+.art-resources,
 .social-media-negatives,
 .studio-visit-sources-cloud {
   height: 700px;
