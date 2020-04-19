@@ -10,7 +10,7 @@ export default class WordCloud {
     this.innerHeight = (input.height - 50) || 400;
 
     this.margin = input.margin || { top: 20, right: 20, bottom: 20, left: 30 };
-    this.color = input.color || "#666";
+    this.color = input.color || null;
     this.sideways = input.sideways || false;
 
     this.multiplier = input.multiplier || 5;
@@ -52,7 +52,7 @@ export default class WordCloud {
           .data(words)
           .enter().append("text")
           .style("font-size", function (d) { return (d.size + "px"); })
-          // .style("fill", color)
+          .style(color ? "fill" : null, color)
           .style("opacity", "0.75")
           .style("font-weight", "200")
           .attr("text-anchor", "middle")

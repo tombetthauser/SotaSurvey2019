@@ -10,6 +10,7 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 export const RENDER_GRAPHS = () => {
 
   new WordCloud({
+    color: randColor(),
     title: "",
     tag: ".art-resources",
     data: DATA.ART_RESOURCES,
@@ -18,6 +19,7 @@ export const RENDER_GRAPHS = () => {
   }).render();
 
   new WordCloud({
+    color: randColor(),
     title: "",
     tag: ".social-media-negatives",
     data: DATA.SOCIAL_MEDIA_NEGATIVES,
@@ -26,6 +28,7 @@ export const RENDER_GRAPHS = () => {
   }).render();
 
   new WordCloud({
+    color: randColor(),
     title: "",
     tag: ".social-media-positives",
     data: DATA.SOCIAL_MEDIA_POSITIVES,
