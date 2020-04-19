@@ -11,6 +11,15 @@ export const RENDER_GRAPHS = () => {
 
   new BarGraph({
     color: randColor(),
+    title: "How large is your current work space?",
+    tag: ".studio-size",
+    data: DATA.STUDIO_SIZE,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
     title: "What type of work space did you use this past year?",
     tag: ".studio-space-type",
     data: DATA.STUDIO_SPACE_TYPE,

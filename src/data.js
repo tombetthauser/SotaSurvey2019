@@ -19,6 +19,16 @@ export const LINKS = [
   "studio-habits",
 ];
 
+export const STUDIO_SIZE = [
+  {name: "Not sure / hard to say", value: ".071"},
+  {name: "A desk / table etc. (< 80 ft^2)", value: ".303"},
+  {name: "About 8 by 10 feet (80 ft^2)", value: ".141"},
+  {name: "About 10 by 15 feet (150 ft^2)", value: ".202"},
+  {name: "About 15 by 20 feet (300 ft^2)", value: ".141"},
+  {name: "About 20 by 30 feet (600 ft^2)", value: ".061"},
+  {name: "More than 20 by 30 feet (600+ ft^2)", value: ".081"},
+]
+
 export const STUDIO_SPACE_TYPE = [
   {name: "Dedicated room / desk / area in living space", value:	(48 / 163)},
   {name: "Completely mixed up with living space", value:	(45 / 163)},
