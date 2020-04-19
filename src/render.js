@@ -11,10 +11,19 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     title: "",
+    tag: ".social-media-negatives",
+    data: DATA.SOCIAL_MEDIA_NEGATIVES,
+    // color: randColor(),
+    multiplier: 15,
+    minSize: 14,
+  }).render();
+
+  new WordCloud({
+    title: "",
     tag: ".social-media-positives",
     data: DATA.SOCIAL_MEDIA_POSITIVES,
     // color: randColor(),
-    multiplier: 5,
+    multiplier: 6,
     minSize: 14,
   }).render();
 
