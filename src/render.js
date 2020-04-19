@@ -11,6 +11,15 @@ export const RENDER_GRAPHS = () => {
 
   new BarGraph({
     color: randColor(),
+    title: "How many days per week did you work in your studio?",
+    tag: ".studio-hours",
+    data: DATA.STUDIO_DAYS,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
     title: "What did your studio space cost per month?",
     tag: ".studio-price",
     data: DATA.STUDIO_PRICE,

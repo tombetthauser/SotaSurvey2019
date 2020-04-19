@@ -19,6 +19,18 @@ export const LINKS = [
   "studio-habits",
 ];
 
+export const STUDIO_DAYS = [
+  {name: "no studio space", value: ".08"},
+  {name: "less than 1", value: ".04"},
+  {name: "1", value: ".05"},
+  {name: "2", value: ".11"},
+  {name: "3", value: ".18"},
+  {name: "4", value: ".15"},
+  {name: "5", value: ".17"},
+  {name: "6", value: ".09"},
+  {name: "7", value: ".13"},
+]
+
 export const STUDIO_PRICE = [
   {name: "studio mixed with living space", value: ".429"},
   {name: "$0", value: ".235"},
@@ -29,7 +41,7 @@ export const STUDIO_PRICE = [
   {name: "$751 - $1,000", value: ".02"},
   {name: "$1,001 - $2,500", value: ".01"},
   {name: "$2,500 - $5,000", value: ".01"},
-  {name: "More than $5,000", value: "0.0"},
+  // {name: "More than $5,000", value: "0.0"},
   {name: "Not sure / hard to say", value: ".031"},
 ]
 
