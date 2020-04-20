@@ -328,14 +328,14 @@ export const RENDER_GRAPHS = () => {
     angle: true,
   }).render()
 
-  // new PieChart({
-  //   title: "Were your union benefits clear?",
-  //   data: DATA.UNION_BENEFITS,
-  //   color: randColor(),
-  //   tag: ".union-benefits",
-  //   width: 400,
-  //   angle: true,
-  // }).render()
+  new PieChart({
+    title: "Did your career suffer from discrimination?",
+    data: DATA.DISCRIMITATION,
+    color: randColor(),
+    tag: ".discrimination",
+    width: 400,
+    angle: true,
+  }).render()
 
   // ------------------------ BAR GRAPHS
 

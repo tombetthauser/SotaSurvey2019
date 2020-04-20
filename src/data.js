@@ -25,6 +25,14 @@ export const LINKS = [
   "closing-thoughts",
 ];
 
+export const DISCRIMITATION = [
+  {name: "Yes, absolutely", value: ".08"},
+  {name: "Yes, I believe so", value: ".14"},
+  {name: "Not sure / hard to say", value: ".36"},
+  {name: "I don’t believe so", value: ".27"},
+  {name: "No, absolutely not", value: ".15"},
+]
+
 export const ART_WORLD_WELCOME = [
   {name: "Yes, absolutely", value: ".149"},
   {name: "Yes, Somewhat", value: ".337"},
