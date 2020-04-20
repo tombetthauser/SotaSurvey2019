@@ -328,16 +328,16 @@ export const RENDER_GRAPHS = () => {
     angle: true,
   }).render()
 
-  new PieChart({
-    title: "Did your career suffer from discrimination?",
-    data: DATA.DISCRIMITATION,
-    color: randColor(),
-    tag: ".discrimination",
-    width: 400,
-    angle: true,
-  }).render()
-
   // ------------------------ BAR GRAPHS
+  
+    new BarGraph({
+      title: "Did your career suffer from discrimination?",
+      data: DATA.DISCRIMITATION,
+      color: randColor(),
+      tag: ".discrimination",
+      width: 400,
+      angle: true,
+    }).render()
 
   new BarGraph({
     title: "Did you feel welcomed / embraced by the art world?",
