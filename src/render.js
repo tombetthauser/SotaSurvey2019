@@ -114,6 +114,33 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     color: randColor(),
+    title: "What are the most important benefits of your current city / neighborhood?",
+    tag: ".city-benefits",
+    data: DATA.CITY_BENEFITS,
+    multiplier: 3,
+    minSize: 8,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
+    title: "What neighborhood and city did you live in at the end of 2016?",
+    tag: ".previous-city",
+    data: DATA.PREVIOUS_CITY,
+    multiplier: 12,
+    minSize: 8,
+  }).render();
+
+  new WordCloud({
+    title: "What city / neighborhood do you live in?",
+    tag: ".cities-neighborhoods-cloud",
+    data: DATA.CITIES_NEIGHBORHOODS,
+    color: randColor(),
+    multiplier: 12,
+    minSize: 8,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
     title: "List any past degrees you've completed.",
     tag: ".past-degrees",
     data: DATA.PAST_DEGREES,
@@ -334,15 +361,6 @@ export const RENDER_GRAPHS = () => {
     color: randColor(),
     angle: true,
     width: 800,
-  }).render();
-
-  new WordCloud({
-    title: "What city / neighborhood do you live in?",
-    tag: ".cities-neighborhoods-cloud",
-    data: DATA.CITIES_NEIGHBORHOODS,
-    color: randColor(),
-    multiplier: 15,
-    minSize: 8,
   }).render();
 
   new WordCloud({

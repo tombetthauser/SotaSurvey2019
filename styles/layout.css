@@ -446,6 +446,9 @@ strong {
 .job-types,
 .current-school,
 .past-degrees,
+.cities-neighborhoods-cloud,
+.previous-city,
+.city-benefits,
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
@@ -461,6 +464,9 @@ strong {
 .job-types,
 .current-school,
 .past-degrees,
+.cities-neighborhoods-cloud,
+.previous-city,
+.city-benefits,
 .studio-visit-sources-cloud {
   height: 700px;
   width: 1000px;
@@ -519,6 +525,10 @@ text {
 .studio-habits-div { display: none; }
 .employment-div { display: none; }
 .schools-div { display: none; }
+.cities-div { display: none; }
+.galleries-div { display: none; }
+.instructors-div { display: none; }
+.closing-thoughts-div { display: none; }
 
 
 a {
