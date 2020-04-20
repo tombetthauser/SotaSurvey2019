@@ -25,6 +25,22 @@ export const LINKS = [
   "closing-thoughts",
 ];
 
+export const ART_WORLD_WELCOME = [
+  {name: "Yes, absolutely", value: ".149"},
+  {name: "Yes, Somewhat", value: ".337"},
+  {name: "Not sure / hard to say", value: ".198"},
+  {name: "No, not particularly", value: ".248"},
+  {name: "No, absolutely not", value: ".069"},
+]
+
+export const SURVEY_TIME = [
+  {name: "1-10", value: ".347"},
+  {name: "10-20", value: ".439"},
+  {name: "20-30", value: ".194"},
+  {name: "30-60", value: ".02"},
+  // {name: "60+ min", value: ""},
+]
+
 export const EXTRA_DUTY_PAY = [
   {name: "Yes, definitely", value: ".25"},
   {name: "I believe so", value: ".1"},

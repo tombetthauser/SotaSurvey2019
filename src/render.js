@@ -252,6 +252,13 @@ export const RENDER_GRAPHS = () => {
   // ------------------------ PIE CHARTS
   
   new PieChart({
+    title: "How many minutes did this survey take you?",
+    data: DATA.SURVEY_TIME,
+    color: randColor(),
+    tag: ".survey-time",
+  }).render()
+  
+  new PieChart({
     title: "How many campuses did you teach at your last semester?",
     data: DATA.CAMPUSES_TAUGHT_COUNT,
     color: randColor(),
@@ -331,6 +338,15 @@ export const RENDER_GRAPHS = () => {
   // }).render()
 
   // ------------------------ BAR GRAPHS
+
+  new BarGraph({
+    title: "Did you feel welcomed / embraced by the art world?",
+    data: DATA.ART_WORLD_WELCOME,
+    color: randColor(),
+    tag: ".art-world-welcome",
+    width: 400,
+    angle: true,
+  }).render()
 
   new BarGraph({
     title: "How would you rate the work environment of your schools?",
