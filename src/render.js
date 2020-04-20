@@ -125,6 +125,15 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     color: randColor(),
+    title: "Do you have any final thoughts regarding this survey?",
+    tag: ".final-thoughts",
+    data: DATA.FINAL_THOUGHTS,
+    multiplier: 20,
+    minSize: 14,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
     title: "Are there any arts institutions, galleries etc. that you would like to anonymously cite for outstanding service to artists or communities this past year?",
     tag: ".negative-shoutout",
     data: DATA.NEGATIVE_SHOUTOUT,

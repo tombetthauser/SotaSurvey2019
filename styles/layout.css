@@ -453,6 +453,7 @@ strong {
 .extra-duties,
 .positive-shoutout,
 .negative-shoutout,
+.final-thoughts,
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
@@ -475,6 +476,7 @@ strong {
 .extra-duties,
 .positive-shoutout,
 .negative-shoutout,
+.final-thoughts,
 .studio-visit-sources-cloud {
   height: 700px;
   width: 1000px;
