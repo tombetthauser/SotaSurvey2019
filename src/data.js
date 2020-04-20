@@ -25,6 +25,39 @@ export const LINKS = [
   "closing-thoughts",
 ];
 
+export const NEGATIVE_SHOUTOUT = [
+  { name: "Alaska Government", value: 1 },
+  { name: "All of Them", value: 1 },
+  { name: "Museums accepting funding from the Sacklers", value: 1 },
+  { name: "Money Laundering Galleries / Dealers", value: 1 },
+  { name: "Blue Sky Gallery", value: 1 },
+  { name: "Carnation Contemporary ", value: 1 },
+  { name: "College of Marin", value: 1 },
+  { name: "SFAI Public Programs", value: 1 },
+  { name: "CB1 Gallery", value: 1 },
+  { name: "West Valley College", value: 1 },
+  { name: "Copyright of the Phrase “Inktober”", value: 1 },
+  { name: "Dogwood Arts (Knoxville)", value: 1 },
+  { name: "10+ Very Late Payments From Businesses ", value: 1 },
+  { name: "Everyone Else", value: 1 },
+  { name: "Hauser & Wirth", value: 1 },
+  { name: "South Florida Museums / Galleries", value: 1 },
+  { name: "Instagram", value: 1 },
+  { name: "Facebook", value: 1 },
+  { name: "John Natsoulas Gallery", value: 1 },
+  { name: "Marciano Art Foundation (LA)", value: 1 },
+  { name: "Sparrow Gallery (Sacramento)", value: 1 },
+  { name: "Material Institute", value: 1 },
+  { name: "Moma PS1", value: 1 },
+  { name: "No", value: 3 },
+  { name: "No ", value: 1 },
+  { name: "Governor of Illinois ", value: 1 },
+  { name: "Onslow Commission on the Arts", value: 1 },
+  { name: "NC Arts Council", value: 1 },
+  { name: "NEA", value: 1 },
+  { name: "Too Many to List", value: 1 }
+]
+
 export const POSITIVE_SHOUTOUT = [
   { name: "Aggregate Space Gallery", value: 1 },
   { name: "Anchorage Museum", value: 1 },
