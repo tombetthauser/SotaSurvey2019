@@ -25,7 +25,79 @@ export const LINKS = [
   "closing-thoughts",
 ];
 
+export const UNION_BENEFITS = [
+  {name: "yes", value: ".609"},
+  {name: "no", value: ".399"},
+]
 
+export const UNION_MEMBER = [
+  {name: "yes", value: ".208"},
+  {name: "no", value: ".771"},
+  {name: "not sure", value: ".021"},
+]
+
+export const TEACHING_ENVIRONMENT_RATING = [
+  { name: "extremely positive", value: "0.129" },
+  { name: "generally positive", value: "0.484" },
+  { name: "neutral / mixed", value: "0.323" },
+  // { name: "generally poor", value: "0" },
+  { name: "extremely poor", value: "0.032" },
+  { name: "not sure / hard to say", value: "0.032" },
+]
+
+export const CAMPUSES_TAUGHT_COUNT = [
+  {name: "1", value: ".667"},
+  {name: "2", value: ".222"},
+  {name: "3", value: ".074"},
+  {name: "4", value: ".037"},
+  // {name: "4+", value: "0"},
+]
+
+export const CLASSES_TAUGHT_COUNT = [
+  {name: "1", value: ".481"},
+  {name: "2", value: ".111"},
+  {name: "3", value: ".148"},
+  {name: "4", value: ".185"},
+  {name: "5", value: ".074"},
+  // {name: "6", value: ""},
+  // {name: "6+", value: ""},
+]
+
+export const SHOOLS_TAUGHT_AT = [
+  { "name": "A Phillip Randolph Highschool", "value": 2 },
+  { "name": "Art Supply Demonstrator", "value": 1 },
+  { "name": "Artcenter Manatee", "value": 1 },
+  { "name": "Ashcan Studio of Art", "value": 1 },
+  { "name": "City College of San Francisco (TA)", "value": 1 },
+  { "name": "Coastal Carolina Community College", "value": 1 },
+  { "name": "College of Marin", "value": 1 },
+  { "name": "CSU Long Beach", "value": 1 },
+  { "name": "High School", "value": 1 },
+  { "name": "Innovations Diploma Prep", "value": 2 },
+  { "name": "Long Beach Community College", "value": 1 },
+  { "name": "Louisiana State University", "value": 1 },
+  { "name": "Material Institute", "value": 1 },
+  { "name": "Middle School", "value": 2 },
+  { "name": "Molloy College", "value": 2 },
+  { "name": "Moreau Catholic High School", "value": 1 },
+  { "name": "Msu Broad Art Museum", "value": 1 },
+  { "name": "Private Lessons", "value": 1 },
+  { "name": "Public Art Center", "value": 1 },
+  { "name": "Sacramento City College", "value": 1 },
+  { "name": "San Francisco Art Institute (Ta)", "value": 1 },
+  { "name": "Sierra College", "value": 1 },
+  { "name": "St. Mary’s College of California", "value": 1 },
+  { "name": "Tulane", "value": 1 },
+  { "name": "Uc Davis", "value": 1 },
+  { "name": "Uc Davis Art Museum", "value": 1 },
+  { "name": "Uc San Diego", "value": 1 },
+  { "name": "University of Alaska Anchorage", "value": 1 },
+  { "name": "University of Iowa", "value": 1 },
+  { "name": "University of Pittsburgh", "value": 1 },
+  { "name": "West Valley College", "value": 1 },
+  { "name": "Western Carolina University", "value": 1 },
+  { "name": "Youth Art Exchange (SF)", "value": 1 }
+]
 
 export const CLOSED_GALLERIES = [
   {name: "0", value: ".317"},

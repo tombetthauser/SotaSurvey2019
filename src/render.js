@@ -114,6 +114,15 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     color: randColor(),
+    title: "What schools did you teach for this past year?",
+    tag: ".schools-taught-at",
+    data: DATA.SHOOLS_TAUGHT_AT,
+    multiplier: 1,
+    minSize: 14,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
     title: "What are the most important benefits of your current city / neighborhood?",
     tag: ".city-benefits",
     data: DATA.CITY_BENEFITS,
@@ -223,6 +232,20 @@ export const RENDER_GRAPHS = () => {
   // ------------------------ PIE CHARTS
   
   new PieChart({
+    title: "How many campuses did you teach at your last semester?",
+    data: DATA.CAMPUSES_TAUGHT_COUNT,
+    color: randColor(),
+    tag: ".campuses-taught-count",
+  }).render()
+  
+  new PieChart({
+    title: "How many classes did you teach your last semester?",
+    data: DATA.CLASSES_TAUGHT_COUNT,
+    color: randColor(),
+    tag: ".classes-taught-count",
+  }).render()
+  
+  new PieChart({
     title: "How many openings / receptions did you attend?",
     data: DATA.RECEPTION_COUNT,
     color: randColor(),
@@ -258,9 +281,45 @@ export const RENDER_GRAPHS = () => {
     angle: true,
     width: 400,
   }).render()
+  
+
+  new PieChart({
+    title: "Were you a part of a union this past year?",
+    data: DATA.UNION_MEMBER,
+    color: randColor(),
+    tag: ".union-member",
+    width: 400,
+    angle: true,
+  }).render()
+
+  new PieChart({
+    title: "Were your union benefits / advantages clear?",
+    data: DATA.UNION_BENEFITS,
+    color: randColor(),
+    tag: ".union-benefits",
+    width: 400,
+    angle: true,
+  }).render()
+
+  // new PieChart({
+  //   title: "Were your union benefits clear?",
+  //   data: DATA.UNION_BENEFITS,
+  //   color: randColor(),
+  //   tag: ".union-benefits",
+  //   width: 400,
+  //   angle: true,
+  // }).render()
 
   // ------------------------ BAR GRAPHS
-  
+
+  new BarGraph({
+    title: "How would you rate the work environment of your schools?",
+    data: DATA.TEACHING_ENVIRONMENT_RATING,
+    color: randColor(),
+    tag: ".teaching-environment-rating",
+    width: 400,
+    angle: true,
+  }).render()
 
   new BarGraph({
     title: "How many galleries closed in your area?",
