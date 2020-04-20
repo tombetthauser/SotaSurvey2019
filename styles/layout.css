@@ -450,6 +450,7 @@ strong {
 .previous-city,
 .city-benefits,
 .schools-taught-at,
+.extra-duties,
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
@@ -469,6 +470,7 @@ strong {
 .previous-city,
 .city-benefits,
 .schools-taught-at,
+.extra-duties,
 .studio-visit-sources-cloud {
   height: 700px;
   width: 1000px;

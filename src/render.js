@@ -114,6 +114,15 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     color: randColor(),
+    title: "What additional duties aside from teaching did you perform for your school or schools this past year?",
+    tag: ".extra-duties",
+    data: DATA.EXTRA_DUTIES,
+    multiplier: 20,
+    minSize: 14,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
     title: "What schools did you teach for this past year?",
     tag: ".schools-taught-at",
     data: DATA.SHOOLS_TAUGHT_AT,

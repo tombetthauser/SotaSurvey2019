@@ -25,6 +25,31 @@ export const LINKS = [
   "closing-thoughts",
 ];
 
+export const EXTRA_DUTIES = [
+  { name: "academic advisor", value: 2 },
+  { name: "buying / managing supplies", value: 3 },
+  { name: "cleaning classroom", value: 1 },
+  { name: "clerical work", value: 1 },
+  { name: "committees", value: 1 },
+  { name: "department chair", value: 1 },
+  { name: "emails in off hours / semesters", value: 1 },
+  { name: "faculty navigator", value: 1 },
+  { name: "managed art collection", value: 1 },
+  { name: "managing hazardous materials", value: 1 },
+  { name: "meetings", value: 1 },
+  { name: "metal shop teaching", value: 1 },
+  { name: "mural painting", value: 2 },
+  { name: "NA / none", value: 4 },
+  { name: "organizational work", value: 1 },
+  { name: "recommendation letters", value: 1 },
+  { name: "student / campus exhibitions", value: 1 },
+  { name: "teaching free workshops", value: 2 },
+  { name: "tech support", value: 1 },
+  { name: "theatre sets", value: 1 },
+  { name: "volunteer / community events", value: 5 },
+  { name: "woodshop teaching", value: 2 }
+]
+
 export const UNION_BENEFITS = [
   {name: "yes", value: ".609"},
   {name: "no", value: ".399"},
