@@ -128,8 +128,8 @@ export const RENDER_GRAPHS = () => {
     title: "Do you have any final thoughts regarding this survey?",
     tag: ".final-thoughts",
     data: DATA.FINAL_THOUGHTS,
-    multiplier: 20,
-    minSize: 14,
+    multiplier: 15,
+    minSize: 8,
   }).render();
 
   new WordCloud({
