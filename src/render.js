@@ -126,6 +126,15 @@ export const RENDER_GRAPHS = () => {
   new WordCloud({
     color: randColor(),
     title: "Are there any arts institutions, galleries etc. that you would like to anonymously cite for outstanding service to artists or communities this past year?",
+    tag: ".negative-shoutout",
+    data: DATA.NEGATIVE_SHOUTOUT,
+    multiplier: 20,
+    minSize: 14,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
+    title: "Are there any arts institutions, galleries etc. that you would like to anonymously cite for outstanding service to artists or communities this past year?",
     tag: ".positive-shoutout",
     data: DATA.POSITIVE_SHOUTOUT,
     multiplier: 20,
