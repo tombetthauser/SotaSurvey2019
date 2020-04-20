@@ -11,9 +11,27 @@ export const RENDER_GRAPHS = () => {
 
   new BarGraph({
     color: randColor(),
+    title: "What is your highest level of education?",
+    tag: ".education-level",
+    data: DATA.EDUCATION_LEVEL,
+    angle: true,
+    width: 600,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
     title: "Did you claim any studio expenses?",
     tag: ".tax-expenses",
     data: DATA.TAX_EXPENSES,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
+    color: randColor(),
+    title: "Are you currently a student?",
+    tag: ".current-student",
+    data: DATA.CURRENT_STUDENT,
     angle: true,
     width: 400,
   }).render();
@@ -96,6 +114,24 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     color: randColor(),
+    title: "List any past degrees you've completed.",
+    tag: ".past-degrees",
+    data: DATA.PAST_DEGREES,
+    multiplier: 5,
+    minSize: 12,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
+    title: "If you are currently a student what school do you attend?",
+    tag: ".current-school",
+    data: DATA.CURRENT_SCHOOL,
+    multiplier: 1,
+    minSize: 20,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
     title: "What types of jobs did you work?",
     tag: ".job-types",
     data: DATA.JOB_TYPES,
@@ -160,6 +196,13 @@ export const RENDER_GRAPHS = () => {
   // ------------------------ PIE CHARTS
   
   new PieChart({
+    title: "Rating for your educational experience?",
+    data: DATA.EDUCATION_EXPERIENCE_RATING,
+    color: randColor(),
+    tag: ".education-experience-rating",
+  }).render()
+
+  new PieChart({
     title: "Did you sell any work online?",
     data: DATA.ANY_ONLINE_SALES,
     color: randColor(),
@@ -176,6 +219,24 @@ export const RENDER_GRAPHS = () => {
   }).render()
 
   // ------------------------ BAR GRAPHS
+
+  new BarGraph({
+    title: "How much was a monthly loan payment?",
+    tag: ".student-loan-payment",
+    data: DATA.STUDENT_LOAN_PAYMENT,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render()
+
+  new BarGraph({
+    title: "How much do you owe in student loans?",
+    tag: ".student-loans",
+    data: DATA.STUDENT_LOANS,
+    color: randColor(),
+    angle: true,
+    width: 400,
+  }).render()
 
   new BarGraph({
     title: "Did you maintain a studio website in 2019?",

@@ -444,6 +444,8 @@ strong {
 .art-resources,
 .social-media-negatives,
 .job-types,
+.current-school,
+.past-degrees,
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
@@ -457,6 +459,8 @@ strong {
 .art-resources,
 .social-media-negatives,
 .job-types,
+.current-school,
+.past-degrees,
 .studio-visit-sources-cloud {
   height: 700px;
   width: 1000px;
@@ -514,6 +518,7 @@ text {
 .websites-social-media-div { display: none; }
 .studio-habits-div { display: none; }
 .employment-div { display: none; }
+.schools-div { display: none; }
 
 
 a {
