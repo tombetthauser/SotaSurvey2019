@@ -223,6 +223,20 @@ export const RENDER_GRAPHS = () => {
   // ------------------------ PIE CHARTS
   
   new PieChart({
+    title: "How many openings / receptions did you attend?",
+    data: DATA.RECEPTION_COUNT,
+    color: randColor(),
+    tag: ".reception-count",
+  }).render()
+  
+  new PieChart({
+    title: "How important was visiting galleries / museums?",
+    data: DATA.GALLERY_PRIORITY,
+    color: randColor(),
+    tag: ".gallery-priority",
+  }).render()
+  
+  new PieChart({
     title: "Rating for your educational experience?",
     data: DATA.EDUCATION_EXPERIENCE_RATING,
     color: randColor(),
@@ -246,7 +260,32 @@ export const RENDER_GRAPHS = () => {
   }).render()
 
   // ------------------------ BAR GRAPHS
+  
 
+  new BarGraph({
+    title: "How many galleries closed in your area?",
+    data: DATA.CLOSED_GALLERIES,
+    color: randColor(),
+    tag: ".closed-galleries",
+    width: 400,
+  }).render()
+
+  new BarGraph({
+    title: "How many new galleries opened in your area?",
+    data: DATA.OPENED_GALLERIES,
+    color: randColor(),
+    tag: ".opened-galleries",
+    width: 400,
+  }).render()
+
+  new BarGraph({
+    title: "How many art fairs / biennials did you attend?",
+    data: DATA.ART_FAIR_COUNT,
+    color: randColor(),
+    tag: ".fair-count",
+    width: 400,
+  }).render()
+  
   new BarGraph({
     title: "How much was a monthly loan payment?",
     tag: ".student-loan-payment",

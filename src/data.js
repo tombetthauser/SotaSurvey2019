@@ -25,6 +25,52 @@ export const LINKS = [
   "closing-thoughts",
 ];
 
+
+
+export const CLOSED_GALLERIES = [
+  {name: "0", value: ".317"},
+  {name: "1-2", value: ".238"},
+  {name: "3-5", value: ".129"},
+  {name: "6-10", value: ".01"},
+  {name: "10+", value: ".01"},
+  {name: "not sure", value: ".297"},
+]
+
+export const OPENED_GALLERIES = [
+  {name: "0", value: ".317"},
+  {name: "1-2", value: ".277"},
+  {name: "3-5", value: ".178"},
+  {name: "6-10", value: ".01"},
+  {name: "10+", value: ".01"},
+  {name: "not sure", value: ".208"},
+]
+
+export const ART_FAIR_COUNT = [
+  {name: "0", value: ".505"},
+  {name: "1-2", value: ".356"},
+  {name: "3-5", value: ".109"},
+  {name: "6-10", value: ".02"},
+  {name: "10+", value: ".01"},
+  // {name: "not sure", value: ""},
+]
+
+export const RECEPTION_COUNT = [
+  {name: "0", value: ".139"},
+  {name: "1-2", value: ".168"},
+  {name: "3-5", value: ".198"},
+  {name: "6-10", value: ".188"},
+  {name: "11-25", value: ".198"},
+  {name: "25-50", value: ".059"},
+  {name: "50+", value: ".05"},
+]
+
+export const GALLERY_PRIORITY = [
+  { name: "extremely important", "value": (31 / 100) },
+  { name: "not important", "value": (20 / 100) },
+  { name: "somewhat important", "value": (48 / 100) },
+  { name: "not sure", "value": (1 / 100) }
+]
+
 export const CITY_BENEFITS = [
   { name: "2 Hours To Anywhere", value: 1 },
   { name: "Access To Art", value: 1 },
