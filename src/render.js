@@ -125,6 +125,15 @@ export const RENDER_GRAPHS = () => {
 
   new WordCloud({
     color: randColor(),
+    title: "Are there any arts institutions, galleries etc. that you would like to anonymously cite for outstanding service to artists or communities this past year?",
+    tag: ".positive-shoutout",
+    data: DATA.POSITIVE_SHOUTOUT,
+    multiplier: 20,
+    minSize: 14,
+  }).render();
+
+  new WordCloud({
+    color: randColor(),
     title: "What additional duties aside from teaching did you perform for your school or schools this past year?",
     tag: ".extra-duties",
     data: DATA.EXTRA_DUTIES,
@@ -329,7 +338,7 @@ export const RENDER_GRAPHS = () => {
   }).render()
 
   // ------------------------ BAR GRAPHS
-  
+
     new BarGraph({
       title: "Did your career suffer from discrimination?",
       data: DATA.DISCRIMITATION,
