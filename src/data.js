@@ -25,6 +25,14 @@ export const LINKS = [
   "closing-thoughts",
 ];
 
+export const EXTRA_DUTY_PAY = [
+  {name: "Yes, definitely", value: ".25"},
+  {name: "I believe so", value: ".1"},
+  {name: "Unsure", value: ".15"},
+  {name: "I don't believe so", value: ".2"},
+  {name: "No, definitely not", value: ".3"},
+]
+
 export const EXTRA_DUTIES = [
   { name: "academic advisor", value: 2 },
   { name: "buying / managing supplies", value: 3 },

@@ -110,6 +110,17 @@ export const RENDER_GRAPHS = () => {
     width: 800,
   }).render();
 
+  new BarGraph({
+    color: randColor(),
+    title: "Were you paid for these extra duties?",
+    tag: ".extra-duty-pay",
+    data: DATA.EXTRA_DUTY_PAY,
+    multiplier: .8,
+    minSize: 14,
+    angle: true,
+    width: 400,
+  }).render();
+
   // ------------------- WORD CLOUDS
 
   new WordCloud({
