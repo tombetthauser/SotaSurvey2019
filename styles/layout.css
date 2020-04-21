@@ -54,7 +54,7 @@ text {
 .left-column-footer {
   border-right: 1px solid #c4dfff;
   min-height: 35px;
-  padding: 12.5px;
+  padding: 12.5px 12.5px 12.5px 25px;
 }
 
 .side-note-p {
@@ -83,6 +83,24 @@ text {
 .main-header-container {
   display: flex;
   height: 40px;
+  background-color: red;
+    background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 11px
+  );
+}
+
+.left-column-footer li {
+  display: inline-block;
+}
+
+.left-bottom-links-ul {
+  margin-left: -55px;
+  margin-top: 2.5px !important;
+  margin-bottom: 5px !important;
 }
 
 .main-header-nav {
@@ -222,7 +240,7 @@ text {
   padding-top: 3px;
   position: absolute;
   margin-left: 10px;
-  line-height: 15px;
+  line-height: 16.5px;
 }
 
 .left-bottom-links-ul {
