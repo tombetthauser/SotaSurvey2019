@@ -48,7 +48,7 @@ text {
 }
 
 .left-column-section ul {
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .left-column-footer {
@@ -83,14 +83,14 @@ text {
 .main-header-container {
   display: flex;
   height: 40px;
-  background-color: red;
+  /* background-color: red;
     background: repeating-linear-gradient(
     45deg,
-    #606dbc,
-    #606dbc 10px,
-    #465298 10px,
-    #465298 11px
-  );
+    #fff,
+    #fff 10px,
+    #fff 10px,
+    #c4dfff 11px
+  ); */
 }
 
 .left-column-footer li {
@@ -115,11 +115,31 @@ text {
   border-bottom: 1px solid #c4dfff;
   /* border-right: 1px solid #c4dfff; */
   flex-grow: 1;
-  background-color: #fff;
+  /* background-color: #fff; */
   z-index: 1;
   line-height: 40px;
   padding-left: 35px;
   font-size: 13px;
+}
+
+.medium-lines {
+  /* background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    #fff 10px,
+    #c4dfff 11px
+  ); */
+}
+
+.small-lines {
+  /* background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    #fff 10px,
+    #c4dfff 11px
+  ); */
 }
 
 /* Main body styling starts here. */
