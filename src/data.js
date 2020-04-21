@@ -26,6 +26,19 @@ export const LINKS = [
   "general-information",
   "exhibitions-opportunities",
   "studio-visits-sales",
+  // left-nav-highlighted
+  // word-cloud
+  // general-information
+  // exhibitions-opportunities
+  // studio-visits-sales
+  // websites-social-media
+  // studio-habits
+  // employment
+  // schools
+  // cities
+  // galleries
+  // instructors
+  // closing-thoughts
 ];
 
 export const FINAL_THOUGHTS = [
