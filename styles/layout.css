@@ -217,11 +217,12 @@ text {
 }
 
 .left-footer-inner-div {
-  width: 110px;
+  width: 170px;
   display: inline-block;
-  padding-top: 7.5px;
+  padding-top: 3px;
   position: absolute;
   margin-left: 10px;
+  line-height: 15px;
 }
 
 .left-bottom-links-ul {
