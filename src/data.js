@@ -23,6 +23,9 @@ export const LINKS = [
   "galleries",
   "instructors",
   "closing-thoughts",
+  "general-information",
+  "exhibitions-opportunities",
+  "studio-visits-sales",
 ];
 
 export const FINAL_THOUGHTS = [

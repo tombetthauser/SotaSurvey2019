@@ -28,7 +28,7 @@ text {
   flex-direction: column;
   display: flex;
   height: 100vh;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 .left-column-header {
@@ -539,6 +539,9 @@ text {
 .galleries-div { display: none; }
 .instructors-div { display: none; }
 .closing-thoughts-div { display: none; }
+.general-information { display: none; }
+.exhibitions-opportunities { display: none; }
+.studio-visits-sales { display: none; }
 
 
 a {
