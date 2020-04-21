@@ -4,7 +4,7 @@ import { RENDER_GRAPHS } from "./src/render";
 const linkShow = (link) => {
   for (let i = 0; i < LINKS.length; i++) { document.querySelector(`.${LINKS[i]}-div`).style.display = "none" }
   // document.querySelector(`.side-note-p`).innerHTML = SIDE_NOTES[link] ? SIDE_NOTES[link] : "";
-  document.querySelector(`.${link}-div`).style.display = "block";
+  if (link) document.querySelector(`.${link}-div`).style.display = "block";
   document.querySelector(`.main-section-container`).scrollTop = 0;
 }
 
@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', (_event) => {
     }
 
     linkBorderRemove();
+    linkShow(`introduction`);
     linkBorderAdd(`introduction`);
 
     RENDER_GRAPHS();

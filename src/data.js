@@ -27,7 +27,7 @@ export const LINKS = [
   "exhibitions-opportunities",
   "studio-visits-sales",
   // left-nav-highlighted
-  // word-cloud
+  // "word-cloud",
   // general-information
   // exhibitions-opportunities
   // studio-visits-sales
