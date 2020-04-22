@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', (_event) => {
           linkShow(`${LINKS[i]}`)
           linkBorderRemove();
           linkBorderAdd(LINKS[i])
+          style.height = "0px";
+          style.borderBottom = "none";
         })
       }
     }

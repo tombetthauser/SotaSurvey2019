@@ -122,6 +122,9 @@ text {
   font-size: 13px;
 }
 
+
+
+
 .medium-lines {
   /* background: repeating-linear-gradient(
     45deg,
@@ -140,6 +143,17 @@ text {
     #fff 10px,
     #c4dfff 11px
   ); */
+}
+
+.navburger-line {
+  height: 6px;
+  width: 20px;
+  margin-left: 10px;
+  border-bottom: 1px solid #c4dfff;
+}
+
+.navburger-line:nth-child(1) {
+  margin-top: 6.5px;
 }
 
 /* Main body styling starts here. */
@@ -170,17 +184,6 @@ text {
   max-width: 90%;
   line-height: 20px;
 }
-
-
-
-/* Responsive styling starts here. */
-
-@media only screen and (max-width: 1000px) {
-  .left-column-container{ display: none; }
-  .main-header-nav { display: block; }
-  .mobile-drop-down { display: block; }
-}
-
 
 
 /* Left column links styling starts here. */
@@ -242,6 +245,14 @@ text {
   position: absolute;
   top: 9px;
   left: 15px;
+}
+
+.left-column-header-hand-mobile {
+  height: 17.5px;
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  display: none;
 }
 
 .credits-tom-image {
@@ -613,4 +624,16 @@ a {
 
 a:visited {
   color: black;
+}
+
+
+
+/* Responsive styling starts here. */
+
+@media only screen and (max-width: 1000px) {
+  .left-column-container{ display: none; }
+  .main-header-nav { display: block; }
+  .mobile-drop-down { display: block; }
+  .main-header-section { padding-left: 40px; }
+  .left-column-header-hand-mobile { display: block; }
 }
