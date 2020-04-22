@@ -2,12 +2,34 @@ import * as DATA from "./data";
 import BarGraph from "./BarGraph";
 import PieChart from "./PieChart";
 import WordCloud from "./WordCloud";
+import WordCloudMobile from "./WordCloudMobile";
 import LineGraph from "./LineGraph";
 import BoxPlot from "./BoxPlot";
 
 const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)];
 
 export const RENDER_GRAPHS = () => {
+
+  new WordCloudMobile({
+    title: "What words describe your work?",
+    tag: ".graph-keywords-mobile",
+    data: DATA.KEYWORDS,
+    // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    width: 8000,
+  }).render();
+
+  new WordCloud({
+    title: "What words describe your work?",
+    tag: ".graph-keywords",
+    data: DATA.KEYWORDS,
+    // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    width: 8000,
+  }).render();
+
+
+
+
+
 
   new BarGraph({
     color: randColor(),
@@ -724,14 +746,6 @@ export const RENDER_GRAPHS = () => {
     color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
     angle: true
-  }).render();
-
-  new WordCloud({
-    title: "What words describe your work?",
-    tag: ".graph-keywords",
-    data: DATA.KEYWORDS,
-    // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
-    width: 8000,
   }).render();
   
   new BarGraph({
