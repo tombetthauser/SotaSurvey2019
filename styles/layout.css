@@ -248,10 +248,8 @@ text {
 }
 
 .left-column-header-hand-mobile {
-  height: 17.5px;
-  position: absolute;
-  top: 10px;
-  left: 55px;
+  height: 16.5px;
+  margin-bottom: -3px;
   display: none;
 }
 
@@ -634,6 +632,6 @@ a:visited {
   .left-column-container{ display: none; }
   .main-header-nav { display: block; }
   .mobile-drop-down { display: block; }
-  .main-header-section { padding-left: 40px; }
-  .left-column-header-hand-mobile { display: block; }
+  .main-header-section { padding-left: 15px; }
+  .left-column-header-hand-mobile { display: inline-block; }
 }
