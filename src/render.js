@@ -10,6 +10,8 @@ const randColor = () => DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.lengt
 
 export const RENDER_GRAPHS = () => {
 
+  // -------------------------------------- MOBILE WORD CLOUDS
+
   new WordCloudMobile({
     title: "What words describe your work?",
     tag: ".graph-keywords-mobile",
@@ -17,6 +19,202 @@ export const RENDER_GRAPHS = () => {
     color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 500,
   }).render();
+
+  new WordCloudMobile({
+    title: "What words describe your work?",
+    tag: ".graph-exhibition-contact-mobile",
+    data: DATA.EXHIBITION_CONTACT,
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    multiplier: 300,
+    minSize: 12,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "Do you have any final thoughts regarding this survey?",
+    tag: ".final-thoughts-mobile",
+    data: DATA.FINAL_THOUGHTS,
+    multiplier: 15,
+    minSize: 8,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "Are there any arts institutions, galleries etc. that you would like to anonymously cite for outstanding service to artists or communities this past year?",
+    tag: ".negative-shoutout-mobile",
+    data: DATA.NEGATIVE_SHOUTOUT,
+    multiplier: 20,
+    minSize: 14,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "Are there any arts institutions, galleries etc. that you would like to anonymously cite for outstanding service to artists or communities this past year?",
+    tag: ".positive-shoutout-mobile",
+    data: DATA.POSITIVE_SHOUTOUT,
+    multiplier: 20,
+    minSize: 14,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "What additional duties aside from teaching did you perform for your school or schools this past year?",
+    tag: ".extra-duties-mobile",
+    data: DATA.EXTRA_DUTIES,
+    multiplier: 20,
+    minSize: 14,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "What schools did you teach for this past year?",
+    tag: ".schools-taught-at-mobile",
+    data: DATA.SHOOLS_TAUGHT_AT,
+    multiplier: 1,
+    minSize: 14,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "What are the most important benefits of your current city / neighborhood?",
+    tag: ".city-benefits-mobile",
+    data: DATA.CITY_BENEFITS,
+    multiplier: 3,
+    minSize: 8,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "What neighborhood and city did you live in at the end of 2016?",
+    tag: ".previous-city-mobile",
+    data: DATA.PREVIOUS_CITY,
+    multiplier: 12,
+    minSize: 8,
+  }).render();
+
+  new WordCloudMobile({
+    title: "What city / neighborhood do you live in?",
+    tag: ".cities-neighborhoods-cloud-mobile",
+    data: DATA.CITIES_NEIGHBORHOODS,
+    color: randColor(),
+    multiplier: 12,
+    minSize: 8,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "List any past degrees you've completed.",
+    tag: ".past-degrees-mobile",
+    data: DATA.PAST_DEGREES,
+    multiplier: 5,
+    minSize: 12,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "If you are currently a student what school do you attend?",
+    tag: ".current-school-mobile",
+    data: DATA.CURRENT_SCHOOL,
+    multiplier: 1,
+    minSize: 20,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "What types of jobs did you work?",
+    tag: ".job-types-mobile",
+    data: DATA.JOB_TYPES,
+    multiplier: 6.5,
+    minSize: 12,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "",
+    tag: ".art-resources-mobile",
+    data: DATA.ART_RESOURCES,
+    multiplier: 1.5,
+    minSize: 12,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "",
+    tag: ".social-media-negatives-mobile",
+    data: DATA.SOCIAL_MEDIA_NEGATIVES,
+    multiplier: 15,
+    minSize: 14,
+  }).render();
+
+  new WordCloudMobile({
+    color: randColor(),
+    title: "",
+    tag: ".social-media-positives-mobile",
+    data: DATA.SOCIAL_MEDIA_POSITIVES,
+    multiplier: 6,
+    minSize: 14,
+  }).render();
+
+  new WordCloudMobile({
+    title: "",
+    tag: ".sale-types-cloud-mobile",
+    data: DATA.SALE_TYPES,
+    // color: randColor(),
+    multiplier: 3,
+    minSize: 10,
+  }).render();
+
+  new WordCloudMobile({
+    title: "",
+    tag: ".studio-visit-sources-cloud-mobile",
+    data: DATA.STUDIO_VISIT_SOURCES,
+    // color: randColor(),
+    multiplier: 3.5,
+    minSize: 10,
+  }).render();
+
+  new WordCloudMobile({
+    title: "Who visited your studiothis past year?",
+    tag: ".studio-visitors-cloud-mobile",
+    data: DATA.STUDIO_VISITORS,
+    // color: randColor(),
+    multiplier: 2,
+    minSize: 10,
+  }).render();
+
+  new WordCloudMobile({
+    title: "What kinds of work did you sell?",
+    tag: ".sales-mediums-cloud-mobile",
+    data: DATA.SALES_MEDIUMS,
+    color: randColor(),
+    multiplier: 3,
+    minSize: 12,
+  }).render();
+
+  new WordCloudMobile({
+    title: "Who did you sell work to?",
+    tag: ".graph-buyers-mobile",
+    data: DATA.BUYERS_CLOUD,
+    color: randColor(),
+    multiplier: 1.5,
+    minSize: 12,
+  }).render();
+
+  new WordCloudMobile({
+    title: "What words describe your work?",
+    tag: ".graph-gallery-spaces-mobile",
+    data: DATA.EXHIBITION_SPACES,
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    multiplier: 1.75,
+    minSize: 12,
+  }).render();
+
+
+
+
+
+
+
 
   new WordCloud({
     title: "What words describe your work?",
@@ -225,6 +423,16 @@ export const RENDER_GRAPHS = () => {
     multiplier: 1.75,
     minSize: 12,
   }).render();
+
+
+
+
+
+
+
+
+
+
 
 // ------------------------------- BAR GRAPHS
 

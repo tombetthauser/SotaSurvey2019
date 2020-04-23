@@ -511,7 +511,29 @@ strong {
   text-transform: capitalize;
 }
 
-.graph-keywords-mobile {
+.graph-keywords-mobile,
+.graph-keywords-mobile,
+.graph-exhibition-contact-mobile,
+.final-thoughts-mobile,
+.negative-shoutout-mobile,
+.positive-shoutout-mobile,
+.extra-duties-mobile,
+.schools-taught-at-mobile,
+.city-benefits-mobile,
+.previous-city-mobile,
+.cities-neighborhoods-cloud-mobile,
+.past-degrees-mobile,
+.current-school-mobile,
+.job-types-mobile,
+.art-resources-mobile,
+.social-media-negatives-mobile,
+.social-media-positives-mobile,
+.sale-types-cloud-mobile,
+.studio-visit-sources-cloud-mobile,
+.studio-visitors-cloud-mobile,
+.sales-mediums-cloud-mobile,
+.graph-buyers-mobile,
+.graph-gallery-spaces-mobile {
   height: 1500px;
   display: block;
   margin-left: auto;
@@ -643,9 +665,9 @@ a:visited {
   .mobile-drop-down { display: block; }
   .main-header-section { padding-left: 15px; }
   .left-column-header-hand-mobile { display: inline-block; }
-  .mobile-only { display: block; }
 }
 
 @media only screen and (max-width: 600px) {
+  .mobile-only { display: block; }
   .desktop-only { display: none; }
 }
