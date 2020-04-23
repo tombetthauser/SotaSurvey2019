@@ -9,7 +9,7 @@ export default class WordCloudMobile {
     this.innerWidth = (input.width - 50) || 550;
     this.innerHeight = (input.height - 50) || 400;
 
-    this.margin = input.margin || { top: 20, right: 20, bottom: 20, left: 30 };
+    this.margin = input.margin || { top: 20, right: 20, bottom: 20, left: 0 };
     this.color = input.color || null;
     this.sideways = input.sideways || false;
 
@@ -24,7 +24,7 @@ export default class WordCloudMobile {
       .attr("width", this.width)
       .attr("height", this.height)
       .append("g")
-      .attr("transform", "translate(-75,-32.5)");
+      .attr("transform", "translate(-115,-32.5)");
 
       let multiplier = this.multiplier;
       let minSize = this.minSize;

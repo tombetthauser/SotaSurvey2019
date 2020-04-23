@@ -644,5 +644,8 @@ a:visited {
   .main-header-section { padding-left: 15px; }
   .left-column-header-hand-mobile { display: inline-block; }
   .mobile-only { display: block; }
+}
+
+@media only screen and (max-width: 600px) {
   .desktop-only { display: none; }
 }

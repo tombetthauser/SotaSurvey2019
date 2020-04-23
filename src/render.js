@@ -14,7 +14,7 @@ export const RENDER_GRAPHS = () => {
     title: "What words describe your work?",
     tag: ".graph-keywords-mobile",
     data: DATA.KEYWORDS,
-    // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 500,
   }).render();
 
