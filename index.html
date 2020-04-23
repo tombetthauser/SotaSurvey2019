@@ -1,850 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/victory-hand_270c.png">
-
-  <title>SotA 2019</title>
-  <link rel="stylesheet" href="app.css">
-  <!-- <script src="app.js"></script> -->
-  <script src="dist/main.js"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
-
-  <!-- Below are header tags and links for JQuery Map -->
-  <link href="./dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="./dist/jquery.vmap.js"></script>
-  <script type="text/javascript" src="./dist/maps/jquery.vmap.usa.js" charset="utf-8"></script>
-  <script type="text/javascript" src="./states.js"></script>
-  <link rel="stylesheet" href="./states.css">
-</head>
-<body class="html-body-container">
-  <!-- <div class="rainbow-div"></div> -->
-  <aside class="left-column-container">
-    <header class="left-column-header small-lines">
-      <img class="left-column-header-hand" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/victory-hand_270c.png" alt="">
-      <span class="left-column-header-text">SotA</span>
-      <span class="left-column-header-year">2019</span>
-    </header>
-    <section class="left-column-section medium-lines">
-      <ul class="left-column-ul">
-        <!-- <li class="left-column-li map-link">Survey Map</li> -->
-        <!-- <li class="left-column-li cities-neighborhoods-cloud-link">Cities</li> -->
-        <!-- <li class="left-column-li demographics-link">Demographics</li> -->
-        <!-- <li class="left-column-li exhibitions-link">Exhibitions</li>
-        <li class="left-column-li gallery-spaces-link">Show Venues</li>
-        <li class="left-column-li finding-shows-link">Finding Shows</li>
-        <li class="left-column-li studio-visits-link">Studio Visits</li>
-        <li class="left-column-li sales-link">Selling Work</li>
-        <li class="left-column-li sales-cloud-link">Collectors</li>
-        <li class="left-column-li sales-mediums-cloud-link">Sale Mediums</li>
-        <li class="left-column-li studio-visitors-cloud-link">Studio Visitors</li>
-        <li class="left-column-li studio-visit-sources-cloud-link">Studio Visit Sources</li> -->
-
-        <!-- <hr> -->
-        <!-- <hr> -->
-        <!-- <hr> -->
-
-        <li class="left-column-li introduction-link left-nav-highlighted-link">Introduction</li>
-        <li class="left-column-li word-cloud-link">Studio Keywords</li>
-        <li class="left-column-li general-information-link">General Information</li>
-        <li class="left-column-li exhibitions-opportunities-link">Exhibitions / Opportunities</li>
-        <li class="left-column-li studio-visits-sales-link">Studio Visits / Sales</li>
-        <li class="left-column-li websites-social-media-link">Websites / Social Media</li>
-        <li class="left-column-li studio-habits-link">Studio Space / Habits</li>
-        <li class="left-column-li employment-link">Jobs / Employment</li>
-        <li class="left-column-li schools-link">Schools / Art Programs</li>
-        <li class="left-column-li cities-link">Cities / Neighborhoods</li>
-        <li class="left-column-li galleries-link">Galleries / Museums</li>
-        <li class="left-column-li instructors-link">Art Instructors</li>
-        <li class="left-column-li closing-thoughts-link">Closing Thoughts</li>
-        <!-- <li class="left-column-li conclusions-link">Conclusions</li> -->
-        <li class="left-column-li"><a target="new" href="./src/raw_data.csv">Raw Data (download)</a></li>
-      </ul>
-    </section>
-    <footer class="left-column-footer small-lines">
-        <a target="new" href="http://tombetthauser.com" class="credits-tom-image"></a>
-        <div class="left-footer-inner-div">
-          Site built by<br>Tom Betthauser
-        </div>
-        <ul class="left-bottom-links-ul">
-          <li><a target="new" href="http://tombetthauser.com">portfolio</a></li>
-          <li><a target="new" href="https://www.linkedin.com/in/tombetthauser/">linkedin</a></li>
-          <li><a target="new" href="https://github.com/tombetthauser">github</a></li>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/victory-hand_270c.png">
+    <title>SotA 2019</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="dist/main.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+    <link href="./dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="./dist/maps/jquery.vmap.usa.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./states.js"></script>
+    <link rel="stylesheet" href="./states.css">
+  </head>
+  <body class="html-body-container">
+    <aside class="left-column-container">
+      <header class="left-column-header small-lines">
+        <img class="left-column-header-hand" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/victory-hand_270c.png" alt="">
+        <span class="left-column-header-text">SotA</span>
+        <span class="left-column-header-year">2019</span>
+      </header>
+      <section class="left-column-section medium-lines">
+        <ul class="left-column-ul">
+          <li class="left-column-li introduction-link left-nav-highlighted-link">Introduction</li>
+          <li class="left-column-li word-cloud-link">Studio Keywords</li>
+          <li class="left-column-li general-information-link">General Information</li>
+          <li class="left-column-li exhibitions-opportunities-link">Exhibitions / Opportunities</li>
+          <li class="left-column-li studio-visits-sales-link">Studio Visits / Sales</li>
+          <li class="left-column-li websites-social-media-link">Websites / Social Media</li>
+          <li class="left-column-li studio-habits-link">Studio Space / Habits</li>
+          <li class="left-column-li employment-link">Jobs / Employment</li>
+          <li class="left-column-li schools-link">Schools / Art Programs</li>
+          <li class="left-column-li cities-link">Cities / Neighborhoods</li>
+          <li class="left-column-li galleries-link">Galleries / Museums</li>
+          <li class="left-column-li instructors-link">Art Instructors</li>
+          <li class="left-column-li closing-thoughts-link">Closing Thoughts</li>
+          <li class="left-column-li"><a target="new" href="./src/raw_data.csv">Raw Data (download)</a></li>
         </ul>
-    </footer>
-  </aside>
-  <section class="main-section-container">
-    <header class="main-header-container">
-      <aside class="main-header-nav">
-        <div class="navburger-line"></div>
-        <div class="navburger-line"></div>
-        <div class="navburger-line"></div>
-      </aside>
-      <section class="main-header-section medium-lines">
-        <!-- State of the Arts Survey 2019 – Results -->
-        <img class="left-column-header-hand-mobile" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/victory-hand_270c.png" alt="">
-        SotA 2019 Results
       </section>
-    </header>
-    <nav class="mobile-drop-down">
-      <ul class="left-column-ul">
-        <!-- <li class="left-column-li map-link">Survey Map</li> -->
-        <!-- <li class="left-column-li cities-neighborhoods-cloud-link">Cities</li> -->
-        <!-- <li class="left-column-li demographics-link">Demographics</li> -->
-        <!-- <li class="left-column-li word-cloud-link">Studio Keywords</li> -->
-        <!-- <li class="left-column-li exhibitions-link">Exhibitions</li> -->
-        <!-- <li class="left-column-li gallery-spaces-link">Show Venues</li> -->
-        <!-- <li class="left-column-li finding-shows-link">Finding Shows</li> -->
-        <!-- <li class="left-column-li studio-visits-link">Studio Visits</li> -->
-        <!-- <li class="left-column-li sales-link">Selling Work</li> -->
-        <!-- <li class="left-column-li sales-cloud-link">Collectors</li> -->
-        <!-- <li class="left-column-li sales-mediums-cloud-link">Sale Mediums</li> -->
-        <!-- <li class="left-column-li studio-visitors-cloud-link">Studio Visitors</li> -->
-        <!-- <li class="left-column-li studio-visit-sources-cloud-link">Studio Visit Sources</li> -->
-        
-        <!-- General Information -->
-
-        <li class="left-column-li introduction-link">Introduction</li>
-        <li class="left-column-li general-information-link">General Information</li>
-        <li class="left-column-li exhibitions-opportunities-link">Exhibitions / Opportunities</li>
-        <li class="left-column-li studio-visits-sales-link">Studio Visits / Sales</li>
-        <li class="left-column-li websites-social-media-link">Websites / Social Media</li>
-        <li class="left-column-li studio-habits-link">Studio Space / Habits</li>
-        <li class="left-column-li employment-link">Jobs / Employment</li>
-        <li class="left-column-li schools-link">Schools / Art Programs</li>
-        <li class="left-column-li cities-link">Cities / Neighborhoods</li>
-        <li class="left-column-li galleries-link">Galleries / Museums</li>
-        <li class="left-column-li instructors-link">Art Instructors</li>
-        <li class="left-column-li closing-thoughts-link">Closing Thoughts</li>
-
-
-        <!-- <li class="left-column-li conclusions-link">Conclusions</li> -->
-        <li class="left-column-li"><a target="new" href="google.com">Raw Data</a></li>
-      </ul>
-    </nav>
-    <main class="main-section-body">
-      <div class="introduction-div">
-
-        <p class="intro-title-p">Welcome to the State of the Arts 2019 survey results!</p>
-
-        <!-- <p>TLDR: These are the results of a census-style survey for visual artists by visual artists.</p> -->
-
-        <p>State of the Arts is <strong>an anonymous census-style survey for visual artists</strong> intended to help artist gather and have free open
-          access to critical information regarding trends in the arts communities of which they are a part. The goal of the survey is
-          to <strong>assist artists in practical decision making</strong> and aid them in building a more inclusive, sustainable and vibrant art
-          world by giving them free access to this information.</p>
-
-        <p>The 2019 iteration of the survey was organized with the assistance of a small group of graduates from the San
-          Francisco Art Institute and the Yale School of Art. <strong>It included 89 questions</strong> including but not
-          limited to those that addressed the following.</p>
-
-        <ul>
-          <li>What <strong>cities</strong> are artists living in?</li>
-          <li>What kinds of <strong>jobs</strong> are we working?</li>
-          <li>What <strong>subjects</strong> are we making work about?</li>
-          <li>What <strong>mediums</strong> are we using?</li>
-          <li>How are we <strong>selling</strong> our work?</li>
-          <li>How are we <strong>getting shows</strong> ?</li>
-          <li>How are we <strong>connecting</strong> with eachother?</li>
-          <li>In what ways are we <strong>struggling</strong> ?</li>
-          <li>In what ways are we <strong>thriving</strong> ?</li>
+      <footer class="left-column-footer small-lines">
+          <a target="new" href="http://tombetthauser.com" class="credits-tom-image"></a>
+          <div class="left-footer-inner-div">
+            Site built by<br>Tom Betthauser
+          </div>
+          <ul class="left-bottom-links-ul">
+            <li><a target="new" href="http://tombetthauser.com">portfolio</a></li>
+            <li><a target="new" href="https://www.linkedin.com/in/tombetthauser/">linkedin</a></li>
+            <li><a target="new" href="https://github.com/tombetthauser">github</a></li>
+          </ul>
+      </footer>
+    </aside>
+    <section class="main-section-container">
+      <header class="main-header-container">
+        <aside class="main-header-nav">
+          <div class="navburger-line"></div>
+          <div class="navburger-line"></div>
+          <div class="navburger-line"></div>
+        </aside>
+        <section class="main-header-section medium-lines">
+          <img class="left-column-header-hand-mobile" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/victory-hand_270c.png" alt="">
+          SotA 2019 Results
+        </section>
+      </header>
+      <nav class="mobile-drop-down">
+        <ul class="left-column-ul">
+          <li class="left-column-li introduction-link">Introduction</li>
+          <li class="left-column-li general-information-link">General Information</li>
+          <li class="left-column-li exhibitions-opportunities-link">Exhibitions / Opportunities</li>
+          <li class="left-column-li studio-visits-sales-link">Studio Visits / Sales</li>
+          <li class="left-column-li websites-social-media-link">Websites / Social Media</li>
+          <li class="left-column-li studio-habits-link">Studio Space / Habits</li>
+          <li class="left-column-li employment-link">Jobs / Employment</li>
+          <li class="left-column-li schools-link">Schools / Art Programs</li>
+          <li class="left-column-li cities-link">Cities / Neighborhoods</li>
+          <li class="left-column-li galleries-link">Galleries / Museums</li>
+          <li class="left-column-li instructors-link">Art Instructors</li>
+          <li class="left-column-li closing-thoughts-link">Closing Thoughts</li>
+          <li class="left-column-li"><a target="new" href="google.com">Raw Data</a></li>
         </ul>
-
-        <p>For this <strong>first beta version of the survey</strong> we are proud to have had <strong>over 100 participants</strong> from across the United States that took the
-          survey before December 31st 2019. <strong>Participation is still welcome</strong> however if you wish to fill out the survey.</p>
-
-        <p><strong>If you would like to contribute ideas for the 2020 survey</strong> please don't hesitate to <strong>take the
-        2019 survey.</strong>  All your information for 2019 will be aggregated to the rest of the participants data and fields are
-        provided in each section where you can add new question ideas and thoughts on current questions.</p>
-
-        <!-- <p> -->
+      </nav>
+      <main class="main-section-body">
+        <div class="introduction-div">
+          <p class="intro-title-p">Welcome to the State of the Arts 2019 survey results!</p>
+          <p>State of the Arts is <strong>an anonymous census-style survey for visual artists</strong> intended to help artist gather and have free open
+            access to critical information regarding trends in the arts communities of which they are a part. The goal of the survey is
+            to <strong>assist artists in practical decision making</strong> and aid them in building a more inclusive, sustainable and vibrant art
+            world by giving them free access to this information.</p>
+          <p>The 2019 iteration of the survey was organized with the assistance of a small group of graduates from the San
+            Francisco Art Institute and the Yale School of Art. <strong>It included 89 questions</strong> including but not
+            limited to those that addressed the following.</p>
+          <ul>
+            <li>What <strong>cities</strong> are artists living in?</li>
+            <li>What kinds of <strong>jobs</strong> are we working?</li>
+            <li>What <strong>subjects</strong> are we making work about?</li>
+            <li>What <strong>mediums</strong> are we using?</li>
+            <li>How are we <strong>selling</strong> our work?</li>
+            <li>How are we <strong>getting shows</strong> ?</li>
+            <li>How are we <strong>connecting</strong> with eachother?</li>
+            <li>In what ways are we <strong>struggling</strong> ?</li>
+            <li>In what ways are we <strong>thriving</strong> ?</li>
+          </ul>
+          <p>
+            For this <strong>first beta version of the survey</strong> we are proud to have had <strong>over 100 participants</strong> from across the United States that took the
+            survey before December 31st 2019. <strong>Participation is still welcome</strong> however if you wish to fill out the survey.
+          </p>
+          <p>
+            <strong>If you would like to contribute ideas for the 2020 survey</strong> please don't hesitate to <strong>take the
+            2019 survey.</strong>  All your information for 2019 will be aggregated to the rest of the participants data and fields are
+            provided in each section where you can add new question ideas and thoughts on current questions.
+          </p>
           <br>
           <a target="new" href="https://forms.gle/m7n8RQ2Wf8DfUEVo8" class="take-survey-button">Take the 2019 Survey!</a> 
+          <br><br><br>
+          <p>
+            <strong>As you peruse</strong> the results please keep in mind, <strong>this is a completely open-ended survey.</strong> We went to great lengths to
+            make sure there was no singular agenda or bias at work in our selection of questions. The presentation for the data is
+            intended to be similarly neutral. <strong>It's up to the reader to decide what the data might mean</strong> and what conclusions to
+            draw.
+          </p>
+          <p>
+            Have fun, take everything with a big grain of salt, when in doubt check out the raw data and <strong>if
+            you find anything interesting</strong> like correlations or unexpected trends don't hesitate to <strong>share it on social media</strong> using <strong>#SotA2019</strong> or
+            <strong>#SotASurvey</strong>!
+          </p>
+          <p class="tech-stack-intro-p">
+            This site was built using object oriented ES6 JavaScript in conjunction with the D3 data visualizations library. This project would not have been 
+            possible without the rich ecosystem of D3 resources made freely available by the community of engineers who generously contribute it.
+          </p>
+          <img class="tech-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" alt="">
+          <img class="tech-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcoG9TklnGohKNEkHCt8xvHlBybkylL8LmI_pzyQyT03E4hCO9Pg&s" alt="">
+        </div>
+        <div class="map-div">
+          <p>Welcome to the Survey Map!</p>
+          <p class="basic-p">Organized on this site are the processed results from the State of the Arts survey 2019. The original
+            survey can be viewed on its separate page, and the raw data can be downloaded on request by any artist or artist-run
+            organization.</p>
+          <div id="vmap"></div>
+          <p class="map-hover-notes">Hover over states to see spacific participant numbers.</p>
+        </div>
+        <div class="cities-neighborhoods-cloud-div"></div>
+        <div class="demographics-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Demographics Section</p>
+            <p class="cities-top-text-p">
+              Below are <strong>selected data visualizations</strong> for the <strong>basic demographic information</strong> of survey participants like gender, race,
+              age etc. <strong>All responses pertain to 2019</strong> and are worded as they were in the survey, abbreviated when necessary. This
+              information is interesting in isolation but gains new levels of depth when cross-referenced, which can be done freely
+              using the downloadable raw data. Most questions were prompted as 
+            </p>
+          </div>
           <br>
-          <br>
-          <br>
-          <!-- &lt;-- (contribute to the 2020 survey) -->
-        <!-- </p> -->
-
-        <p><strong>As you peruse</strong> the results please keep in mind, <strong>this is a completely open-ended survey.</strong> We went to great lengths to
-        make sure there was no singular agenda or bias at work in our selection of questions. The presentation for the data is
-        intended to be similarly neutral. <strong>It's up to the reader to decide what the data might mean</strong> and what conclusions to
-        draw.</p>
-
-        <p>Have fun, take everything with a big grain of salt, when in doubt check out the raw data and <strong>if
-        you find anything interesting</strong> like correlations or unexpected trends don't hesitate to <strong>share it on social media</strong> using <strong>#SotA2019</strong> or
-        <strong>#SotASurvey</strong>!</p>
-
-        <p class="tech-stack-intro-p">This site was built using object oriented ES6 JavaScript in conjunction with the D3 data visualizations library. This project would not have been 
-          possible without the rich ecosystem of D3 resources made freely available by the community of engineers who generously contribute it.</p>
-
-        <img class="tech-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" alt="">
-        <img class="tech-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcoG9TklnGohKNEkHCt8xvHlBybkylL8LmI_pzyQyT03E4hCO9Pg&s" alt="">
-
-      </div>
-      <div class="map-div">
-        <p>Welcome to the Survey Map!</p>
-        <p class="basic-p">Organized on this site are the processed results from the State of the Arts survey 2019. The original
-          survey can be viewed on its separate page, and the raw data can be downloaded on request by any artist or artist-run
-          organization.</p>
-        <div id="vmap"></div>
-        <p class="map-hover-notes">Hover over states to see spacific participant numbers.</p>
-      </div>
-      <div class="cities-neighborhoods-cloud-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Cities Section</p>
-          <p>Below is a <strong>word cloud</strong> representing <strong>what cities artists lived in during 2019.</strong> 
-          The <strong>size of words</strong> correlates directly to the <strong>number of survey participants living in the city</strong> 
-          that listed a given word in their response. Artists were simply asked to fill in what city they lived in and were free to answer 
-          however they saw fit. For instance you will see New York and Brooklyn listed separately but no significant mention of Manhattan. 
-          It is up to the reader to decide what this indicates. For complete information on this section please see the downloadable raw data.</p>
         </div>
-        <svg class="cities-neighborhoods-cloud"></svg> -->
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="demographics-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Demographics Section</p>
-          <p class="cities-top-text-p">
-            Below are <strong>selected data visualizations</strong> for the <strong>basic demographic information</strong> of survey participants like gender, race,
-            age etc. <strong>All responses pertain to 2019</strong> and are worded as they were in the survey, abbreviated when necessary. This
-            information is interesting in isolation but gains new levels of depth when cross-referenced, which can be done freely
-            using the downloadable raw data. Most questions were prompted as 
-          </p>
+        <div class="word-cloud-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Studio Keywords Section</p>
+            <p class="cities-top-text-p">
+              Below is a <strong>word cloud</strong> representing the words artists used to <strong>describe their studio practice during 2019.</strong> 
+              The <strong>size of words</strong> correlates directly to the <strong>number of survey participants</strong> that listed a given word in their response. Artists were
+              asked to fill in <strong>any words to describe the subject matter and mediums they used</strong> in their studios this past year. To work with the data in a cross-referenceable format as always
+              please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="graph-keywords desktop-only"></svg>
+          <svg class="graph-keywords-mobile mobile-only"></svg>
         </div>
-        <!-- <svg class="graph-gender"></svg> -->
-        <!-- <svg class="graph-race"></svg> -->
-        <!-- <svg class="graph-orientation"></svg> -->
-        <!-- <svg class="graph-age"></svg> -->
-        <!-- <svg class="graph-found-survey"></svg> -->
-        <br>
-      </div>
-      <div class="word-cloud-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Keywords Section</p>
-          <p class="cities-top-text-p">
-            Below is a <strong>word cloud</strong> representing the words artists used to <strong>describe their studio practice during 2019.</strong> 
-            The <strong>size of words</strong> correlates directly to the <strong>number of survey participants</strong> that listed a given word in their response. Artists were
-            asked to fill in <strong>any words to describe the subject matter and mediums they used</strong> in their studios this past year. To work with the data in a cross-referenceable format as always
-            please see the downloadable raw data.
-          </p>
+        <!-- OLD SECTION DIVS -->
+        <div class="exhibitions-div"></div>
+        <div class="gallery-spaces-div"></div>
+        <div class="finding-shows-div"></div>
+        <div class="studio-visits-div"></div>
+        <div class="sales-div"></div>
+        <div class="sales-cloud-div"></div>
+        <div class="sales-mediums-cloud-div"></div>
+        <div class="studio-visitors-cloud-div"></div>
+        <div class="studio-visit-sources-cloud-div"></div>
+        <!-- OLD SECTION DIVS END -->
+        <div class="general-information-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">General Information Section</p>
+            <p class="cities-top-text-p">
+              Below are <strong>selected data visualizations</strong> for the <strong>basic demographic information</strong> of
+              survey participants like gender, race,
+              age etc. <strong>All responses pertain to 2019</strong> and are worded as they were in the survey, abbreviated when
+              necessary. This
+              information is interesting in isolation but gains new levels of depth when cross-referenced, which can be done
+              freely
+              using the downloadable raw data. Most questions were prompted as
+            </p>
+          </div>
+          <svg class="graph-gender"></svg>
+          <svg class="graph-race"></svg>
+          <svg class="graph-orientation"></svg>
+          <svg class="graph-age"></svg>
+          <svg class="graph-found-survey"></svg>
         </div>
-        <svg class="graph-keywords desktop-only"></svg>
-        <svg class="graph-keywords-mobile mobile-only"></svg>
-      </div>
-
-
-
-
-
-
-      <div class="exhibitions-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Exhibitions Section</p>
-          <p class="cities-top-text-p">
-            This section holds all <strong>general information regarding exhibitions in 2019</strong> for survey participants. This includes
-            information regarding <strong>show participation, gallery relationships, press etc.</strong> Exhibition-related questions that were best
-            represented in word clouds will be found in their own respective sections.
-          </p>
+        <div class="exhibitions-opportunities-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Exhibitions Section</p>
+            <p class="cities-top-text-p">
+              This section holds all <strong>general information regarding exhibitions in 2019</strong> for survey participants.
+              This includes
+              information regarding <strong>show participation, gallery relationships, press etc.</strong> Exhibition-related
+              questions that were best
+              represented in word clouds will be found in their own respective sections.
+            </p>
+          </div>
+          <svg class="graph-exhibitions-priority"></svg>
+          <svg class="graph-group-show-count"></svg>
+          <svg class="graph-solo-show-count"></svg>
+          <svg class="graph-show-applications"></svg>
+          <svg class="graph-application-fees"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Show Venues Section</p>
+            <p class="cities-top-text-p">
+              Below is a <strong>word cloud</strong> representing the <strong>places artists showed their work in 2019.</strong>
+              The <strong>size of words</strong> correlates directly
+              to the <strong>number of survey participants that listed a given venue type</strong> in their response. In many
+              cases artists wrote in their own custom venue types such as "public spaces"
+              which are up to the reader to interpret. To work with the data in a cross-referenceable format as always please see
+              the downloadable raw data.
+            </p>
+          </div>
+          <svg class="graph-gallery-spaces"></svg>
+          <svg class="graph-publication-count"></svg>
+          <svg class="graph-socialmedia-features"></svg>
+          <svg class="graph-event-organization"></svg>
+          <svg class="graph-gallery-representation"></svg>
+          <svg class="graph-legal-paperwork"></svg>
+          <svg class="graph-residency-priority"></svg>
+          <svg class="graph-residency-app-count"></svg>
+          <svg class="graph-residency-count"></svg>
+          <svg class="graph-grant-app-count"></svg>
+          <svg class="graph-grant-count"></svg>
+          <svg class="graph-grant-sum"></svg>
         </div>
-        <svg class="graph-exhibitions-priority"></svg>
-        <svg class="graph-group-show-count"></svg>
-        <svg class="graph-solo-show-count"></svg>
-        <svg class="graph-show-applications"></svg>
-        <svg class="graph-application-fees"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Show Venues Section</p>
-          <p class="cities-top-text-p">
-            Below is a <strong>word cloud</strong> representing the <strong>places artists showed their work in 2019.</strong>
-            The <strong>size of words</strong> correlates directly
-            to the <strong>number of survey participants that listed a given venue type</strong> in their response. In many
-            cases artists wrote in their own custom venue types such as "public spaces"
-            which are up to the reader to interpret. To work with the data in a cross-referenceable format as always please see
-            the downloadable raw data.
-          </p>
-        </div>
-        <svg class="graph-gallery-spaces"></svg>
-        <svg class="graph-publication-count"></svg>
-        <svg class="graph-socialmedia-features"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Visit Sources Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>sources for studio visits in 2019.</strong> The 
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
-            a given type of studio visit resource</strong> in their response. As always, to work with the data in a cross-referenceable 
-            format please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="studio-visit-sources-cloud"></svg>
-        <svg class="graph-event-organization"></svg>
-        <svg class="graph-gallery-representation"></svg>
-        <svg class="graph-legal-paperwork"></svg>
-        <svg class="graph-residency-priority"></svg>
-        <svg class="graph-residency-app-count"></svg>
-        <svg class="graph-residency-count"></svg>
-        <svg class="graph-grant-app-count"></svg>
-        <svg class="graph-grant-count"></svg>
-        <svg class="graph-grant-sum"></svg> -->
-      </div>
-      <div class="gallery-spaces-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Show Venues Section</p>
-          <p class="cities-top-text-p">
-            Below is a <strong>word cloud</strong> representing the <strong>places artists showed their work in 2019.</strong> The <strong>size of words</strong> correlates directly
-            to the <strong>number of survey participants that listed a given venue type</strong> in their response. In many cases artists wrote in their own custom venue types such as "public spaces" 
-            which are up to the reader to interpret. To work with the data in a cross-referenceable format as always please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="graph-gallery-spaces"></svg> -->
-      </div>
-      <div class="finding-shows-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Finding Shows Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>the ways artists found shows in 2019.</strong> The <strong>size of words</strong> correlates directly to the
-            <strong>number of survey participants that listed a given exhibition resource</strong> in their response. In some cases artists wrote in
-            their own custom venue types such as "art societies" which are up to the reader to interpret. To work with the data in a
-            cross-referenceable format as always please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="graph-exhibition-contact"></svg> -->
-      </div>
-      <div class="studio-visits-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Visits Section</p>
-          <p class="cities-top-text-p">
-            Below are selected visualizations for <strong>data related to the studio visits artists had in 2019</strong> including how much of a
-            priority studio visits were for artists and how many studio visits they had. All questions are worded as closely as
-            possible to how they appeared in the survey, abbreviated when necessary. As always this information gains new levels of
-            depth when cross-referenced, which can be done freely using the downloadable raw data.
-          </p>
-        </div> -->
-        <!-- <svg class="graph-visit-priority"></svg> -->
-        <!-- <svg class="graph-visit-count"></svg> -->
-      </div>
-      <div class="sales-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Selling Work Section</p>
-          <p class="cities-top-text-p">
-            Below are selected visualizations for <strong>data related to how artists sold work in 2019</strong> including
-            how much of a priority selling work was for them and how much money they made from selling work. All questions are worded as closely as
-            possible to how they appeared in the survey, abbreviated when necessary. As always deeper insights can be gained from this information 
-            when cross-referenced, which can be done freely using the downloadable raw data.
-          </p>
-        </div>
-        <svg class="graph-selling-priority"></svg>
-        <svg class="any-online-sales"></svg>
-        <svg class="graph-sale-platforms"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">How did you sell work?</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>the ways artists sold work in 2019.</strong> The <strong>size of words</strong> correlates directly to the
-            <strong>number of survey participants that listed a given sale types</strong> in their response. To work with the data in a
-            cross-referenceable format as always please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="sale-types-cloud"></svg>
-        <svg class="graph-sales-sum"></svg>
-        <svg class="graph-collector-treatment"></svg> -->
-      </div>
-      <div class="sales-cloud-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Collectors Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>the types of people that artists sold work to in 2019.</strong> As in the other word clouds the <strong>size of words</strong> correlates directly to the
-            <strong>number of survey participants that listed a given type of collector</strong> in their response. In some
-            cases artists wrote in their own custom collector types such as "strangers" which are up to the reader to interpret. To work with the data in
-            a cross-referenceable format as always please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="graph-buyers"></svg> -->
-      </div>
-      <div class="sales-mediums-cloud-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Sale Mediums Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>the types of work that artists sold in 2019.</strong> The 
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
-            a given type of work sold</strong> in their response. In some cases artists wrote in their own custom type of sold work 
-            such as "designs" which are up to the reader to interpret. As always, to work with the data in a cross-referenceable 
-            format please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="sales-mediums-cloud"></svg> -->
-      </div>
-      <div class="studio-visitors-cloud-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Visitors Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>who visited artist's studios in 2019.</strong> The 
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
-            a given type of studio visitor</strong> in their response. As always, to work with the data in a cross-referenceable 
-            format please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="studio-visitors-cloud"></svg> -->
-      </div>
-      <div class="studio-visit-sources-cloud-div">
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Visit Sources Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>sources for studio visits in 2019.</strong> The 
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
-            a given type of studio visit resource</strong> in their response. As always, to work with the data in a cross-referenceable 
-            format please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="studio-visit-sources-cloud"></svg> -->
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-      <div class="general-information-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">General Information Section</p>
-          <p class="cities-top-text-p">
-            Below are <strong>selected data visualizations</strong> for the <strong>basic demographic information</strong> of
-            survey participants like gender, race,
-            age etc. <strong>All responses pertain to 2019</strong> and are worded as they were in the survey, abbreviated when
-            necessary. This
-            information is interesting in isolation but gains new levels of depth when cross-referenced, which can be done
-            freely
-            using the downloadable raw data. Most questions were prompted as
-          </p>
-        </div>
-        <svg class="graph-gender"></svg>
-        <svg class="graph-race"></svg>
-        <svg class="graph-orientation"></svg>
-        <svg class="graph-age"></svg>
-        <svg class="graph-found-survey"></svg>
-      </div>
-      <div class="exhibitions-opportunities-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Exhibitions Section</p>
-          <p class="cities-top-text-p">
-            This section holds all <strong>general information regarding exhibitions in 2019</strong> for survey participants.
-            This includes
-            information regarding <strong>show participation, gallery relationships, press etc.</strong> Exhibition-related
-            questions that were best
-            represented in word clouds will be found in their own respective sections.
-          </p>
-        </div>
-        <svg class="graph-exhibitions-priority"></svg>
-        <svg class="graph-group-show-count"></svg>
-        <svg class="graph-solo-show-count"></svg>
-        <svg class="graph-show-applications"></svg>
-        <svg class="graph-application-fees"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Show Venues Section</p>
-          <p class="cities-top-text-p">
-            Below is a <strong>word cloud</strong> representing the <strong>places artists showed their work in 2019.</strong>
-            The <strong>size of words</strong> correlates directly
-            to the <strong>number of survey participants that listed a given venue type</strong> in their response. In many
-            cases artists wrote in their own custom venue types such as "public spaces"
-            which are up to the reader to interpret. To work with the data in a cross-referenceable format as always please see
-            the downloadable raw data.
-          </p>
-        </div>
-        <svg class="graph-gallery-spaces"></svg>
-        <svg class="graph-publication-count"></svg>
-        <svg class="graph-socialmedia-features"></svg>
-        <!-- <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Visit Sources Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>sources for studio visits in 2019.</strong> The
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
-              a given type of studio visit resource</strong> in their response. As always, to work with the data in a
-            cross-referenceable
-            format please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="studio-visit-sources-cloud"></svg> -->
-        <svg class="graph-event-organization"></svg>
-        <svg class="graph-gallery-representation"></svg>
-        <svg class="graph-legal-paperwork"></svg>
-        <svg class="graph-residency-priority"></svg>
-        <svg class="graph-residency-app-count"></svg>
-        <svg class="graph-residency-count"></svg>
-        <svg class="graph-grant-app-count"></svg>
-        <svg class="graph-grant-count"></svg>
-        <svg class="graph-grant-sum"></svg>
-      </div>
-
-
-
-
-
-
-
-
-
-      <div class="studio-visits-sales-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Visits / Sales Section</p>
-          <p class="cities-top-text-p">
-            Below are selected visualizations for <strong>data related to the studio visits artists had in 2019</strong>
-            including how much of a
-            priority studio visits were for artists and how many studio visits they had. All questions are worded as closely as
-            possible to how they appeared in the survey, abbreviated when necessary. As always this information gains new levels
-            of
-            depth when cross-referenced, which can be done freely using the downloadable raw data.
-          </p>
-          <p class="cities-top-text-p">
-            Below are selected visualizations for <strong>data related to how artists sold work in 2019</strong> including
-            how much of a priority selling work was for them and how much money they made from selling work. All questions are
-            worded as closely as
-            possible to how they appeared in the survey, abbreviated when necessary. As always deeper insights can be gained
-            from this information
-            when cross-referenced, which can be done freely using the downloadable raw data.
-          </p>
-        </div>
-        <svg class="graph-selling-priority"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Collectors Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>the types of people that artists sold work to in 2019.</strong> As in the
-            other word clouds the <strong>size of words</strong> correlates directly to the
-            <strong>number of survey participants that listed a given type of collector</strong> in their response. In some
-            cases artists wrote in their own custom collector types such as "strangers" which are up to the reader to interpret.
-            To work with the data in
-            a cross-referenceable format as always please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="graph-buyers"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">How did you make art-related sales?</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>the ways artists sold work in 2019.</strong> The <strong>size of
-              words</strong> correlates directly to the
-            <strong>number of survey participants that listed a given sale types</strong> in their response. To work with the
-            data in a
-            cross-referenceable format as always please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="sale-types-cloud"></svg>
-        <svg class="graph-sales-sum"></svg>
-      <!-- <div class="sales-mediums-cloud-div"> -->
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Sale Mediums Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>the types of work that artists sold in 2019.</strong> The 
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
-            a given type of work sold</strong> in their response. In some cases artists wrote in their own custom type of sold work 
-            such as "designs" which are up to the reader to interpret. As always, to work with the data in a cross-referenceable 
-            format please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="sales-mediums-cloud"></svg>
-        <svg class="graph-collector-treatment"></svg>
-        <svg class="any-online-sales"></svg>
-        <svg class="graph-sale-platforms"></svg>
-        <svg class="graph-visit-priority"></svg>
-        <svg class="graph-visit-count"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Visitors Cloud</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>who visited artist's studios in 2019.</strong> The
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
+        <div class="studio-visits-sales-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Studio Visits / Sales Section</p>
+            <p class="cities-top-text-p">
+              Below are selected visualizations for <strong>data related to the studio visits artists had in 2019</strong>
+              including how much of a
+              priority studio visits were for artists and how many studio visits they had. All questions are worded as closely as
+              possible to how they appeared in the survey, abbreviated when necessary. As always this information gains new levels
+              of
+              depth when cross-referenced, which can be done freely using the downloadable raw data.
+            </p>
+            <p class="cities-top-text-p">
+              Below are selected visualizations for <strong>data related to how artists sold work in 2019</strong> including
+              how much of a priority selling work was for them and how much money they made from selling work. All questions are
+              worded as closely as
+              possible to how they appeared in the survey, abbreviated when necessary. As always deeper insights can be gained
+              from this information
+              when cross-referenced, which can be done freely using the downloadable raw data.
+            </p>
+          </div>
+          <svg class="graph-selling-priority"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Collectors Section</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>the types of people that artists sold work to in 2019.</strong> As in the
+              other word clouds the <strong>size of words</strong> correlates directly to the
+              <strong>number of survey participants that listed a given type of collector</strong> in their response. In some
+              cases artists wrote in their own custom collector types such as "strangers" which are up to the reader to interpret.
+              To work with the data in
+              a cross-referenceable format as always please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="graph-buyers"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">How did you make art-related sales?</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>the ways artists sold work in 2019.</strong> The <strong>size of
+              words</strong> correlates directly to the <strong>number of survey participants that listed a given sale types
+              </strong> in their response. To work with the data in a cross-referenceable format as always please 
+              see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="sale-types-cloud"></svg>
+          <svg class="graph-sales-sum"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Sale Mediums Section</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>the types of work that artists sold in 2019.</strong> The 
+              <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
+              a given type of work sold</strong> in their response. In some cases artists wrote in their own custom type of sold work 
+              such as "designs" which are up to the reader to interpret. As always, to work with the data in a cross-referenceable 
+              format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="sales-mediums-cloud"></svg>
+          <svg class="graph-collector-treatment"></svg>
+          <svg class="any-online-sales"></svg>
+          <svg class="graph-sale-platforms"></svg>
+          <svg class="graph-visit-priority"></svg>
+          <svg class="graph-visit-count"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Studio Visitors Cloud</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>who visited artist's studios in 2019.</strong> The
+              <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
               a given type of studio visitor</strong> in their response. As always, to work with the data in a
-            cross-referenceable
-            format please see the downloadable raw data.
-          </p>
-        </div>
-        <svg class="studio-visitors-cloud"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Visit Sources Cloud</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>sources for studio visits in 2019.</strong> The
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
+              cross-referenceable format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="studio-visitors-cloud"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Studio Visit Sources Cloud</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>sources for studio visits in 2019.</strong> The
+              <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
               a given type of studio visit resource</strong> in their response. As always, to work with the data in a
-            cross-referenceable
-            format please see the downloadable raw data.
-          </p>
+              cross-referenceable format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="studio-visit-sources-cloud"></svg>
         </div>
-        <svg class="studio-visit-sources-cloud"></svg>
-      </div>
-
-
-
-      <div class="websites-social-media-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Websites / Social Media Section</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>sources for studio visits in 2019.</strong> The 
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
-            a given type of studio visit resource</strong> in their response. As always, to work with the data in a cross-referenceable 
-            format please see the downloadable raw data.
-          </p>
+        <div class="websites-social-media-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Websites / Social Media Section</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>sources for studio visits in 2019.</strong> The 
+              <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
+              a given type of studio visit resource</strong> in their response. As always, to work with the data in a cross-referenceable 
+              format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="graph-social-media-priority"></svg>
+          <svg class="graph-facebook-frequency"></svg>
+          <svg class="graph-facebook-more-less"></svg>
+          <svg class="graph-instagram-frequency"></svg>
+          <svg class="instagram-more-less"></svg>
+          <svg class="graph-paid-social-media"></svg>
+          <svg class="social-media-service-rating"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Social Media Positives</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>what participants liked about social media in 2019.</strong> The 
+              <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
+              a given keyword or phrase</strong> in their response. 
+              Remember that there is an <strong>unavoidable bias towards instagram</strong> in this and all questions
+              since in this beta version of the survey promotion primarily occured via instagram.
+            </p>
+          </div>
+          <svg class="social-media-positives"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Social Media Negatives</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>what participants didn't like about social media in 2019.</strong> The
+              <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
+              a given keyword or phrase</strong> in their response. 
+              Remember that there is an <strong>unavoidable bias towards instagram</strong> in this and all questions
+              since in this beta version of the survey promotion primarily occured via instagram.
+            </p>
+          </div>
+          <svg class="social-media-negatives"></svg>
+          <svg class="personal-website"></svg>
+          <svg class="personal-website-2016"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Art Resources</p>
+            <p class="cities-top-text-p">
+              Below is a word cloud representing <strong>what resources artists used frequently in 2019 to find art-related content.</strong> The
+              <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
+              a given resource</strong> in their response. Remember that there is an <strong>unavoidable bias towards 
+              instagram</strong> in this and all questions since in this beta version of the survey promotion 
+              primarily occured via instagram.
+            </p>
+          </div>
+          <svg class="art-resources"></svg>
         </div>
-        <svg class="graph-social-media-priority"></svg>
-        <svg class="graph-facebook-frequency"></svg>
-        <svg class="graph-facebook-more-less"></svg>
-        <svg class="graph-instagram-frequency"></svg>
-        <svg class="instagram-more-less"></svg>
-        <svg class="graph-paid-social-media"></svg>
-        <svg class="social-media-service-rating"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Social Media Positives</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>what participants liked about social media in 2019.</strong> The 
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed 
-            a given keyword or phrase</strong> in their response. 
-            Remember that there is an <strong>unavoidable bias towards instagram</strong> in this and all questions
-            since in this beta version of the survey promotion primarily occured via instagram.
-          </p>
+        <div class="studio-habits-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Studio Space / Habits Section</p>
+            <p class="cities-top-text-p">
+              This section covers data related to <strong>what kinds of studio space</strong> in addition to  
+              <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable 
+              format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="studio-space-type"></svg>
+          <br><br><br><br><br><br>
+          <svg class="studio-size"></svg>
+          <svg class="studio-price"></svg>
+          <br><br><br><br><br><br>
+          <svg class="studio-days"></svg>
+          <svg class="studio-hours"></svg>
         </div>
-        <svg class="social-media-positives"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Social Media Negatives</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>what participants didn't like about social media in 2019.</strong> The
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
-            a given keyword or phrase</strong> in their response. 
-            Remember that there is an <strong>unavoidable bias towards instagram</strong> in this and all questions
-            since in this beta version of the survey promotion primarily occured via instagram.
-          </p>
+        <div class="employment-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Jobs / Employment Section</p>
+            <p class="cities-top-text-p">
+              This section covers data related to <strong>what kinds of studio space</strong> in addition to
+              <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable
+              format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="job-types"></svg>
+          <svg class="unemployment"></svg>
+          <svg class="job-app-count"></svg>
+          <svg class="job-income"></svg>
+          <svg class="tax-expenses"></svg>
         </div>
-        <svg class="social-media-negatives"></svg>
-        <svg class="personal-website"></svg>
-        <svg class="personal-website-2016"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Art Resources</p>
-          <p class="cities-top-text-p">
-            Below is a word cloud representing <strong>what resources artists used frequently in 2019 to find art-related content.</strong> The
-            <strong>size of words</strong> correlates directly to the <strong>number of survey participants that listed
-              a given resource</strong> in their response. 
-            Remember that there is an <strong>unavoidable bias towards instagram</strong> in this and all questions
-            since in this beta version of the survey promotion primarily occured via instagram.
-          </p>
+        <div class="schools-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Schools / Art Programs</p>
+            <p class="cities-top-text-p">
+              This section covers data related to <strong>what kinds of studio space</strong> in addition to
+              <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable
+              format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="education-level"></svg>
+          <svg class="current-student"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">If you are currently a student what school do you attend?</p>
+            <p class="cities-top-text-p">
+              This section covers data related to <strong>what kinds of studio space</strong> in addition to
+              <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable
+              format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="current-school"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">List any past degrees you've completed.</p>
+            <p class="cities-top-text-p">
+              This section covers data related to <strong>what kinds of studio space</strong> in addition to
+              <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable
+              format please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="past-degrees"></svg>
+          <svg class="education-experience-rating"></svg>
+          <svg class="student-loans"></svg>
+          <svg class="student-loan-payment"></svg>
         </div>
-        <svg class="art-resources"></svg>
-      </div>
-      
-      <div class="studio-habits-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Studio Space / Habits Section</p>
-          <p class="cities-top-text-p">
-            This section covers data related to <strong>what kinds of studio space</strong> in addition to  
-            <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable 
-            format please see the downloadable raw data.
-          </p>
+        <div class="cities-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Cities / Neighborhoods Section</p>
+            <p>
+              Below is a <strong>word cloud</strong> representing <strong>what cities artists lived in during 2019.</strong> 
+              The <strong>size of words</strong> correlates directly to the <strong>number of survey participants living in the city</strong> 
+              that listed a given word in their response. Artists were simply asked to fill in what city they lived in and were free to answer 
+              however they saw fit. For instance you will see New York and Brooklyn listed separately but no significant mention of Manhattan. 
+              It is up to the reader to decide what this indicates. For complete information on this section please see the downloadable raw data.
+            </p>
+          </div>
+          <svg class="cities-neighborhoods-cloud"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">What neighborhood and city did you live in at the end of 2016?</p>
+            <p>
+              Below is a <strong>word cloud</strong> representing <strong>what cities artists lived in during 2019.</strong> 
+            </p>
+          </div>
+          <svg class="previous-city"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">What are the most important benefits of your current city or neighborhood?</p>
+            <p>
+              Below is a <strong>word cloud</strong> representing <strong>what cities artists lived in during 2019.</strong> 
+            </p>
+          </div>
+          <svg class="city-benefits"></svg>
         </div>
-        <svg class="studio-space-type"></svg>
-        <br><br><br><br><br><br>
-        <svg class="studio-size"></svg>
-        <svg class="studio-price"></svg>
-        <br><br><br><br><br><br>
-        <svg class="studio-days"></svg>
-        <svg class="studio-hours"></svg>
-      </div>
-
-      <div class="employment-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Jobs / Employment Section</p>
-          <p class="cities-top-text-p">
-            This section covers data related to <strong>what kinds of studio space</strong> in addition to
-            <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable
-            format please see the downloadable raw data.
-          </p>
+        <div class="galleries-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Galleries / Museums Section</p>
+            <p class="cities-top-text-p">This is the Galleries / Museums section.</p>
+          </div>
+          <svg class="gallery-priority"></svg>
+          <svg class="reception-count"></svg>
+          <svg class="fair-count"></svg>
+          <svg class="opened-galleries"></svg>
+          <svg class="closed-galleries"></svg>
         </div>
-        <svg class="job-types"></svg>
-        <svg class="unemployment"></svg>
-        <svg class="job-app-count"></svg>
-        <svg class="job-income"></svg>
-        <svg class="tax-expenses"></svg>
-      </div>
-
-      <div class="schools-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Schools / Art Programs</p>
-          <p class="cities-top-text-p">
-            This section covers data related to <strong>what kinds of studio space</strong> in addition to
-            <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable
-            format please see the downloadable raw data.
-          </p>
+        <div class="instructors-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Art Instructors Section</p>
+            <p class="cities-top-text-p">This is the Art Instructors section.</p>
+          </div>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">What schools did you teach for this past year?</p>
+            <p class="cities-top-text-p">This is a word cloud visualization.</p>
+          </div>
+          <svg class="schools-taught-at"></svg>
+          <svg class="classes-taught-count"></svg>
+          <svg class="campuses-taught-count"></svg>
+          <svg class="teaching-environment-rating"></svg>
+          <svg class="union-member"></svg>
+          <svg class="union-benefits"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">What additional duties aside from teaching did you perform?</p>
+            <p class="cities-top-text-p">This is a word cloud visualization.</p>
+          </div>
+          <svg class="extra-duties"></svg>
+          <svg class="extra-duty-pay"></svg>
         </div>
-        <svg class="education-level"></svg>
-        <svg class="current-student"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">If you are currently a student what school do you attend?</p>
-          <p class="cities-top-text-p">
-            This section covers data related to <strong>what kinds of studio space</strong> in addition to
-            <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable
-            format please see the downloadable raw data.
-          </p>
+        <div class="closing-thoughts-div">
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Closing Thoughts Section</p>
+            <p class="cities-top-text-p">This is the Closing Thoughts section.</p>
+          </div>
+          <svg class="survey-time"></svg>
+          <svg class="art-world-welcome"></svg>
+          <svg class="discrimination"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Positive Mention Cloud</p>
+            <p class="cities-top-text-p">
+              Are there any arts institutions, galleries etc. that you would like to anonymously cite 
+              for outstanding service to artists or communities this past year?
+            </p>
+          </div>
+          <svg class="positive-shoutout"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Artist Abuse Cloud</p>
+            <p class="cities-top-text-p">
+              Are there any arts institutions, galleries etc. that you would like to anonymously cite
+              for outstanding service to artists or communities this past year?
+            </p>
+          </div>
+          <svg class="negative-shoutout"></svg>
+          <div class="cities-top-text-div">
+            <p class="intro-title-p">Final Thoughts Cloud</p>
+            <p class="cities-top-text-p">
+              Are there any arts institutions, galleries etc. that you would like to anonymously cite
+              for outstanding service to artists or communities this past year?
+            </p>
+          </div>
+          <svg class="final-thoughts"></svg>
         </div>
-        <svg class="current-school"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">List any past degrees you've completed.</p>
-          <p class="cities-top-text-p">
-            This section covers data related to <strong>what kinds of studio space</strong> in addition to
-            <strong>artist's studio habits.</strong> As always, to work with the data in a cross-referenceable
-            format please see the downloadable raw data.
-          </p>
+        <div class="conclusions-div">
+          <p class="basic-p">Welcome to the conclusions section!</p>
+          <p class="basic-p">What does it all mean? Who can say, the presentation of all this information is specifically intended to not lean towards any particular conclusions so your personal conclusions are as valid as anyone else's.</p>
+          <p class="basic-p">Thanks for checkin it out!</p>
         </div>
-        <svg class="past-degrees"></svg>
-        <svg class="education-experience-rating"></svg>
-        <svg class="student-loans"></svg>
-        <svg class="student-loan-payment"></svg>
-      </div>
-
-
-
-
-
-      <div class="cities-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Cities / Neighborhoods Section</p>
-          <p>Below is a <strong>word cloud</strong> representing <strong>what cities artists lived in during 2019.</strong> 
-          The <strong>size of words</strong> correlates directly to the <strong>number of survey participants living in the city</strong> 
-          that listed a given word in their response. Artists were simply asked to fill in what city they lived in and were free to answer 
-          however they saw fit. For instance you will see New York and Brooklyn listed separately but no significant mention of Manhattan. 
-          It is up to the reader to decide what this indicates. For complete information on this section please see the downloadable raw data.</p>
-        </div>
-        <svg class="cities-neighborhoods-cloud"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">What neighborhood and city did you live in at the end of 2016?</p>
-          <p>
-            Below is a <strong>word cloud</strong> representing <strong>what cities artists lived in during 2019.</strong> 
-          </p>
-        </div>
-        <svg class="previous-city"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">What are the most important benefits of your current city or neighborhood?</p>
-          <p>
-            Below is a <strong>word cloud</strong> representing <strong>what cities artists lived in during 2019.</strong> 
-          </p>
-        </div>
-        <svg class="city-benefits"></svg>
-      </div>
-
-
-
-
-
-      <div class="galleries-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Galleries / Museums Section</p>
-          <p class="cities-top-text-p">This is the Galleries / Museums section.</p>
-        </div>
-        <svg class="gallery-priority"></svg>
-        <svg class="reception-count"></svg>
-        <svg class="fair-count"></svg>
-        <svg class="opened-galleries"></svg>
-        <svg class="closed-galleries"></svg>
-      </div>
-
-
-
-
-
-      <div class="instructors-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Art Instructors Section</p>
-          <p class="cities-top-text-p">This is the Art Instructors section.</p>
-        </div>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">What schools did you teach for this past year?</p>
-          <p class="cities-top-text-p">This is a word cloud visualization.</p>
-        </div>
-        <svg class="schools-taught-at"></svg>
-        <svg class="classes-taught-count"></svg>
-        <svg class="campuses-taught-count"></svg>
-        <svg class="teaching-environment-rating"></svg>
-        <svg class="union-member"></svg>
-        <svg class="union-benefits"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">What additional duties aside from teaching did you perform?</p>
-          <p class="cities-top-text-p">This is a word cloud visualization.</p>
-        </div>
-        <svg class="extra-duties"></svg>
-        <svg class="extra-duty-pay"></svg>
-      </div>
-
-
-
-
-
-      <div class="closing-thoughts-div">
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Closing Thoughts Section</p>
-          <p class="cities-top-text-p">This is the Closing Thoughts section.</p>
-        </div>
-        <svg class="survey-time"></svg>
-        <svg class="art-world-welcome"></svg>
-        <svg class="discrimination"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Positive Mention Cloud</p>
-          <p class="cities-top-text-p">Are there any arts institutions, galleries etc. that you would like to anonymously cite for outstanding service to
-          artists or communities this past year?</p>
-        </div>
-        <svg class="positive-shoutout"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Artist Abuse Cloud</p>
-          <p class="cities-top-text-p">Are there any arts institutions, galleries etc. that you would like to anonymously cite
-            for outstanding service to
-            artists or communities this past year?</p>
-        </div>
-        <svg class="negative-shoutout"></svg>
-        <div class="cities-top-text-div">
-          <p class="intro-title-p">Final Thoughts Cloud</p>
-          <p class="cities-top-text-p">Are there any arts institutions, galleries etc. that you would like to anonymously cite
-            for outstanding service to
-            artists or communities this past year?</p>
-        </div>
-        <svg class="final-thoughts"></svg>
-      </div>
-
-
-      <div class="conclusions-div">
-        <p class="basic-p">Welcome to the conclusions section!</p>
-        <p class="basic-p">What does it all mean? Who can say, the presentation of all this information is specifically intended to not lean towards any particular conclusions so your personal conclusions are as valid as anyone else's.</p>
-        <p class="basic-p">Thanks for checkin it out!</p>
-      </div>
-    </main>
-  </section>
-</body>
+      </main>
+    </section>
+  </body>
 </html>
