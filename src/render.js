@@ -15,7 +15,7 @@ export const RENDER_GRAPHS = () => {
     tag: ".graph-keywords-mobile",
     data: DATA.KEYWORDS,
     // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
-    width: 8000,
+    width: 500,
   }).render();
 
   new WordCloud({

@@ -5,7 +5,7 @@ export default class WordCloudMobile {
     this.tag = input.tag;
 
     this.width = input.width || 1000;
-    this.height = input.height || 750;
+    this.height = input.height || 1500;
     this.innerWidth = (input.width - 50) || 550;
     this.innerHeight = (input.height - 50) || 400;
 
@@ -33,13 +33,13 @@ export default class WordCloudMobile {
       let color = this.color;
 
       var layout = d3.layout.cloud()
-        .size([1000, 750])
+        .size([500, 1500]) // 750,000
         .words(this.data.map(function (d) { return {
           text: d.name, 
           size: (d.value * multiplier) >= minSize ? (d.value * multiplier) : minSize
         }; }))
         .padding(5)
-        // .rotate(function () { return 0; })
+        .rotate(function () { return 90; })
         .fontSize(function (d) { return d.size; })
         .on("end", draw);
       layout.start();
