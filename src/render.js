@@ -31,119 +31,20 @@ export const RENDER_GRAPHS = () => {
 
 
 
-  new BarGraph({
-    color: randColor(),
-    title: "What is your highest level of education?",
-    tag: ".education-level",
-    data: DATA.EDUCATION_LEVEL,
-    angle: true,
-    width: 600,
-  }).render();
 
-  new BarGraph({
-    color: randColor(),
-    title: "Did you claim any studio expenses?",
-    tag: ".tax-expenses",
-    data: DATA.TAX_EXPENSES,
-    angle: true,
-    width: 400,
-  }).render();
 
-  new PieChart({
-    color: randColor(),
-    title: "Are you currently a student?",
-    tag: ".current-student",
-    data: DATA.CURRENT_STUDENT,
-    angle: true,
-    width: 400,
-  }).render();
 
-  new PieChart({
-    color: randColor(),
-    title: "How many jobs did you apply for?",
-    tag: ".job-app-count",
-    data: DATA.JOB_APP_COUNT,
-    angle: true,
-    width: 400,
-  }).render();
-
-  new PieChart({
-    color: randColor(),
-    title: "Did you apply for unemployment or food stamps?",
-    tag: ".unemployment",
-    data: DATA.UNEMPLOYMENT,
-    angle: true,
-    width: 400,
-  }).render();
-
-  new PieChart({
-    color: randColor(),
-    title: "How many hours per studio day did you work?",
-    tag: ".studio-hours",
-    data: DATA.STUDIO_HOURS,
-    angle: true,
-    width: 400,
-  }).render();
-
-  new PieChart({
-    color: randColor(),
-    title: "How many days per week did you work in your studio?",
-    tag: ".studio-days",
-    data: DATA.STUDIO_DAYS,
-    angle: true,
-    width: 400,
-  }).render();
-
-  new BarGraph({
-    color: randColor(),
-    title: "How much did you make in job-related income?",
-    tag: ".job-income",
-    data: DATA.JOB_INCOME,
-    angle: true,
-    width: 400,
-  }).render();
-
-  new BarGraph({
-    color: randColor(),
-    title: "What did your studio space cost per month?",
-    tag: ".studio-price",
-    data: DATA.STUDIO_PRICE,
-    angle: true,
-    width: 400,
-  }).render();
-
-  new BarGraph({
-    color: randColor(),
-    title: "How large is your current work space?",
-    tag: ".studio-size",
-    data: DATA.STUDIO_SIZE,
-    angle: true,
-    width: 400,
-  }).render();
-
-  new BarGraph({
-    color: randColor(),
-    title: "What type of work space did you use this past year?",
-    tag: ".studio-space-type",
-    data: DATA.STUDIO_SPACE_TYPE,
-    multiplier: .8,
-    minSize: 14,
-    angle: true,
-    width: 800,
-  }).render();
-
-  new BarGraph({
-    color: randColor(),
-    title: "Were you paid for these extra duties?",
-    tag: ".extra-duty-pay",
-    data: DATA.EXTRA_DUTY_PAY,
-    multiplier: .8,
-    minSize: 14,
-    angle: true,
-    width: 400,
-  }).render();
 
   // ------------------- WORD CLOUDS
+
+  new WordCloud({
+    title: "What words describe your work?",
+    tag: ".graph-exhibition-contact",
+    data: DATA.EXHIBITION_CONTACT,
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    multiplier: 300,
+    minSize: 12,
+  }).render();
 
   new WordCloud({
     color: randColor(),
@@ -297,6 +198,148 @@ export const RENDER_GRAPHS = () => {
     multiplier: 2,
     minSize: 10,
   }).render();
+
+  new WordCloud({
+    title: "What kinds of work did you sell?",
+    tag: ".sales-mediums-cloud",
+    data: DATA.SALES_MEDIUMS,
+    color: randColor(),
+    multiplier: 3,
+    minSize: 12,
+  }).render();
+
+  new WordCloud({
+    title: "Who did you sell work to?",
+    tag: ".graph-buyers",
+    data: DATA.BUYERS_CLOUD,
+    color: randColor(),
+    multiplier: 1.5,
+    minSize: 12,
+  }).render();
+
+  new WordCloud({
+    title: "What words describe your work?",
+    tag: ".graph-gallery-spaces",
+    data: DATA.EXHIBITION_SPACES,
+    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    multiplier: 1.75,
+    minSize: 12,
+  }).render();
+
+// ------------------------------- BAR GRAPHS
+
+  new BarGraph({
+    color: randColor(),
+    title: "What is your highest level of education?",
+    tag: ".education-level",
+    data: DATA.EDUCATION_LEVEL,
+    angle: true,
+    width: 600,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
+    title: "Did you claim any studio expenses?",
+    tag: ".tax-expenses",
+    data: DATA.TAX_EXPENSES,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
+    color: randColor(),
+    title: "Are you currently a student?",
+    tag: ".current-student",
+    data: DATA.CURRENT_STUDENT,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
+    color: randColor(),
+    title: "How many jobs did you apply for?",
+    tag: ".job-app-count",
+    data: DATA.JOB_APP_COUNT,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
+    color: randColor(),
+    title: "Did you apply for unemployment or food stamps?",
+    tag: ".unemployment",
+    data: DATA.UNEMPLOYMENT,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
+    color: randColor(),
+    title: "How many hours per studio day did you work?",
+    tag: ".studio-hours",
+    data: DATA.STUDIO_HOURS,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new PieChart({
+    color: randColor(),
+    title: "How many days per week did you work in your studio?",
+    tag: ".studio-days",
+    data: DATA.STUDIO_DAYS,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
+    title: "How much did you make in job-related income?",
+    tag: ".job-income",
+    data: DATA.JOB_INCOME,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
+    title: "What did your studio space cost per month?",
+    tag: ".studio-price",
+    data: DATA.STUDIO_PRICE,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
+    title: "How large is your current work space?",
+    tag: ".studio-size",
+    data: DATA.STUDIO_SIZE,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
+    title: "What type of work space did you use this past year?",
+    tag: ".studio-space-type",
+    data: DATA.STUDIO_SPACE_TYPE,
+    multiplier: .8,
+    minSize: 14,
+    angle: true,
+    width: 800,
+  }).render();
+
+  new BarGraph({
+    color: randColor(),
+    title: "Were you paid for these extra duties?",
+    tag: ".extra-duty-pay",
+    data: DATA.EXTRA_DUTY_PAY,
+    multiplier: .8,
+    minSize: 14,
+    angle: true,
+    width: 400,
+  }).render();
+
 
   // ------------------------ PIE CHARTS
   
@@ -546,24 +589,6 @@ export const RENDER_GRAPHS = () => {
     width: 800,
   }).render();
 
-  new WordCloud({
-    title: "What kinds of work did you sell?",
-    tag: ".sales-mediums-cloud",
-    data: DATA.SALES_MEDIUMS,
-    color: randColor(),
-    multiplier: 3,
-    minSize: 12,
-  }).render();
-
-  new WordCloud({
-    title: "Who did you sell work to?",
-    tag: ".graph-buyers",
-    data: DATA.BUYERS_CLOUD,
-    color: randColor(),
-    multiplier: 1.5,
-    minSize: 12,
-  }).render();
-
   new BarGraph({
     title: "How many studio visits did you have?",
     data: DATA.VISIT_COUNT,
@@ -677,15 +702,6 @@ export const RENDER_GRAPHS = () => {
     width: 400,
   }).render();
 
-  new WordCloud({
-    title: "What words describe your work?",
-    tag: ".graph-exhibition-contact",
-    data: DATA.EXHIBITION_CONTACT,
-    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
-    multiplier: 300,
-    minSize: 12,
-  }).render();
-
   new BarGraph({
     title: "How many social media re-posts / features?",
     tag: ".graph-socialmedia-features",
@@ -702,15 +718,6 @@ export const RENDER_GRAPHS = () => {
     color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
     // angle: true,
-  }).render();
-
-  new WordCloud({
-    title: "What words describe your work?",
-    tag: ".graph-gallery-spaces",
-    data: DATA.EXHIBITION_SPACES,
-    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
-    multiplier: 1.75,
-    minSize: 12,
   }).render();
 
   new BarGraph({
