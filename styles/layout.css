@@ -3,6 +3,11 @@ svg g text {
   max-width: 300px;
 }
 
+body {
+  /* background-color: black; */
+  /* filter: invert(1); */
+}
+
 .html-body-container {
   font-family: monospace;
   font-size: 12px;
