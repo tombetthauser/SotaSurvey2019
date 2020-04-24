@@ -481,7 +481,7 @@ strong {
 }
 
 .graph-keywords {
-
+  margin-left: 30px !important;
 }
 
 
@@ -543,6 +543,10 @@ strong {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  fill: rgb(255, 161, 175);
+  animation: fill-text-shift;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
 }
 
 .studio-visitors-cloud,

@@ -33,7 +33,7 @@ export default class WordCloudMobile {
       let color = this.color;
 
       var layout = d3.layout.cloud()
-        .size([500, 1500]) // 750,000
+        .size([this.width, this.height]) // 750,000
         .words(this.data.map(function (d) { return {
           text: d.name, 
           size: (d.value * multiplier) >= minSize ? (d.value * multiplier) : minSize
@@ -53,7 +53,7 @@ export default class WordCloudMobile {
           .enter().append("text")
           .style("font-size", function (d) { return (d.size + "px"); })
           .style(color ? "fill" : null, color)
-          .style("opacity", "0.75")
+          .style("opacity", "0.85")
           .style("font-weight", "200")
           .attr("text-anchor", "middle")
           .style("font-family", "sans-serif")
@@ -71,7 +71,7 @@ export default class WordCloudMobile {
         .attr("transform", "translate(-50,-350)");
   
       var layout = d3.layout.cloud()
-        .size([450, 1800])
+        .size([this.width, this.height])
         .words(this.data.map(function (d) { return { text: d.name, size: (d.value * 5) }; }))
         .padding(5)
         .rotate(function () { return 90; })
