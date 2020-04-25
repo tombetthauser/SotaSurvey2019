@@ -163,6 +163,8 @@ export const RENDER_GRAPHS = () => {
     // color: randColor(),
     multiplier: 3,
     minSize: 10,
+    height: 800,
+    width: 500,
   }).render();
 
   new WordCloudMobile({
@@ -199,6 +201,8 @@ export const RENDER_GRAPHS = () => {
     // color: randColor(),
     multiplier: 1.5,
     minSize: 12,
+    height: 800,
+    width: 500,
   }).render();
 
   new WordCloudMobile({
@@ -380,6 +384,8 @@ export const RENDER_GRAPHS = () => {
     // color: randColor(),
     multiplier: 3,
     minSize: 10,
+    height: 600,
+    width: 750,
   }).render();
 
   new WordCloud({
@@ -419,7 +425,7 @@ export const RENDER_GRAPHS = () => {
   }).render();
 
   new WordCloud({
-    title: "What words describe your work?",
+    title: "",
     tag: ".graph-gallery-spaces",
     data: DATA.EXHIBITION_SPACES,
     // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],

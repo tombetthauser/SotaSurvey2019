@@ -550,10 +550,17 @@ strong {
   /* width: 500px; */
 }
 
-.graph-gallery-spaces-mobile {
+.graph-gallery-spaces-mobile,
+.graph-buyers-mobile,
+.sale-types-cloud-mobile {
   height: 900px;
   margin-top: 75px !important;
   margin-bottom: -75px !important;
+}
+
+.graph-buyers {
+  margin-left: 25px !important;
+  margin-top: 15px !important;
 }
 
 rect {
@@ -607,12 +614,22 @@ rect {
   100%   {stroke: rgb(255, 161, 175);}
 }
 
-.social-media-positives,
-.sale-types-cloud {
+.social-media-positives {
   height: 800px;
   width: 1000px;
   text-transform: capitalize;
   margin-left: -50px;
+}
+
+.sale-types-cloud {
+  height: 750px;
+  width: 750px;
+  margin-left: -100px !important;
+  margin-top: -40px !important;
+}
+
+.sale-types-cloud text {
+  text-transform: capitalize !important;
 }
 
 /* .graph-legal-paperwork,
