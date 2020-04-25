@@ -208,6 +208,8 @@ export const RENDER_GRAPHS = () => {
     // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     multiplier: 1.75,
     minSize: 12,
+    width: 500,
+    height: 800,
   }).render();
 
 

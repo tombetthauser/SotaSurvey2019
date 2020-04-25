@@ -478,7 +478,6 @@ strong {
 .graph-gallery-spaces {
   margin-top: -20px !important;
   margin-bottom: 50px !important;
-  /* margin-left: -50px !important; */
 }
 
 .graph-keywords {
@@ -548,6 +547,13 @@ strong {
   animation: fill-text-shift;
   animation-duration: 20s;
   animation-iteration-count: infinite;
+  /* width: 500px; */
+}
+
+.graph-gallery-spaces-mobile {
+  height: 900px;
+  margin-top: 75px !important;
+  margin-bottom: -75px !important;
 }
 
 rect {
@@ -608,6 +614,17 @@ rect {
   text-transform: capitalize;
   margin-left: -50px;
 }
+
+/* .graph-legal-paperwork,
+.graph-exhibitions-priority,
+.graph-socialmedia-features,
+.graph-residency-priority {
+  margin-bottom: 65px !important;
+} */
+
+/* .graph-exhibitions-priority {
+  margin-top: 65px !important;
+} */
 
 text {
   text-transform: initial;
@@ -704,4 +721,5 @@ a:visited {
   .mobile-only { display: block; }
   .desktop-only { display: none; }
   svg { display: block; margin-left: auto; margin-right: auto; }
+  .main-section-body svg { margin: 65px auto }
 }
