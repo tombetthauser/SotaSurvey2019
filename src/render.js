@@ -172,10 +172,10 @@ export const RENDER_GRAPHS = () => {
     tag: ".studio-visit-sources-cloud-mobile",
     data: DATA.STUDIO_VISIT_SOURCES,
     // color: randColor(),
-    multiplier: 3.5,
+    multiplier: 2.5,
     minSize: 10,
-    height: 700,
-    width: 300,
+    height: 1500,
+    width: 500,
   }).render();
 
   new WordCloudMobile({
@@ -234,7 +234,7 @@ export const RENDER_GRAPHS = () => {
     tag: ".graph-keywords",
     data: DATA.KEYWORDS,
     // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
-    width: 8000,
+    // width: 8000,
   }).render();
 
 
@@ -399,7 +399,7 @@ export const RENDER_GRAPHS = () => {
     tag: ".studio-visit-sources-cloud",
     data: DATA.STUDIO_VISIT_SOURCES,
     // color: randColor(),
-    multiplier: 3.5,
+    multiplier: 1.5,
     minSize: 10,
   }).render();
 
