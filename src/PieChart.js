@@ -14,6 +14,7 @@ export default class PieChart {
     this.angle = input.angle || false;
 
     this.rotation = input.rotation || false;
+    this.pathWidth = input.pathWidth || 1;
   }
 
   render() {
@@ -49,8 +50,9 @@ export default class PieChart {
       .append('path')
       .attr('d', arcGenerator)
       .attr('fill', function (d) { return (color(d.data.key)) })
+      .attr('class', 'pie-path')
       .style("stroke", this.color)
-      .style("stroke-width", 2)
+      .style("stroke-width", this.pathWidth)
       .style("fill", "none");
 
     svg

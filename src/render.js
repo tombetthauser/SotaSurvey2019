@@ -907,7 +907,7 @@ export const RENDER_GRAPHS = () => {
     title: "What is your gender?",
     tag: ".graph-gender",
     data: DATA.GENDER,
-    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
   }).render();
 
@@ -976,7 +976,7 @@ export const RENDER_GRAPHS = () => {
     title: "What is your race / ethnicity?",
     tag: ".graph-race",
     data: DATA.RACE,
-    color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
+    // color: DATA.COLORS[Math.floor(Math.random() * DATA.COLORS.length)],
     width: 400,
     angle: true,
   }).render();

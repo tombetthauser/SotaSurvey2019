@@ -12,6 +12,7 @@ export default class BarGraph {
     this.margin = input.margin || { top: 20, right: 20, bottom: 20, left: 30 };
     this.color = input.color || "#ddd";
     this.angle = input.angle || false;
+    this.strokeWidth = input.strokeWidth || 1;
   }
 
   render() {
@@ -40,7 +41,7 @@ export default class BarGraph {
       .attr("width", x.bandwidth())
       .attr("y", d => y(d.value))
       .style("stroke", this.color)
-      .style("stroke-width", 2)
+      .style("stroke-width", this.strokeWidth)
       .style("fill", "none");
 
 

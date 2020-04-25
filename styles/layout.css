@@ -343,7 +343,7 @@ strong {
   font-family: sans-serif;
   letter-spacing: 1px;
   animation: color-text-shift;
-  animation-duration: 45s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
 }
 /* 
@@ -355,7 +355,7 @@ strong {
   font-family: sans-serif;
   letter-spacing: 1px;
   animation: color-text-shift;
-  animation-duration: 45s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
   border: 1px solid pink;
   color: pink;
@@ -378,7 +378,7 @@ strong {
   height: 100px;
   background-color: red;
   animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 20;
 } */
 
 
@@ -510,7 +510,7 @@ strong {
 .studio-visitors-cloud {
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
-  animation-duration: 45s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
   /* text-shadow: -12px 12px 2px rgba(0,0,0,0.05); */
   text-transform: capitalize;
@@ -545,7 +545,21 @@ strong {
   margin-right: auto;
   fill: rgb(255, 161, 175);
   animation: fill-text-shift;
-  animation-duration: 45s;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+rect {
+  stroke: rgb(255, 161, 175);
+  animation: stroke-shift;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.pie-path {
+  stroke: rgb(255, 161, 175);
+  animation: stroke-shift;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
 }
 
@@ -575,6 +589,15 @@ strong {
   60%  {fill: rgb(116, 201, 67);}
   80%  {fill: rgb(255, 168, 55);}
   100%   {fill: rgb(255, 161, 175);}
+}
+
+@keyframes stroke-shift {
+  0%   {stroke: rgb(255, 161, 175);}
+  20%   {stroke: rgb(214, 125, 255);}
+  40%  {stroke: rgb(104, 193, 235);}
+  60%  {stroke: rgb(116, 201, 67);}
+  80%  {stroke: rgb(255, 168, 55);}
+  100%   {stroke: rgb(255, 161, 175);}
 }
 
 .social-media-positives,
