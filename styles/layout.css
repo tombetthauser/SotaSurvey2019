@@ -735,13 +735,12 @@ text {
 /* .instructors { display: none; } */
 /* .closing-thoughts { display: none; } */
 
-
-
-
-
-
-
-
+.graph-sale-platforms-mobile {
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    height: 850px;
+    transform: translate(-490px, 0) rotate(90deg);
+}
 
 a {
   text-decoration: none;
@@ -776,10 +775,4 @@ a:visited {
   .desktop-only { display: none; }
   svg { display: block; margin-left: auto; margin-right: auto; }
   .main-section-body svg { margin: 65px auto }
-  .graph-sale-platforms { 
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    height: 750px;
-    transform: translate(-42.5%, 0) rotate(90deg);
-  }
 }

@@ -813,6 +813,16 @@ export const RENDER_GRAPHS = () => {
   }).render();
 
   new BarGraph({
+    title: "What platforms did you sell work on?",
+    tag: ".graph-sale-platforms-mobile",
+    data: DATA.SALE_PLATFORMS,
+    // color: randColor(),
+    angle: true,
+    width: 800,
+    height: 350,
+  }).render();
+
+  new BarGraph({
     title: "How many studio visits did you have?",
     data: DATA.VISIT_COUNT,
     // color: randColor(),
