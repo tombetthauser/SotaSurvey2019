@@ -633,9 +633,16 @@ rect {
 }
 
 .sale-types-cloud-mobile {
-  height: 750px;
+  height: 500px;
   width: 500px;
   /* margin-left: 25px !important; */
+}
+
+.sales-mediums-cloud {
+  height: 500px;
+  width: 750px;
+  margin-left: 0px !important;
+  margin-top: 25px !important;
 }
 
 .sale-types-cloud text {
