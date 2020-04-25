@@ -457,7 +457,7 @@ strong {
 .graph-buyers {
   overflow: visible;
   width: 900px;
-  height: 650px;
+  height: 700px;
   margin-top: -20px !important;
   margin-left: -50px !important;
 }
@@ -577,6 +577,13 @@ rect {
   animation-iteration-count: infinite;
 }
 
+.sales-mediums-cloud-mobile {
+  height: 550px;
+  width: 400px;
+  margin-top: 0px !important;
+  margin-left: 50px !important;
+}
+
 .studio-visitors-cloud,
 .art-resources,
 .social-media-negatives,
@@ -633,9 +640,9 @@ rect {
 }
 
 .sale-types-cloud-mobile {
-  height: 500px;
+  height: 750px;
   width: 500px;
-  /* margin-left: 25px !important; */
+  margin-left: 50px !important;
 }
 
 .sales-mediums-cloud {

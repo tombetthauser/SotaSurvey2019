@@ -54,6 +54,7 @@ export default class WordCloudMobile {
           .style("font-size", function (d) { return (d.size + "px"); })
           .style(color ? "fill" : null, color)
           .style("opacity", "0.85")
+          .style("text-transform", "capitalize")
           .style("font-weight", "200")
           .attr("text-anchor", "middle")
           .style("font-family", "sans-serif")
@@ -90,6 +91,7 @@ export default class WordCloudMobile {
           .style("fill", this.color)
           .style("opacity", "0.75")
           .style("font-weight", "200")
+          .style("text-transform", "capitalize")
           .attr("text-anchor", "middle")
           .style("font-family", "sans-serif")
           .attr("transform", function (d) {
