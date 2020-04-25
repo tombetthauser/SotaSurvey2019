@@ -627,10 +627,9 @@ rect {
 }
 
 .sale-types-cloud {
-  height: 750px;
+  height: 600px;
   width: 750px;
-  margin-left: -100px !important;
-  margin-top: -40px !important;
+  margin-left: 25px !important;
 }
 
 .sale-types-cloud text {
