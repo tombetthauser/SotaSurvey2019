@@ -621,6 +621,11 @@ rect {
   margin-left: -50px;
 }
 
+.sales-mediums-cloud {
+  height: 650px;
+  width: 650px;
+}
+
 .sale-types-cloud {
   height: 750px;
   width: 750px;

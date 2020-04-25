@@ -33,7 +33,7 @@ export default class WordCloud {
       let color = this.color;
 
       var layout = d3.layout.cloud()
-        .size([1000, 750])
+        .size([this.width, this.height])
         .words(this.data.map(function (d) { return {
           text: d.name, 
           size: (d.value * multiplier) >= minSize ? (d.value * multiplier) : minSize
