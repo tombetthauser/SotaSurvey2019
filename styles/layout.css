@@ -578,10 +578,11 @@ rect {
 }
 
 .sales-mediums-cloud-mobile {
-  height: 550px;
+  height: 500px;
   width: 400px;
   margin-top: 0px !important;
   margin-left: 50px !important;
+  margin-bottom: 150px !important;
 }
 
 .studio-visitors-cloud,
@@ -651,6 +652,12 @@ rect {
   margin-left: 0px !important;
   margin-top: 25px !important;
 }
+
+.studio-visitors-cloud-mobile {
+  /* width: 500px; */
+  height: 750px;
+}
+
 
 .sale-types-cloud text {
   text-transform: capitalize !important;
@@ -736,7 +743,6 @@ text {
 
 
 
-
 a {
   text-decoration: none;
   color: black;
@@ -746,6 +752,13 @@ a:visited {
   color: black;
 }
 
+/* .main-header-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 25;
+} */
 
 
 /* Responsive styling starts here. */
