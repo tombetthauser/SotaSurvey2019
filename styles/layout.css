@@ -580,7 +580,7 @@ rect {
 .sales-mediums-cloud-mobile {
   height: 500px;
   width: 400px;
-  margin-top: 0px !important;
+  /* margin-top: 0px !important; */
   margin-left: 50px !important;
   margin-bottom: 150px !important;
 }
@@ -740,6 +740,12 @@ text {
     transform: rotate(90deg);
     height: 850px;
     transform: translate(-490px, 0) rotate(90deg);
+}
+
+
+.studio-visit-sources-cloud-mobile {
+  height: 800px;
+  margin-left: 150px !important;
 }
 
 a {

@@ -174,6 +174,8 @@ export const RENDER_GRAPHS = () => {
     // color: randColor(),
     multiplier: 3.5,
     minSize: 10,
+    height: 700,
+    width: 300,
   }).render();
 
   new WordCloudMobile({
