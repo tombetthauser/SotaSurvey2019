@@ -702,4 +702,5 @@ a:visited {
 @media only screen and (max-width: 600px) {
   .mobile-only { display: block; }
   .desktop-only { display: none; }
+  svg { display: block; margin-left: auto; margin-right: auto; }
 }
