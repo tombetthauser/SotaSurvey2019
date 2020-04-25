@@ -632,6 +632,12 @@ rect {
   margin-left: 25px !important;
 }
 
+.sale-types-cloud-mobile {
+  height: 750px;
+  width: 500px;
+  /* margin-left: 25px !important; */
+}
+
 .sale-types-cloud text {
   text-transform: capitalize !important;
 }
