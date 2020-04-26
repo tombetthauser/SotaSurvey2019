@@ -59,8 +59,10 @@ text {
 .left-column-footer {
   border-right: 1px solid #c4dfff;
   min-height: 35px;
-  padding: 12.5px 12.5px 12.5px 25px;
+  padding: 15px 12.5px 15px 20px;
 }
+
+/* .intro-title-p {} */
 
 .side-note-p {
   width: 150px;
@@ -104,7 +106,7 @@ text {
 
 .left-bottom-links-ul {
   margin-left: -55px;
-  margin-top: 2.5px !important;
+  margin-top: 10px !important;
   margin-bottom: 5px !important;
 }
 
@@ -413,6 +415,7 @@ strong {
   border-bottom: 1px solid #c4dfff;
   font-size: 14px;
   max-width: 960px;
+  line-height: 22px;
 }
 
 /* .take-survey-button {
@@ -569,6 +572,30 @@ strong {
   transform: translate(100px, 0);
 }
 
+.schools-taught-at-mobile {
+  height: 750px;
+  margin-top: 50px !important;
+  transform: translate(100px, 0);
+}
+
+.extra-duties-mobile {
+  height: 1000px;
+  width: 300px;
+  transform: translate(35px, 0);
+}
+
+.positive-shoutout-mobile,
+.negative-shoutout-mobile {
+  height: 1000px;
+  width: 300px;
+  transform: translate(50px, 0);
+}
+
+.final-thoughts-mobile {
+  height: 1600px;
+  width: 300px;
+  transform: translate(50px, 0);
+}
 
 
 .graph-buyers {
@@ -792,6 +819,16 @@ text {
   width: 500px;
   margin-left: 50px !important;
   margin-top: 25px !important;
+}
+
+.previous-city-mobile,
+.cities-neighborhoods-cloud-mobile {
+  height: 1200px;
+  margin-left: 75px !important;
+}
+.city-benefits-mobile {
+  height: 1500px;
+  margin-left: 75px !important;
 }
 
 a {

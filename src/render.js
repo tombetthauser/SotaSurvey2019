@@ -37,6 +37,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.FINAL_THOUGHTS,
     multiplier: 15,
     minSize: 8,
+    height: 1600,
+    width: 400,
   }).render();
 
   new WordCloudMobile({
@@ -46,6 +48,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.NEGATIVE_SHOUTOUT,
     multiplier: 20,
     minSize: 14,
+    height: 1000,
+    width: 400,
   }).render();
 
   new WordCloudMobile({
@@ -55,6 +59,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.POSITIVE_SHOUTOUT,
     multiplier: 20,
     minSize: 14,
+    height: 1000,
+    width: 400,
   }).render();
 
   new WordCloudMobile({
@@ -64,6 +70,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.EXTRA_DUTIES,
     multiplier: 20,
     minSize: 14,
+    height: 1000,
+    width: 400,
   }).render();
 
   new WordCloudMobile({
@@ -73,6 +81,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.SHOOLS_TAUGHT_AT,
     multiplier: 1,
     minSize: 14,
+    height: 700,
+    width: 300,
   }).render();
 
   new WordCloudMobile({
@@ -82,6 +92,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.CITY_BENEFITS,
     multiplier: 3,
     minSize: 8,
+    height: 1400,
+    width: 400,
   }).render();
 
   new WordCloudMobile({
@@ -91,6 +103,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.PREVIOUS_CITY,
     multiplier: 12,
     minSize: 8,
+    height: 1200,
+    width: 400,
   }).render();
 
   new WordCloudMobile({
@@ -100,6 +114,8 @@ export const RENDER_GRAPHS = () => {
     // color: randColor(),
     multiplier: 12,
     minSize: 8,
+    height: 1200,
+    width: 400,
   }).render();
 
   new WordCloudMobile({
@@ -608,14 +624,14 @@ export const RENDER_GRAPHS = () => {
   }).render()
   
   new PieChart({
-    title: "How many campuses did you teach at your last semester?",
+    title: "How many campuses did you teach at?",
     data: DATA.CAMPUSES_TAUGHT_COUNT,
     // color: randColor(),
     tag: ".campuses-taught-count",
   }).render()
   
   new PieChart({
-    title: "How many classes did you teach your last semester?",
+    title: "How many classes did you teach per semester?",
     data: DATA.CLASSES_TAUGHT_COUNT,
     // color: randColor(),
     tag: ".classes-taught-count",
@@ -698,7 +714,7 @@ export const RENDER_GRAPHS = () => {
   }).render()
 
   new BarGraph({
-    title: "How would you rate the work environment of your schools?",
+    title: "How were you treated by your schools?",
     data: DATA.TEACHING_ENVIRONMENT_RATING,
     // color: randColor(),
     tag: ".teaching-environment-rating",
