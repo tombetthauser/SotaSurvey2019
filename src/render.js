@@ -109,6 +109,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.PAST_DEGREES,
     multiplier: 5,
     minSize: 12,
+    height: 1400,
+    width: 400,
   }).render();
 
   new WordCloudMobile({
@@ -118,6 +120,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.CURRENT_SCHOOL,
     multiplier: 1,
     minSize: 20,
+    height: 900,
+    width: 300,
   }).render();
 
   new WordCloudMobile({
@@ -127,6 +131,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.JOB_TYPES,
     multiplier: 6.5,
     minSize: 12,
+    height: 900,
+    width: 300,
   }).render();
 
   new WordCloudMobile({
@@ -136,6 +142,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.ART_RESOURCES,
     multiplier: 1.5,
     minSize: 12,
+    height: 900,
+    width: 300,
   }).render();
 
   new WordCloudMobile({
@@ -145,6 +153,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.SOCIAL_MEDIA_NEGATIVES,
     multiplier: 15,
     minSize: 14,
+    height: 900,
+    width: 300,
   }).render();
 
   new WordCloudMobile({
@@ -154,6 +164,8 @@ export const RENDER_GRAPHS = () => {
     data: DATA.SOCIAL_MEDIA_POSITIVES,
     multiplier: 6,
     minSize: 14,
+    height: 900,
+    width: 300,
   }).render();
 
   new WordCloudMobile({
@@ -464,6 +476,15 @@ export const RENDER_GRAPHS = () => {
 
   new BarGraph({
     // color: randColor(),
+    title: "What is your highest level of education?",
+    tag: ".education-level-mobile",
+    data: DATA.EDUCATION_LEVEL,
+    angle: true,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    // color: randColor(),
     title: "Did you claim any studio expenses?",
     tag: ".tax-expenses",
     data: DATA.TAX_EXPENSES,
@@ -551,7 +572,18 @@ export const RENDER_GRAPHS = () => {
     multiplier: .8,
     minSize: 14,
     angle: true,
-    width: 800,
+    width: 400,
+  }).render();
+
+  new BarGraph({
+    // color: randColor(),
+    title: "What type of work space did you use this past year?",
+    tag: ".studio-space-type-mobile",
+    data: DATA.STUDIO_SPACE_TYPE,
+    multiplier: .8,
+    minSize: 14,
+    angle: true,
+    width: 400,
   }).render();
 
   new BarGraph({

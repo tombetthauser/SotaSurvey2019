@@ -558,6 +558,19 @@ strong {
   margin-bottom: -75px !important;
 }
 
+.social-media-positives-mobile {
+  height: 900px;
+  transform: translate(75px, 0);
+}
+
+.social-media-negatives-mobile,
+.art-resources-mobile {
+  height: 1000px;
+  transform: translate(100px, 0);
+}
+
+
+
 .graph-buyers {
   margin-left: 25px !important;
   margin-top: 15px !important;
@@ -583,6 +596,37 @@ rect {
   /* margin-top: 0px !important; */
   margin-left: 50px !important;
   margin-bottom: 150px !important;
+}
+
+.current-school-mobile {
+  height: 900px;
+  width: 300px;
+  transform: translate(100px, 25px);
+}
+
+.past-degrees-mobile {
+  height: 1400px;
+  width: 300px;
+  transform: translate(50px, 0px);
+}
+
+.current-school-mobile {
+  height: 900px;
+  width: 300px;
+  transform: translate(100px, 25px);
+}
+
+.job-types-mobile {
+  height: 1000px;
+  width: 300px;
+  transform: translate(100px, 25px);
+}
+
+
+
+.studio-space-type, 
+.studio-size {
+  height: 550px;
 }
 
 .studio-visitors-cloud,
