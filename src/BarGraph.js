@@ -10,7 +10,7 @@ export default class BarGraph {
     this.innerHeight = (input.height - 50) || 400;
 
     this.margin = input.margin || { top: 50, right: 20, bottom: 20, left: 30 };
-    this.color = input.color || "#ddd";
+    this.color = input.color || "#000";
     this.angle = input.angle || false;
     this.strokeWidth = input.strokeWidth || 1;
   }

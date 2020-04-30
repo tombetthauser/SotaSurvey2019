@@ -1,6 +1,11 @@
 import { LINKS, SIDE_NOTES } from "./src/data";
 import { RENDER_GRAPHS } from "./src/render";
 
+const colorHash = {
+  totalCount: 3,
+  current: 0
+}
+
 const linkShow = (link) => {
   for (let i = 0; i < LINKS.length; i++) { document.querySelector(`.${LINKS[i]}-div`).style.display = "none" }
   // document.querySelector(`.side-note-p`).innerHTML = SIDE_NOTES[link] ? SIDE_NOTES[link] : "";
@@ -31,8 +36,8 @@ document.addEventListener('DOMContentLoaded', (_event) => {
   let style = document.querySelector(".mobile-drop-down").style;
   
     document.querySelector(".main-header-nav").addEventListener("click", () => {
-      if (style.height === "375px") { style.height = "0px"; style.borderBottom = "none"; } 
-      else { style.height = "375px"; style.borderBottom = "1px solid #c4dfff"; }
+      if (style.height === "400px") { style.height = "0px"; style.borderBottom = "none"; } 
+      else { style.height = "400px"; style.borderBottom = "1px solid #c4dfff"; }
     });
 
     window.addEventListener('resize', () => {
@@ -51,6 +56,13 @@ document.addEventListener('DOMContentLoaded', (_event) => {
         })
       }
     }
+
+    document.querySelectorAll(".switch-colors-link").forEach(ele => {
+      ele.addEventListener("click", () => {
+        colorHash.current = (colorHash.current + 1) % colorHash.totalCount;
+        document.querySelector(".color-palette-css").href = `./styles/layout${colorHash.current}.css`;
+      })
+    })
 
     linkBorderRemove();
     linkShow(`introduction`);
