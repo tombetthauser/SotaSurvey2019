@@ -220,7 +220,7 @@ text {
 .cities-top-text-div {
   border-bottom: 1px solid black;
   flex-grow: 1;
-  /* background-color: white; */
+  background-color: white;
   z-index: 50;
   margin: -7.5px -35px 25px -35px;
   position: relative;
