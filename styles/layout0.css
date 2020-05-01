@@ -848,6 +848,12 @@ a:visited {
   z-index: 25;
 } */
 
+.current-section-underline {
+  border-bottom: '1px solid #c4dfff';
+}
+
+    /* // 
+    // document.querySelector(`.${link}-link`).style.borderBottom = '1px solid #c4dfff'; */
 
 /* Responsive styling starts here. */
 

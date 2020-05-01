@@ -5,6 +5,17 @@ const state = {
   paletteCount: 3,
   palette: 0,
   currentPage: "introduction",
+  // borderColor: "#c4dfff",
+  borderColor: () => {
+    switch (state.palette) {
+      case 0:
+        return "#c4dfff";
+      case 1:
+        return "#000";
+      case 2:
+        return "#fff";
+    }
+  },
 }
 
 const linkShow = (link) => {
@@ -26,7 +37,9 @@ const linkBorderRemove = (link) => {
 
 const linkBorderAdd = (link) => {
   if (link) {
-    document.querySelector(`.${link}-link`).style.borderBottom = '1px solid #c4dfff';
+    console.log(link);
+    state.currentPage = link;
+    document.querySelector(`.${link}-link`).style.borderBottom = `1px solid ${state.borderColor()}`;
   }
 }
 
@@ -60,8 +73,9 @@ document.addEventListener('DOMContentLoaded', (_event) => {
     document.querySelectorAll(".switch-colors-link").forEach(ele => {
       ele.addEventListener("click", () => {
         state.palette = (state.palette + 1) % state.paletteCount;
-        alert(document.querySelector("body").style.display)
         document.querySelector(".color-palette-css").href = `./styles/layout${state.palette}.css`;
+        document.querySelector(`.${state.currentPage}-link`).style.borderBottom = `1px solid ${state.borderColor()}`;
+        // reassign underline color
       })
     })
 
