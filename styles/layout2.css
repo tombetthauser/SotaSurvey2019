@@ -608,15 +608,19 @@ strong {
   margin-top: 15px !important;
 }
 
+path {
+    stroke: white !important;
+}
+
 rect {
-  stroke: white;
+  stroke: white !important;
   /* animation: stroke-shift; */
   /* animation-duration: 20s; */
   /* animation-iteration-count: infinite; */
 }
 
 .pie-path {
-  stroke: white;
+  stroke: white !important;
   /* animation: stroke-shift; */
   /* animation-duration: 20s; */
   /* animation-iteration-count: infinite; */

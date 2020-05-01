@@ -1,14 +1,14 @@
 import { LINKS, SIDE_NOTES } from "./src/data";
 import { RENDER_GRAPHS } from "./src/render";
 
-const colorHash = {
-  totalCount: 3,
-  current: 0
+const state = {
+  paletteCount: 3,
+  palette: 0,
+  currentPage: "introduction",
 }
 
 const linkShow = (link) => {
   for (let i = 0; i < LINKS.length; i++) { document.querySelector(`.${LINKS[i]}-div`).style.display = "none" }
-  // document.querySelector(`.side-note-p`).innerHTML = SIDE_NOTES[link] ? SIDE_NOTES[link] : "";
   if (link) document.querySelector(`.${link}-div`).style.display = "block";
   document.querySelector(`.main-section-container`).scrollTop = 0;
 }
@@ -59,8 +59,9 @@ document.addEventListener('DOMContentLoaded', (_event) => {
 
     document.querySelectorAll(".switch-colors-link").forEach(ele => {
       ele.addEventListener("click", () => {
-        colorHash.current = (colorHash.current + 1) % colorHash.totalCount;
-        document.querySelector(".color-palette-css").href = `./styles/layout${colorHash.current}.css`;
+        state.palette = (state.palette + 1) % state.paletteCount;
+        alert(document.querySelector("body").style.display)
+        document.querySelector(".color-palette-css").href = `./styles/layout${state.palette}.css`;
       })
     })
 
