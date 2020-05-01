@@ -4,8 +4,7 @@ svg g text {
 }
 
 body {
-  /* background-color: black; */
-  /* filter: invert(1); */
+  opacity: 1 !important;
 }
 
 .html-body-container {

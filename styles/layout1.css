@@ -6,9 +6,7 @@ svg g text {
 body {
   background-color: white;
   color: black;
-    background-color: white;
-
-  /* filter: invert(1); */
+  opacity: 1 !important;
 }
 
 .html-body-container {

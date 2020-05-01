@@ -5,7 +5,6 @@ const state = {
   paletteCount: 3,
   palette: 0,
   currentPage: "introduction",
-  // borderColor: "#c4dfff",
   borderColor: () => {
     switch (state.palette) {
       case 0:
@@ -39,7 +38,9 @@ const linkBorderAdd = (link) => {
   if (link) {
     console.log(link);
     state.currentPage = link;
-    document.querySelector(`.${link}-link`).style.borderBottom = `1px solid ${state.borderColor()}`;
+    document.querySelectorAll(`.${link}-link`).forEach(ele => {
+      ele.style.borderBottom = `1px solid ${state.borderColor()}`;
+    })
   }
 }
 
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (_event) => {
   
     document.querySelector(".main-header-nav").addEventListener("click", () => {
       if (style.height === "400px") { style.height = "0px"; style.borderBottom = "none"; } 
-      else { style.height = "400px"; style.borderBottom = "1px solid #c4dfff"; }
+      else { style.height = "400px"; style.borderBottom = `1px solid ${state.borderColor()}`; }
     });
 
     window.addEventListener('resize', () => {
@@ -74,8 +75,10 @@ document.addEventListener('DOMContentLoaded', (_event) => {
       ele.addEventListener("click", () => {
         state.palette = (state.palette + 1) % state.paletteCount;
         document.querySelector(".color-palette-css").href = `./styles/layout${state.palette}.css`;
-        document.querySelector(`.${state.currentPage}-link`).style.borderBottom = `1px solid ${state.borderColor()}`;
-        // reassign underline color
+        document.querySelectorAll(`.${state.currentPage}-link`).forEach(ele => {
+          ele.style.borderBottom = `1px solid ${state.borderColor()}`;
+        })
+        document.querySelector(".mobile-drop-down").style.borderBottom = `1px solid ${state.borderColor()}`;
       })
     })
 
