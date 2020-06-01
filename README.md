@@ -30,15 +30,11 @@ The results from an annual community-developed survey for visual artists built i
 ***
 
 
-# Example Images:
+# Example Gif:
 
 <br><br>
-<img src="https://raw.githubusercontent.com/tombetthauser/image_library/master/Screen%20Shot%202020-05-16%20at%209.01.38%20AM.png">
+<img src="https://raw.githubusercontent.com/tombetthauser/image_library/master/sota.gif">
 A sample of the D3 data visualizations featured on the page.
-
-<br><br>
-<img src="https://raw.githubusercontent.com/tombetthauser/image_library/master/Screen%20Shot%202020-05-16%20at%209.01.14%20AM.png">
-Another sample of the D3 data visualizations featured on the page.
 
 ***
 
